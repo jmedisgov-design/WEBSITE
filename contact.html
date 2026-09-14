@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact | EDIS</title>
+<meta name="description" content="Contact the EDIS team at AICTEM.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Contact</div>
+  <div class="eyebrow">Contact</div>
+  <h1>Talk to the EDIS team</h1>
+  <p>For demonstrations, licences, Academy enrolment, training partnerships, API access or media
+  enquiries.</p>
+</div></section>
+
+<section><div class="wrap"><div class="grid g2" style="gap:48px;align-items:start">
+  <div>
+    <div class="eyebrow">Reach us</div>
+    <h2>Contact details</h2>
+    <div class="card flat">
+      <dl class="dl">
+        <dt>Institution</dt><dd>African Institute for Climate, Trade and Economic Modelling</dd>
+        <dt>Platform</dt><dd>EDIS &mdash; Economic Development Intelligence System</dd>
+        <dt>Email</dt><dd><a href="mailto:info@aictem.org">info@aictem.org</a></dd>
+        <dt>Website</dt><dd><a href="https://aictem.org" target="_blank" rel="noopener">www.aictem.org</a></dd>
+        <dt>Location</dt><dd>Nairobi, Kenya</dd>
+        <dt>Telephone</dt><dd><a href="tel:+256776130913">+256 776 130913</a></dd>
+      </dl>
+    </div>
+
+    <h3 class="mt32">Where to write</h3>
+    <div class="tablewrap">
+      <table class="tbl">
+        <thead><tr><th>Enquiry</th><th>Route</th></tr></thead>
+        <tbody>
+          <tr><td class="rowlabel">Demonstration or licence</td><td><a href="request-demo.html">Request a demonstration</a></td></tr>
+          <tr><td class="rowlabel">Academy enrolment</td><td><a href="academy.html#enrol">EDIS Academy</a></td></tr>
+          <tr><td class="rowlabel">Training partnership</td><td><a href="partners.html">Partners</a></td></tr>
+          <tr><td class="rowlabel">API access</td><td><a href="api.html">API</a></td></tr>
+          <tr><td class="rowlabel">Documentation and course information</td><td><a href="resources.html">Resources</a></td></tr>
+          <tr><td class="rowlabel">Anything else</td><td><a href="mailto:info@aictem.org">info@aictem.org</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div>
+    <div class="eyebrow">Send a message</div>
+    <h2>Write to the team</h2>
+    <form id="contact-form" class="card flat" style="padding:26px">
+      <label class="field mb24"><span>Name <span class="reqmark">*</span></span>
+        <input type="text" name="name" required></label>
+      <label class="field mb24"><span>Institution</span>
+        <input type="text" name="institution"></label>
+      <label class="field mb24"><span>Email <span class="reqmark">*</span></span>
+        <input type="email" name="email" required></label>
+      <label class="field mb24"><span>Subject</span>
+        <select name="subject">
+          <option>Demonstration or licence</option>
+          <option>EDIS Academy</option>
+          <option>Training partnership</option>
+          <option>API and integration</option>
+          <option>Publications and data</option>
+          <option>Media</option>
+          <option>Other</option>
+        </select></label>
+      <label class="field mb24"><span>Message <span class="reqmark">*</span></span>
+        <textarea name="message" required></textarea></label>
+      <button class="btn btn-green btn-lg" type="submit" style="width:100%">Send</button>
+    </form>
+    <div class="formnote mt24" id="sent" hidden></div>
+  </div>
+</div></div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var data = new FormData(e.target), body = [], note = document.getElementById("sent");
+  data.forEach(function (v, k) { if (v) body.push(k + ": " + v); });
+  note.innerHTML = "Thank you. This static preview does not post to a server. " +
+    '<a href="mailto:info@aictem.org?subject=' +
+    encodeURIComponent("EDIS enquiry - " + (data.get("subject") || "")) + "&body=" +
+    encodeURIComponent(body.join("\n")) + '">Open this message in your mail client</a>, ' +
+    'or write to <a href="mailto:info@aictem.org">info@aictem.org</a>.';
+  note.hidden = false;
+});
+</script>
+</body>
+</html>

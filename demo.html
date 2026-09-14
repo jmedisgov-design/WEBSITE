@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Public demonstration | EDIS</title>
+<meta name="description" content="A public demonstration of the EDIS response interface. Precomputed illustrative results, clearly marked as demonstration data.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<div class="strip">Demonstration mode &mdash; results on this page are precomputed illustrative values,
+not policy estimates. <a href="request-demo.html">Request a live demonstration</a>.</div>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Demonstration</div>
+  <div class="eyebrow">Public demonstration</div>
+  <h1>Ask EDIS</h1>
+  <p>Choose one of three registered questions. EDIS routes it, runs the model chain and returns the
+  full response interface &mdash; summary, results, charts, maps, budget, macro effects, poverty, MEL,
+  methods, data and downloads. No proprietary data and no live model is exposed here.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Select a question</div>
+  <div class="subnav" id="q-picker"></div>
+
+  <div class="grid g2" style="gap:26px;align-items:start;grid-template-columns:1.15fr .85fr">
+    <!-- console -->
+    <div class="console">
+      <div class="console-bar">
+        <span class="lamp"></span><span class="lamp"></span><span class="lamp"></span>
+        <span class="ttl">EDIS &mdash; demonstration run</span>
+      </div>
+      <div class="console-q">
+        <label>Policy question</label>
+        <div class="qtext" id="d-q"></div>
+      </div>
+      <div class="console-meta" id="d-meta"></div>
+      <div class="console-out" id="d-out" hidden><div class="kpis" id="d-kpis"></div></div>
+      <div class="console-foot">
+        <span id="d-run">Awaiting run</span>
+        <span><button class="btn btn-green btn-sm" id="d-again">Run again</button></span>
+      </div>
+    </div>
+    <!-- chain -->
+    <div id="d-chain"></div>
+  </div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="eyebrow">Response interface</div>
+  <h2 class="mb24">The structured analytical output</h2>
+  <div class="rtabs" id="d-tabs"></div>
+  <div id="d-panels"></div>
+  <p class="small muted mt24"><span class="demo-flag">Demonstration data</span>
+  Every figure above is a fixed illustrative value used to show the interface. Do not treat these as
+  policy estimates for any country.</p>
+</div></section>
+
+<section><div class="wrap center">
+  <div class="eyebrow">Beyond the demonstration</div>
+  <h2>Run this against your own country and data</h2>
+  <p class="muted" style="max-width:66ch;margin:0 auto 26px">A licensed instance runs the same
+  interface against live models, your country&rsquo;s data and your institution&rsquo;s own scenarios,
+  inside a private workspace with an audit trail.</p>
+  <p class="btnrow" style="justify-content:center">
+    <a class="btn btn-green btn-lg" href="request-demo.html">Request a live demonstration</a>
+    <a class="btn btn-outline btn-lg" href="workspace.html">See the workspace</a>
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/demo.js"></script>
+<script>
+(function () {
+  var H = window.EDIS, S = window.EDIS_DEMO.SCENARIOS, cur = 0, runner = null;
+
+  var picker = document.getElementById("q-picker"),
+      qEl = document.getElementById("d-q"),
+      metaEl = document.getElementById("d-meta"),
+      chainEl = document.getElementById("d-chain"),
+      outEl = document.getElementById("d-out"),
+      kpiEl = document.getElementById("d-kpis"),
+      runEl = document.getElementById("d-run"),
+      tabsEl = document.getElementById("d-tabs"),
+      panEl = document.getElementById("d-panels");
+
+  picker.innerHTML = S.map(function (s, i) {
+    return '<button type="button" data-i="' + i + '"' + (i === 0 ? ' class="active"' : "") + ">" +
+      H.esc(s.id) + " &mdash; " + H.esc(s.q.length > 58 ? s.q.slice(0, 55) + "..." : s.q) + "</button>";
+  }).join("");
+
+  /* ------------------------------------------------------------- panels */
+  function tbl(head, rows) {
+    return '<div class="tablewrap"><table class="tbl"><thead><tr>' +
+      head.map(function (h) { return "<th>" + H.esc(h) + "</th>"; }).join("") +
+      "</tr></thead><tbody>" + rows.map(function (r) {
+        return "<tr>" + r.map(function (c, i) {
+          return i === 0 ? '<td class="rowlabel">' + H.esc(c) + "</td>"
+                         : i === 1 ? '<td class="num">' + H.esc(c) + "</td>"
+                                   : '<td class="small muted">' + H.esc(c) + "</td>";
+        }).join("") + "</tr>";
+      }).join("") + "</tbody></table></div>";
+  }
+  function bullets(a) {
+    return '<ul class="checklist">' + a.map(function (x) {
+      return "<li>" + H.esc(x) + "</li>"; }).join("") + "</ul>";
+  }
+
+  function panels(s) {
+    return [
+      ["summary", "Summary",
+        "<h3>What EDIS found</h3>" +
+        '<div class="kpis" style="margin-bottom:22px">' + s.kpis.map(function (k) {
+          return '<div class="kpi"><div class="k">' + H.esc(k[0]) + '</div><div class="v ' + k[2] +
+            '">' + H.esc(k[1]) + '</div><div class="s">' + H.esc(k[3]) + "</div></div>";
+        }).join("") + "</div>" +
+        "<p>The question was routed to the <strong>" + H.esc(s.agent) + "</strong>, which assembled " +
+        (/^[8]/.test(String(s.chain.length)) ? "an " : "a ") + s.chain.length + "-model workflow for <strong>" + H.esc(s.country) + "</strong> on scenario " +
+        "<strong>" + H.esc(s.scenario) + "</strong>, baseline " + s.base + ", horizon " + s.horizon + ".</p>" +
+        "<h4>Assumptions</h4>" + bullets(s.assume) +
+        "<h4>Limitations</h4>" + bullets(s.limits) +
+        '<div class="prov mt24"><dl>' +
+          "<dt>Question</dt><dd>" + H.esc(s.id) + "</dd>" +
+          "<dt>Country</dt><dd>" + H.esc(s.country) + "</dd>" +
+          "<dt>Scenario</dt><dd>" + H.esc(s.scenario) + "</dd>" +
+          "<dt>Models used</dt><dd>" + H.esc(s.prov.ver) + "</dd>" +
+          "<dt>Run ID</dt><dd>" + H.esc(s.prov.run) + "</dd>" +
+          "<dt>Confidence</dt><dd>" + H.esc(s.prov.conf) + "</dd>" +
+          "<dt>Validation</dt><dd>" + H.esc(s.prov.status) + "</dd>" +
+        "</dl></div>"],
+
+      ["results", "Results",
+        "<h3>Principal results</h3>" + tbl(["Indicator", "Value", "Note"], s.results)],
+
+      ["charts", "Charts",
+        '<div class="chartbox mb24"><h4>' + H.esc(s.barTitle) + "</h4>" +
+          H.bar(s.bars, { fmt: s.barFmt, padL: 150, title: s.barTitle }) + "</div>" +
+        '<div class="chartbox"><h4>' + H.esc(s.lineTitle) + "</h4>" +
+          H.line(s.lines, { xStep: 2, title: s.lineTitle }) +
+          '<div class="legend">' + s.lines.map(function (l) {
+            return '<span><i style="background:' + l.color + '"></i>' + H.esc(l.name) + "</span>";
+          }).join("") + "</div></div>"],
+
+      ["maps", "Maps",
+        '<div class="chartbox"><h4>' + H.esc(s.mapTitle) + "</h4>" +
+          H.gridMap(s.map, { cols: 4, fmt: s.mapFmt, title: s.mapTitle }) +
+          '<div class="legend"><span><i style="background:#e8f2ec"></i>Smaller change</span>' +
+          '<span><i style="background:#165237"></i>Larger change</span></div></div>' +
+        '<p class="small muted mt24 mb0">Schematic region view. A licensed instance returns a full ' +
+        "cartographic map at district and settlement level, with the layer set and projection recorded " +
+        "in the run provenance.</p>"],
+
+      ["budget", "Budget",
+        "<h3>Budget and financing</h3>" + tbl(["Item", "Value", "Note"], s.budget)],
+
+      ["macro", "Macro effects",
+        "<h3>Economy-wide effects</h3>" + tbl(["Indicator", "Value", "Note"], s.macro)],
+
+      ["poverty", "Poverty",
+        "<h3>Distributional incidence</h3>" + tbl(["Indicator", "Value", "Note"], s.poverty)],
+
+      ["mel", "MEL",
+        "<h3>Results-framework mapping</h3>" + tbl(["Result", "Status", "Evidence"], s.mel)],
+
+      ["methods", "Methods",
+        "<h3>How this result was produced</h3><p>" + H.esc(s.methods) + "</p>" +
+        "<h4>Model chain</h4>" +
+        H.chain(s.chain.map(function (c) {
+          return { name: c.name, note: c.note, status: "ok" }; }),
+          { title: "Executed workflow", run: s.prov.run })],
+
+      ["data", "Data",
+        "<h3>Data used</h3>" +
+        '<div class="tablewrap"><table class="tbl"><thead><tr><th>Dataset</th><th>Custodian</th>' +
+        "<th>Reference year</th></tr></thead><tbody>" + s.sources.map(function (r) {
+          return '<tr><td class="rowlabel">' + H.esc(r[0]) + "</td><td>" + H.esc(r[1]) +
+            '</td><td class="num">' + H.esc(r[2]) + "</td></tr>";
+        }).join("") + "</tbody></table></div>" +
+        '<div class="prov mt24"><dl>' +
+          "<dt>Model versions</dt><dd>" + H.esc(s.prov.ver) + "</dd>" +
+          "<dt>Baseline year</dt><dd>" + s.base + "</dd>" +
+          "<dt>Horizon</dt><dd>" + s.horizon + "</dd>" +
+          "<dt>Currency</dt><dd>" + H.esc(s.currency) + "</dd>" +
+          "<dt>Run ID</dt><dd>" + H.esc(s.prov.run) + "</dd>" +
+          "<dt>Timestamp</dt><dd>" + H.esc(s.prov.time) + "</dd>" +
+        "</dl></div>"],
+
+      ["downloads", "Downloads",
+        "<h3>Generated outputs</h3>" +
+        "<p>In a licensed instance each of these is produced from this run, carrying the model " +
+        "versions, data sources, scenario, assumptions, limitations and run ID.</p>" +
+        '<div class="grid g3">' + [
+          ["Executive summary", "PDF"], ["Policy brief", "PDF / Word"],
+          ["Technical report", "PDF / Word"], ["Result tables", "Excel / CSV"],
+          ["Charts", "Vector PDF / PNG"], ["Maps", "PDF / GeoJSON"]
+        ].map(function (d) {
+          return '<div class="card flat"><div class="kicker">' + H.esc(d[1]) + "</div><h3>" +
+            H.esc(d[0]) + '</h3><button class="btn btn-outline btn-sm" disabled>Available on licence</button></div>';
+        }).join("") + "</div>"]
+    ];
+  }
+
+  function renderTabs(s) {
+    var content = panels(s);
+    tabsEl.innerHTML = content.map(function (p, i) {
+      return '<button type="button" data-panel="p-' + p[0] + '"' +
+        (i === 0 ? ' class="active"' : "") + ">" + H.esc(p[1]) + "</button>";
+    }).join("");
+    panEl.innerHTML = content.map(function (p, i) {
+      return '<div class="rpanel" id="p-' + p[0] + '"' + (i === 0 ? "" : " hidden") + ">" + p[2] + "</div>";
+    }).join("");
+    H.tabs(tabsEl, panEl);
+  }
+
+  /* ------------------------------------------------------------- running */
+  function paint(s, states) {
+    chainEl.innerHTML = H.chain(s.chain.map(function (c, i) {
+      return { name: c.name, note: c.note, status: states ? states[i] : "wait" };
+    }), { title: "Model chain", run: s.id });
+  }
+
+  function load(i) {
+    cur = i;
+    var s = S[i];
+    if (runner) runner.stop();
+    metaEl.innerHTML = ["Country: " + s.country, "Region: " + s.region, "Baseline " + s.base,
+      "Horizon " + s.horizon, "Currency " + s.currency, "Scenario " + s.scenario,
+      "Agent: " + s.agent].map(function (t) { return "<span>" + H.esc(t) + "</span>"; }).join("");
+    renderTabs(s);
+    runner = new window.EDIS_DEMO.Runner(s, {
+      onReset: function () {
+        outEl.hidden = true; runEl.textContent = "Routing question";
+        qEl.innerHTML = '<span class="caret"></span>'; paint(s, null);
+      },
+      onType: function (t, done) {
+        qEl.innerHTML = H.esc(t) + (done ? "" : '<span class="caret"></span>');
+      },
+      onChain: function (states) { paint(s, states); runEl.textContent = "Executing model chain"; },
+      onDone: function (sc) {
+        kpiEl.innerHTML = sc.kpis.map(function (k) {
+          return '<div class="kpi"><div class="k">' + H.esc(k[0]) + '</div><div class="v ' + k[2] +
+            '">' + H.esc(k[1]) + '</div><div class="s">' + H.esc(k[3]) + "</div></div>";
+        }).join("");
+        outEl.hidden = false;
+        runEl.textContent = "Run " + sc.prov.run + " · " + sc.prov.status +
+          " · confidence " + sc.prov.conf;
+      }
+    });
+    runner.start();
+  }
+
+  picker.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-i]");
+    if (!b) return;
+    Array.prototype.forEach.call(picker.querySelectorAll("button"), function (o) {
+      o.classList.toggle("active", o === b);
+    });
+    load(parseInt(b.getAttribute("data-i"), 10));
+  });
+  document.getElementById("d-again").addEventListener("click", function () { load(cur); });
+
+  load(0);
+})();
+</script>
+</body>
+</html>

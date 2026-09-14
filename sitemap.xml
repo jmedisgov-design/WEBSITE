@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://edisgov.org/about.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/academy.html</loc><lastmod>2026-09-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://edisgov.org/academy-calendar.html</loc><lastmod>2026-09-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://edisgov.org/courses.html</loc><lastmod>2026-09-05</lastmod><priority>0.9</priority></url>
+  <url><loc>https://edisgov.org/enrol.html</loc><lastmod>2026-09-05</lastmod><priority>0.8</priority></url>
+  <url><loc>https://edisgov.org/agents.html</loc><lastmod>2026-08-29</lastmod><priority>0.8</priority></url>
+  <url><loc>https://edisgov.org/api.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/contact.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/data.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/demo.html</loc><lastmod>2026-08-29</lastmod><priority>0.9</priority></url>
+  <url><loc>https://edisgov.org/gis.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/how-it-works.html</loc><lastmod>2026-08-29</lastmod><priority>0.9</priority></url>
+  <url><loc>https://edisgov.org/</loc><lastmod>2026-08-29</lastmod><priority>1.0</priority></url>
+  <url><loc>https://edisgov.org/login.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/models.html</loc><lastmod>2026-08-29</lastmod><priority>0.8</priority></url>
+  <url><loc>https://edisgov.org/partners.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/pricing.html</loc><lastmod>2026-09-06</lastmod><priority>1.0</priority></url>
+  <url><loc>https://edisgov.org/reports.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/request-demo.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/resources.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/sectors.html</loc><lastmod>2026-08-29</lastmod><priority>0.8</priority></url>
+  <url><loc>https://edisgov.org/simulations.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/solutions.html</loc><lastmod>2026-08-29</lastmod><priority>0.8</priority></url>
+  <url><loc>https://edisgov.org/what-is-edis.html</loc><lastmod>2026-08-29</lastmod><priority>0.9</priority></url>
+  <url><loc>https://edisgov.org/workspace.html</loc><lastmod>2026-08-29</lastmod><priority>0.6</priority></url>
+  <url><loc>https://edisgov.org/government.html</loc><lastmod>2026-09-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://edisgov.org/government-ministry-of-finance.html</loc><lastmod>2026-09-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://edisgov.org/government-central-bank.html</loc><lastmod>2026-09-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://edisgov.org/government-statistics.html</loc><lastmod>2026-09-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://edisgov.org/request-quote.html</loc><lastmod>2026-09-06</lastmod><priority>0.8</priority></url>
+</urlset>

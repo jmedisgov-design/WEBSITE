@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EDIS workspace preview</title>
+<meta name="description" content="A preview of the authenticated EDIS workspace: Ask EDIS, scenario builder, projects, models, agents, data, maps, reports and organisation administration.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<div class="strip">Workspace preview &mdash; a front-end walkthrough of the signed-in experience.
+Figures shown are demonstration values. <a href="request-demo.html">Request a live demonstration</a>.</div>
+
+<div class="ws">
+  <!-- sidebar -->
+  <nav class="ws-side" aria-label="Workspace">
+    <div class="grp">Workspace</div>
+    <a href="#ask" class="active">Ask EDIS</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#projects">Projects</a>
+    <a href="#saved">Saved analysis</a>
+    <div class="grp">Analysis</div>
+    <a href="models.html">Models</a>
+    <a href="agents.html">Agents</a>
+    <a href="#data">Data</a>
+    <a href="#maps">Maps</a>
+    <a href="#reports">Reports</a>
+    <div class="grp">Organisation</div>
+    <a href="#admin">Administration</a>
+    <a href="#roles">Roles and permissions</a>
+    <a href="#usage">Usage</a>
+    <div class="grp">Support</div>
+    <a href="academy.html">Academy</a>
+    <a href="contact.html">Help</a>
+  </nav>
+
+  <!-- main -->
+  <div class="ws-main">
+    <div class="ws-head">
+      <h2>Ministry of Finance, Planning and Economic Development</h2>
+      <div class="ws-user">
+        <span class="badge lock">Government licence</span>
+        <span class="avatar">AK</span>
+        <span>Senior Analyst</span>
+      </div>
+    </div>
+
+    <!-- ASK -->
+    <section class="ws-card anchor" id="ask" style="padding:22px">
+      <h3>Ask EDIS</h3>
+      <p class="muted small">Enter a policy question. EDIS classifies it, selects agents, resolves the
+      model workflow, checks data and permissions, and queues the run.</p>
+      <label class="field mb24">
+        <span>Your question</span>
+        <textarea id="ws-q" style="min-height:88px">What will be the impact of increasing health spending by 20 per cent?</textarea>
+      </label>
+      <div class="filters" style="padding:0;border:0;background:none">
+        <label class="field" style="flex:1 1 150px"><span>Country</span>
+          <select><option>Utopia</option><option>Kenya</option><option>Tanzania</option>
+          <option>Zambia</option><option>Rwanda</option></select></label>
+        <label class="field" style="flex:1 1 150px"><span>Region</span>
+          <select><option>National</option><option>Central</option><option>Eastern</option>
+          <option>Northern</option><option>Western</option></select></label>
+        <label class="field" style="flex:0 1 130px"><span>Baseline year</span>
+          <select><option>2024</option><option>2023</option><option>2022</option></select></label>
+        <label class="field" style="flex:0 1 130px"><span>Horizon</span>
+          <select><option>2030</option><option>2032</option><option>2035</option><option>2040</option></select></label>
+        <label class="field" style="flex:0 1 130px"><span>Currency</span>
+          <select><option>UTD</option><option>USD</option></select></label>
+        <label class="field" style="flex:1 1 170px"><span>Scenario</span>
+          <select><option>New scenario</option><option>HLT-BUDGET-20</option>
+          <option>BUD-OPT-1B</option><option>Baseline</option></select></label>
+        <label class="field" style="flex:0 1 150px"><span>Mode</span>
+          <select id="ws-mode"><option>Standard</option><option>Executive</option><option>Expert</option></select></label>
+      </div>
+      <div class="btnrow mt24">
+        <button class="btn btn-green" id="ws-run">Run analysis</button>
+        <button class="btn btn-outline" type="button">Save question</button>
+        <button class="btn btn-outline" type="button">Add to project</button>
+        <span class="mono small muted" id="ws-status">Ready &middot; 148 of 150 monthly runs remaining</span>
+      </div>
+      <div id="ws-chain" class="mt24"></div>
+    </section>
+
+    <!-- SCENARIOS -->
+    <section class="ws-card anchor" id="scenarios">
+      <h3>Scenario builder</h3>
+      <p class="muted small">Shocks are entered in ministry units and recorded in the run provenance
+      exactly as entered. Move a slider to see the scenario definition update.</p>
+      <div class="grid g2" style="gap:32px;align-items:start">
+        <div>
+          <div class="shock"><label for="sh1">Health expenditure change</label>
+            <input type="range" id="sh1" min="-20" max="50" value="20" step="1">
+            <output for="sh1">+20%</output></div>
+          <div class="shock"><label for="sh2">Public investment envelope</label>
+            <input type="range" id="sh2" min="-10" max="40" value="0" step="1">
+            <output for="sh2">0%</output></div>
+          <div class="shock"><label for="sh3">VAT rate change</label>
+            <input type="range" id="sh3" min="-5" max="5" value="0" step="1">
+            <output for="sh3">0 pp</output></div>
+          <div class="shock"><label for="sh4">Agricultural productivity</label>
+            <input type="range" id="sh4" min="-10" max="30" value="0" step="1">
+            <output for="sh4">0%</output></div>
+          <div class="shock"><label for="sh5">Exchange rate</label>
+            <input type="range" id="sh5" min="-20" max="20" value="0" step="1">
+            <output for="sh5">0%</output></div>
+          <div class="shock"><label for="sh6">Interest rate</label>
+            <input type="range" id="sh6" min="-4" max="8" value="0" step="1">
+            <output for="sh6">0 pp</output></div>
+        </div>
+        <div>
+          <div class="chartbox">
+            <h4>Scenario definition</h4>
+            <pre class="mono small" id="sc-json" style="background:#0e3150;color:#cfe0ee;padding:16px;border-radius:8px;overflow-x:auto;margin:0"></pre>
+          </div>
+          <div class="btnrow mt24">
+            <button class="btn btn-green btn-sm">Run scenario</button>
+            <button class="btn btn-outline btn-sm">Clone</button>
+            <button class="btn btn-outline btn-sm">Compare</button>
+            <button class="btn btn-outline btn-sm">Save</button>
+            <button class="btn btn-outline btn-sm">Share</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="ws-card anchor" id="projects">
+      <h3>Projects</h3>
+      <p class="muted small">A project holds questions, scenarios, datasets, model runs, reports,
+      maps, notes and team members. Projects are scoped to the organisation.</p>
+      <div class="tablewrap">
+        <table class="tbl">
+          <thead><tr><th>Project</th><th>Owner</th><th>Scenarios</th><th>Runs</th><th>Members</th><th>Updated</th></tr></thead>
+          <tbody>
+            <tr><td class="rowlabel">Utopia Health Financing Strategy</td><td>Health Financing Unit</td><td class="num">7</td><td class="num">31</td><td class="num">6</td><td>2 days ago</td></tr>
+            <tr><td class="rowlabel">FY2027/28 Budget Prioritisation</td><td>Budget Directorate</td><td class="num">12</td><td class="num">58</td><td class="num">11</td><td>Today</td></tr>
+            <tr><td class="rowlabel">National Irrigation Programme appraisal</td><td>Public Investment</td><td class="num">4</td><td class="num">19</td><td class="num">5</td><td>1 week ago</td></tr>
+            <tr><td class="rowlabel">AfCFTA tariff scenario</td><td>Trade Policy</td><td class="num">6</td><td class="num">22</td><td class="num">4</td><td>3 days ago</td></tr>
+            <tr><td class="rowlabel">Northern Utopia regional package</td><td>Regional Development</td><td class="num">5</td><td class="num">14</td><td class="num">7</td><td>2 weeks ago</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SAVED -->
+    <section class="ws-card anchor" id="saved">
+      <h3>Saved analysis</h3>
+      <div class="tablewrap">
+        <table class="tbl">
+          <thead><tr><th>Run ID</th><th>Question</th><th>Scenario</th><th>State</th><th>Confidence</th></tr></thead>
+          <tbody>
+            <tr><td class="mono small">EDIS-RUN-2026-1184</td><td class="rowlabel">Best allocation of an additional $1bn</td><td>BUD-OPT-1B</td><td><span class="badge run">Validating</span></td><td>&mdash;</td></tr>
+            <tr><td class="mono small">EDIS-RUN-2026-1177</td><td class="rowlabel">Health spending +20 per cent</td><td>HLT-BUDGET-20</td><td><span class="badge ok">Completed</span></td><td>Medium-high</td></tr>
+            <tr><td class="mono small">EDIS-RUN-2026-1163</td><td class="rowlabel">Irrigation investment by district</td><td>AGR-IRR-2030</td><td><span class="badge ok">Completed</span></td><td>Medium</td></tr>
+            <tr><td class="mono small">EDIS-RUN-2026-1150</td><td class="rowlabel">Debt path under a revenue shortfall</td><td>FIS-SHORT-5</td><td><span class="badge err">Non-converged</span></td><td>&mdash;</td></tr>
+            <tr><td class="mono small">EDIS-RUN-2026-1142</td><td class="rowlabel">Broadband coverage gap</td><td>ICT-COV-80</td><td><span class="badge err">Data missing</span></td><td>&mdash;</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted mt24 mb0">A failed or non-converged run stays in the record with its
+      diagnostics. It is never quietly replaced by an estimate.</p>
+    </section>
+
+    <!-- DATA / MAPS / REPORTS -->
+    <div class="grid g2" style="gap:20px">
+      <section class="ws-card anchor" id="data" style="margin:0">
+        <h3>Data</h3>
+        <p class="muted small">The catalogue, filtered to what this organisation may see.</p>
+        <div class="tablewrap"><table class="tbl" style="min-width:0">
+          <thead><tr><th>Dataset</th><th>Year</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>National household survey</td><td class="num">2019/20</td><td><span class="badge ok">Validated</span></td></tr>
+            <tr><td>Approved estimates</td><td class="num">2024/25</td><td><span class="badge ok">Validated</span></td></tr>
+            <tr><td>Health facility master list</td><td class="num">2024</td><td><span class="badge ok">Validated</span></td></tr>
+            <tr><td>Road inventory</td><td class="num">2023</td><td><span class="badge partial">Partial</span></td></tr>
+            <tr><td>Broadband coverage</td><td class="num">&mdash;</td><td><span class="badge err">Missing</span></td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section class="ws-card anchor" id="maps" style="margin:0">
+        <h3>Maps</h3>
+        <p class="muted small">Scenario overlay from the most recent completed run.</p>
+        <div id="ws-map"></div>
+      </section>
+    </div>
+
+    <section class="ws-card anchor" id="reports">
+      <h3>Reports</h3>
+      <div class="grid g3">
+        <div class="card flat"><div class="kicker">From run 1177</div><h3>Policy brief</h3>
+          <p class="small">Health spending +20 per cent: coverage, cost and distributional effects.</p>
+          <button class="btn btn-outline btn-sm">Generate PDF</button></div>
+        <div class="card flat"><div class="kicker">From run 1177</div><h3>Technical report</h3>
+          <p class="small">Full method, parameters, diagnostics and sensitivity analysis.</p>
+          <button class="btn btn-outline btn-sm">Generate Word</button></div>
+        <div class="card flat"><div class="kicker">From run 1163</div><h3>Investment appraisal</h3>
+          <p class="small">Irrigation programme: return, readiness, risk and pipeline fit.</p>
+          <button class="btn btn-outline btn-sm">Generate PDF</button></div>
+      </div>
+    </section>
+
+    <!-- ADMIN -->
+    <section class="ws-card anchor" id="admin">
+      <h3>Organisation administration</h3>
+      <p class="muted small">Administrators manage users, roles, model access, agent access, projects,
+      country access, usage, reports, API keys and the subscription.</p>
+      <div class="tablewrap">
+        <table class="tbl">
+          <thead><tr><th>User</th><th>Role</th><th>Models</th><th>Countries</th><th>Runs used</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="rowlabel">A. Kirunda</td><td>Senior Analyst</td><td>All sector, CDCGE</td><td>Utopia</td><td class="num">32 / 150</td><td><span class="badge ok">Active</span></td></tr>
+            <tr><td class="rowlabel">J. Nabirye</td><td>Modeler</td><td>All</td><td>Utopia</td><td class="num">96 / 150</td><td><span class="badge ok">Active</span></td></tr>
+            <tr><td class="rowlabel">P. Odongo</td><td>Analyst</td><td>Health, Education, UCSN</td><td>Utopia</td><td class="num">18 / 60</td><td><span class="badge ok">Active</span></td></tr>
+            <tr><td class="rowlabel">S. Achieng</td><td>Executive</td><td>Read-only</td><td>Utopia</td><td class="num">4 / 20</td><td><span class="badge ok">Active</span></td></tr>
+            <tr><td class="rowlabel">T. Mugisha</td><td>Trainer</td><td>Academy set</td><td>Utopia</td><td class="num">11 / 40</td><td><span class="badge partial">Expires 30 Jun</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="ws-card anchor" id="roles">
+      <h3>Roles and permissions</h3>
+      <div class="tablewrap">
+        <table class="tbl">
+          <thead><tr><th>Role</th><th>Can do</th><th>Cannot do</th></tr></thead>
+          <tbody>
+            <tr><td class="rowlabel">Viewer</td><td>Open shared results, read reports</td><td>Run models, change scenarios, export</td></tr>
+            <tr><td class="rowlabel">Analyst</td><td>Ask questions, run permitted models, save analysis</td><td>Change model parameters, manage users</td></tr>
+            <tr><td class="rowlabel">Senior Analyst</td><td>All analyst actions, create projects, share scenarios</td><td>Manage users, change licence</td></tr>
+            <tr><td class="rowlabel">Modeler</td><td>Expert mode, advanced parameters, sensitivity runs</td><td>Manage users, change licence</td></tr>
+            <tr><td class="rowlabel">Executive</td><td>Executive mode, read briefs and comparisons</td><td>Run models, change scenarios</td></tr>
+            <tr><td class="rowlabel">Trainer</td><td>Academy cohorts, laboratory environments</td><td>Access institutional private data</td></tr>
+            <tr><td class="rowlabel">Administrator</td><td>Users, roles, access, API keys, usage, subscription</td><td>Read private user content unless permitted</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="ws-card anchor" id="usage">
+      <h3>Usage</h3>
+      <div class="grid g2" style="gap:24px;align-items:start">
+        <div class="chartbox"><h4>Model runs this month, by model</h4><div id="ws-usage"></div></div>
+        <div>
+          <div class="kpis" style="grid-template-columns:repeat(2,1fr)">
+            <div class="kpi"><div class="k">Active users</div><div class="v">23</div><div class="s">of 30 seats</div></div>
+            <div class="kpi"><div class="k">Runs this month</div><div class="v">412</div><div class="s">unlimited on licence</div></div>
+            <div class="kpi"><div class="k">Reports generated</div><div class="v">78</div><div class="s">this month</div></div>
+            <div class="kpi"><div class="k">Failed runs</div><div class="v down">6</div><div class="s">2 data, 4 non-converged</div></div>
+          </div>
+          <p class="small muted mt24 mb0">Administrators see aggregate usage. Private user content is
+          not exposed to an administrator unless their permissions explicitly allow it.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<section class="sec-dark"><div class="wrap center">
+  <div class="eyebrow">This is a preview</div>
+  <h2>The live workspace runs against your data</h2>
+  <p class="muted" style="max-width:64ch;margin:0 auto 26px">In a licensed instance every panel above
+  is connected to live model services, your country&rsquo;s data and your organisation&rsquo;s private
+  workspace, with an audit trail on every action.</p>
+  <p class="btnrow" style="justify-content:center">
+    <a class="btn btn-green btn-lg" href="request-demo.html">Request a live demonstration</a>
+    <a class="btn btn-ghost btn-lg" href="pricing.html">Access levels</a>
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var H = window.EDIS;
+
+  /* ---- ask: run the chain ---- */
+  var CHAIN = [
+    { name: "FINEX", note: "Fiscal space check" },
+    { name: "MTEF", note: "Ceiling revision by vote" },
+    { name: "Health", note: "Coverage, facilities, workforce" },
+    { name: "UCSN", note: "Facility and staffing unit costs" },
+    { name: "GIS", note: "Siting and catchments" },
+    { name: "CDCGE", note: "Economy-wide closure" },
+    { name: "Poverty microsimulation", note: "Out-of-pocket incidence" },
+    { name: "MEL Framework", note: "Results-framework mapping" }
+  ];
+  var chainEl = document.getElementById("ws-chain"),
+      statusEl = document.getElementById("ws-status"),
+      timers = [];
+
+  function paint(states) {
+    chainEl.innerHTML = H.chain(CHAIN.map(function (c, i) {
+      return { name: c.name, note: c.note, status: states[i] };
+    }), { title: "Run EDIS-RUN-2026-1191", run: states.every(function (s) { return s === "ok"; })
+      ? "Completed" : "In progress" });
+  }
+  var idle = CHAIN.map(function () { return "wait"; });
+  paint(idle);
+
+  document.getElementById("ws-run").addEventListener("click", function () {
+    timers.forEach(clearTimeout); timers = [];
+    var states = CHAIN.map(function () { return "wait"; }), i = 0;
+    statusEl.textContent = "Queued";
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    (function next() {
+      if (i > 0) states[i - 1] = "ok";
+      if (i < CHAIN.length) {
+        states[i] = "run"; paint(states);
+        statusEl.textContent = "Running " + CHAIN[i].name;
+        i++;
+        timers.push(setTimeout(next, reduced ? 40 : 430));
+      } else {
+        paint(states);
+        statusEl.textContent = "Completed · run EDIS-RUN-2026-1191 · validated";
+      }
+    })();
+  });
+
+  /* ---- scenario builder ---- */
+  var SH = [
+    ["sh1", "health_expenditure", "%"], ["sh2", "public_investment", "%"],
+    ["sh3", "vat_rate", "pp"], ["sh4", "agricultural_productivity", "%"],
+    ["sh5", "exchange_rate", "%"], ["sh6", "interest_rate", "pp"]
+  ];
+  var jsonEl = document.getElementById("sc-json");
+  function fmt(v, u) { return (v > 0 ? "+" : "") + v + (u === "pp" ? " pp" : "%"); }
+  function syncScenario() {
+    var shocks = [];
+    SH.forEach(function (s) {
+      var el = document.getElementById(s[0]), v = parseInt(el.value, 10);
+      el.parentNode.querySelector("output").textContent = fmt(v, s[2]);
+      if (v !== 0) shocks.push('    { "type": "' + s[1] + '", "change": ' + v + ' }');
+    });
+    jsonEl.textContent = '{\n  "country": "UT",\n  "baseline_year": 2024,\n  "horizon": 2030,\n' +
+      '  "currency": "UTD",\n  "shocks": [\n' + (shocks.join(",\n") || "") + "\n  ]\n}";
+  }
+  SH.forEach(function (s) {
+    document.getElementById(s[0]).addEventListener("input", syncScenario);
+  });
+  syncScenario();
+
+  /* ---- map + usage ---- */
+  document.getElementById("ws-map").innerHTML = H.gridMap([
+    ["Central", 4.1], ["Eastern", 9.2], ["Northern", 11.4], ["Western", 7.3],
+    ["West Nile", 10.8], ["Karamoja", 13.1], ["Busoga", 8.9], ["Teso", 10.1]
+  ], { cols: 2, fmt: function (v) { return "+" + v.toFixed(1) + " pp"; },
+       title: "Access change by region" });
+
+  document.getElementById("ws-usage").innerHTML = H.bar([
+    ["CDCGE", 118], ["MTEF", 96], ["Health", 71], ["PIAS", 54],
+    ["Transport", 31], ["Poverty", 26], ["GIS", 16]
+  ], { padL: 100, rowH: 30, title: "Model runs this month" });
+})();
+</script>
+</body>
+</html>

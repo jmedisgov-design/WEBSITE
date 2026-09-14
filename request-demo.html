@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request a demonstration | EDIS</title>
+<meta name="description" content="Request a live EDIS demonstration against your country, your sector and a question your institution is facing.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Request a demonstration</div>
+  <div class="eyebrow">Get started</div>
+  <h1>Request a demonstration</h1>
+  <p>Tell us the country, the sector and the question. A demonstration is arranged against a real
+  policy question your institution is facing, not a generic tour of the interface.</p>
+</div></section>
+
+<section><div class="wrap"><div class="grid g2" style="gap:48px;align-items:start">
+  <div>
+    <form id="demo-form" class="card flat" style="padding:28px">
+      <div class="formgrid">
+        <label class="field"><span>Name <span class="reqmark">*</span></span>
+          <input type="text" name="name" required></label>
+        <label class="field"><span>Institution <span class="reqmark">*</span></span>
+          <input type="text" name="institution" required></label>
+        <label class="field"><span>Role <span class="reqmark">*</span></span>
+          <input type="text" name="role" required placeholder="e.g. Commissioner, Budget Directorate"></label>
+        <label class="field"><span>Country <span class="reqmark">*</span></span>
+          <input type="text" name="country" required></label>
+        <label class="field"><span>Work email <span class="reqmark">*</span></span>
+          <input type="email" name="email" required></label>
+        <label class="field"><span>Expected number of users</span>
+          <select name="users">
+            <option>1</option><option>2&ndash;5</option><option>6&ndash;20</option>
+            <option>21&ndash;50</option><option>More than 50</option><option>Not yet known</option>
+          </select></label>
+        <label class="field full"><span>Area of interest</span>
+          <select name="interest">
+            <option>Budget and public finance</option>
+            <option>National development planning</option>
+            <option>Public investment appraisal</option>
+            <option>Macroeconomic and fiscal analysis</option>
+            <option>Sector planning</option>
+            <option>Poverty and distributional analysis</option>
+            <option>Climate and adaptation</option>
+            <option>Trade and regional integration</option>
+            <option>GIS and spatial planning</option>
+            <option>Monitoring, evaluation and learning</option>
+            <option>Training and the EDIS Academy</option>
+            <option>API and systems integration</option>
+          </select></label>
+        <label class="field full"><span>Models you are interested in</span>
+          <input type="text" name="models" placeholder="e.g. FINEX, MTEF, CDCGE, PIAS, Health, GIS"></label>
+        <label class="field full"><span>The question you would like to see answered</span>
+          <textarea name="message" placeholder="e.g. What is the best allocation of an additional $200 million across our health and transport programmes over the next three budget years?"></textarea></label>
+      </div>
+      <div class="btnrow mt24">
+        <button class="btn btn-green btn-lg" type="submit">Send request</button>
+        <span class="small muted">We reply from <a href="mailto:info@aictem.org">info@aictem.org</a>.</span>
+      </div>
+    </form>
+    <div class="formnote mt24" id="sent" hidden></div>
+  </div>
+
+  <div>
+    <div class="eyebrow">What happens next</div>
+    <h2>Three steps</h2>
+    <div class="flow" style="flex-direction:column">
+      <div class="step"><span class="n">01</span><b>Scoping call</b>
+        <span>Thirty minutes to establish the question, the country, the data available and who needs to be in the room.</span></div>
+      <div class="step"><span class="n">02</span><b>Demonstration</b>
+        <span>EDIS is run against your question, with the model chain, the provenance and the limitations shown as they would be in production.</span></div>
+      <div class="step"><span class="n">03</span><b>Licence discussion</b>
+        <span>Seats, countries, run allowance, data integration, support and training, agreed as a contract rather than a published price.</span></div>
+    </div>
+
+    <div class="callout mt32">
+      <h4>Already know what you need?</h4>
+      <p class="mb0">Write directly to <a href="mailto:info@aictem.org">info@aictem.org</a>, or see the
+      <a href="pricing.html">access levels</a> first.</p>
+    </div>
+
+    <div class="card flat mt24">
+      <h3>Also available</h3>
+      <ul class="checklist" style="margin-top:12px">
+        <li><a href="academy.html">EDIS Academy enrolment</a> for individuals and cohorts</li>
+        <li><a href="partners.html">Training partnerships</a> for universities and institutes</li>
+        <li><a href="api.html">API access</a> for institutions with existing systems</li>
+        <li><a href="demo.html">The public demonstration</a>, with no account required</li>
+      </ul>
+    </div>
+  </div>
+</div></div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+document.getElementById("demo-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var f = e.target, data = new FormData(f);
+  var note = document.getElementById("sent");
+  var subject = "EDIS demonstration request - " + (data.get("institution") || "");
+  var body = [];
+  data.forEach(function (v, k) { if (v) body.push(k + ": " + v); });
+  note.innerHTML = "Thank you. This static preview does not post to a server. " +
+    'Your request has been prepared as an email &mdash; <a href="mailto:info@aictem.org?subject=' +
+    encodeURIComponent(subject) + "&body=" + encodeURIComponent(body.join("\n")) +
+    '">open it in your mail client</a>, or write to <a href="mailto:info@aictem.org">info@aictem.org</a>.';
+  note.hidden = false;
+  note.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+</script>
+</body>
+</html>

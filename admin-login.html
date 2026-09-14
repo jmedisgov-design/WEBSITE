@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Administrator sign-in | EDIS</title>
+<meta name="description" content="Administrator sign-in for the EDIS Super Admin portal preview.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<div class="strip">Preview sign-in &mdash; this gate runs in the browser and is not security.
+Real administrator authentication is enforced by the platform services.</div>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; <a href="login.html">Sign in</a> &rsaquo; Administrator</div>
+  <div class="eyebrow">Platform administration</div>
+  <h1>Administrator sign-in</h1>
+  <p>The Super Admin portal covers organisations, subscriptions, usage, model and data failures,
+  API consumption, storage, Academy enrolments and the audit trail across every EDIS deployment.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <form class="authbox" id="adminform" autocomplete="off">
+        <h2>Sign in as administrator</h2>
+        <p class="muted small">Access is restricted to AICTEM platform administrators. Ordinary
+        institutional users sign in at <a href="login.html">the standard sign-in</a>.</p>
+
+        <label class="field"><span>Administrator email <span class="reqmark">*</span></span>
+          <input type="email" id="a-email" name="email" required autocomplete="username"
+                 placeholder="admin@aictem.org"></label>
+        <label class="field"><span>Password <span class="reqmark">*</span></span>
+          <input type="password" id="a-pass" name="password" required
+                 autocomplete="current-password"></label>
+
+        <button class="btn btn-primary btn-lg" type="submit" style="width:100%">Sign in</button>
+
+        <div class="formnote mt24" id="a-ok" hidden>Signed in. Opening the Super Admin portal&hellip;</div>
+        <div class="callout warn mt24" id="a-bad" hidden>
+          <h4>Those credentials were not accepted</h4>
+          <p class="mb0">Check the demonstration credential shown alongside this form.</p>
+        </div>
+
+        <p class="authnote"><a href="login.html">Back to the standard sign-in</a></p>
+      </form>
+    </div>
+
+    <div>
+      <div class="callout">
+        <h4>Demonstration credential</h4>
+        <p>This build has no authentication server, so the portal is opened with a fixed
+        demonstration credential. It is printed here deliberately &mdash; it protects nothing.</p>
+        <dl class="dl" style="margin-top:14px">
+          <dt>Username</dt><dd class="mono" id="cred-user"></dd>
+          <dt>Password</dt><dd class="mono" id="cred-pass"></dd>
+          <dt>Role</dt><dd id="cred-role"></dd>
+        </dl>
+        <p class="btnrow" style="margin-top:16px">
+          <button class="btn btn-outline btn-sm" type="button" id="fill">Fill the form</button>
+        </p>
+      </div>
+
+      <div class="callout warn">
+        <h4>This gate is not security</h4>
+        <p>It runs entirely in the browser. The credential is in
+        <span class="mono">assets/js/admin.js</span>, which anyone can read, and clearing it in the
+        console would open the portal. It exists so that the administrator step is visible in the
+        prototype and the portal is not reached by accident from the public site.</p>
+        <p class="mb0">Before this goes anywhere real, administrator access must be a server-side
+        session with a role check on every request, an audit entry per action, and multi-factor
+        authentication on the account.</p>
+      </div>
+
+      <div class="card flat">
+        <h3>What the portal shows</h3>
+        <ul class="checklist" style="margin-top:12px">
+          <li>Active users, organisations and subscriptions</li>
+          <li>Revenue by licence category</li>
+          <li>Questions asked, most-used agents and models</li>
+          <li>Model failures, data failures and active simulations</li>
+          <li>API usage against quota, and storage</li>
+          <li>Reports generated and Academy enrolments</li>
+          <li>The administrator audit trail</li>
+        </ul>
+        <p class="small muted mt24 mb0">Administrators see aggregates. Private user content is not
+        exposed to an administrator unless their permissions explicitly allow it.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/admin.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var A = window.EDIS_ADMIN;
+
+  document.getElementById("cred-user").textContent = A.DEMO.email;
+  document.getElementById("cred-pass").textContent = A.DEMO.pass;
+  document.getElementById("cred-role").textContent = A.DEMO.role + " · " + A.DEMO.name;
+
+  document.getElementById("fill").addEventListener("click", function () {
+    document.getElementById("a-email").value = A.DEMO.email;
+    document.getElementById("a-pass").value = A.DEMO.pass;
+  });
+
+  document.getElementById("adminform").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var ok = A.unlock(document.getElementById("a-email").value,
+                      document.getElementById("a-pass").value);
+    document.getElementById("a-bad").hidden = ok;
+    document.getElementById("a-ok").hidden = !ok;
+    if (ok) setTimeout(function () { location.href = "admin.html"; }, 500);
+  });
+
+  /* already signed in for this browser session */
+  if (A.unlocked()) {
+    document.getElementById("a-ok").hidden = false;
+    document.getElementById("a-ok").innerHTML =
+      'Already signed in for this session. <a href="admin.html">Open the Super Admin portal</a>.';
+  }
+})();
+</script>
+</body>
+</html>

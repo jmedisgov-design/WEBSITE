@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Model explorer | EDIS</title>
+<meta name="description" content="Every AICTEM model service behind EDIS: purpose, questions answered, inputs, outputs, method, scenario options, integrations, version and status.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Product &rsaquo; Models</div>
+  <div class="eyebrow">Product</div>
+  <h1>Every number comes from a model</h1>
+  <p>Twenty-one model services, each with a stated purpose, a documented method, a version and a
+  status. EDIS is the gateway into them; it does not duplicate them, and it does not substitute for
+  them when they are unavailable.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="grid g3">
+    <div class="card flat"><div class="kicker">Layer 01</div><h3>Macroeconomic and fiscal</h3>
+      <p class="small">FINEX, MTEF, CDCGE, the Budget Output Engine, UCSN and PIAS. The envelope,
+      the ceilings, the economy-wide closure, the costing spine and the appraisal system.</p></div>
+    <div class="card flat"><div class="kicker">Layer 02</div><h3>Sector models</h3>
+      <p class="small">Agriculture, health, education, energy, transport, trade, industry, minerals,
+      water and digital infrastructure &mdash; each priced through the same unit-cost library.</p></div>
+    <div class="card flat"><div class="kicker">Layer 03</div><h3>Cross-cutting</h3>
+      <p class="small">Poverty microsimulation, GIS and spatial planning, climate risk, demography
+      and the monitoring, evaluation and learning framework.</p></div>
+  </div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="eyebrow">Model explorer</div>
+  <h2 class="mb24">Select a model</h2>
+  <div class="g-sidebar grid">
+    <div>
+      <div class="filters filters--stack">
+        <label class="field"><span>Search</span>
+          <input type="search" id="m-search" placeholder="CGE, cost, appraisal, spatial..."></label>
+        <label class="field"><span>Group</span>
+          <select id="m-group">
+            <option value="">All groups</option>
+            <option>Macroeconomic and fiscal</option>
+            <option>Sector</option>
+            <option>Cross-cutting</option>
+          </select></label>
+      </div>
+      <p class="counter" id="m-count"></p>
+      <div id="m-list"></div>
+    </div>
+    <div id="m-detail"></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Status system</div>
+    <h2>Users must be able to tell whether a result is reliable</h2>
+  </div>
+  <div class="grid g4">
+    <div class="card flat"><p><span class="badge ok">Validated</span></p><p class="small">Calibrated, tested against historical data and reviewed. Results are usable for policy analysis.</p></div>
+    <div class="card flat"><p><span class="badge ok">Ready</span></p><p class="small">Available to run for the country and scenario requested, with all required data present.</p></div>
+    <div class="card flat"><p><span class="badge partial">Partial</span></p><p class="small">Runs, but with reduced coverage or a component held fixed. Limitations are stated on every result.</p></div>
+    <div class="card flat"><p><span class="badge err">Data missing</span></p><p class="small">A required dataset is absent for this country or year. EDIS reports this rather than substituting a proxy.</p></div>
+  </div>
+  <p class="center mt32">
+    <a class="btn btn-green" href="simulations.html">How scenarios are run</a>
+    <a class="btn btn-outline" href="data.html">Data and provenance</a>
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var D = window.EDIS_DATA, H = window.EDIS, M = D.MODELS, current = M[0].id;
+
+  var listEl = document.getElementById("m-list"),
+      detEl = document.getElementById("m-detail"),
+      cntEl = document.getElementById("m-count");
+
+  function row(m) {
+    return '<a href="#' + m.id + '" data-id="' + m.id + '" class="card flat" ' +
+      'style="display:block;margin-bottom:10px;padding:14px 16px;color:inherit;' +
+      (m.id === current ? "border-color:#3f9b46;background:#f6fbf7" : "") + '">' +
+      '<div style="display:flex;justify-content:space-between;gap:10px;align-items:center">' +
+      '<strong style="color:#123f63">' + H.esc(m.n) + "</strong>" +
+      '<span class="badge ' + H.badgeClass(m.st) + '">' + H.esc(m.st) + "</span></div>" +
+      '<div class="small muted">' + H.esc(m.full) + "</div></a>";
+  }
+
+  function ul(a) { return "<ul style=\"padding-left:1.1em;margin:0\">" +
+    a.map(function (x) { return "<li>" + H.esc(x) + "</li>"; }).join("") + "</ul>"; }
+
+  function detail(m) {
+    return '<article class="card flat">' +
+      '<div style="display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap">' +
+        "<div><div class=\"kicker\">" + H.esc(m.g) + "</div>" +
+        "<h2 style=\"margin-bottom:.15em\">" + H.esc(m.n) + "</h2>" +
+        '<p class="muted" style="margin:0">' + H.esc(m.full) + "</p></div>" +
+        '<div style="text-align:right"><span class="badge ' + H.badgeClass(m.st) + '">' +
+        H.esc(m.st) + '</span><div class="mono small muted" style="margin-top:6px">version ' +
+        H.esc(m.v) + "</div></div>" +
+      "</div>" +
+      "<p class=\"lead\" style=\"margin-top:18px\">" + H.esc(m.p) + "</p>" +
+      "<hr>" +
+      '<div class="grid g2" style="gap:24px">' +
+        "<div><h4>Questions it answers</h4>" +
+          "<ul style=\"padding-left:1.1em;margin:0\">" + m.q.map(function (x) {
+            return "<li>&ldquo;" + H.esc(x) + "&rdquo;</li>"; }).join("") + "</ul></div>" +
+        "<div><h4>Method</h4><p>" + H.esc(m.e) + "</p></div>" +
+        "<div><h4>Inputs</h4>" + ul(m.i) + "</div>" +
+        "<div><h4>Outputs</h4>" + ul(m.o) + "</div>" +
+        "<div><h4>Scenario options</h4>" + ul(m.sc) + "</div>" +
+        "<div><h4>Integrates with</h4>" + ul(m.link) + "</div>" +
+      "</div>" +
+      '<div class="prov" style="margin-top:24px"><dl>' +
+        "<dt>Model service</dt><dd>" + H.esc(m.n) + "</dd>" +
+        "<dt>Version</dt><dd>" + H.esc(m.v) + "</dd>" +
+        "<dt>Status</dt><dd>" + H.esc(m.st) + "</dd>" +
+        "<dt>Group</dt><dd>" + H.esc(m.g) + "</dd>" +
+      "</dl></div>" +
+      '<div class="card-actions" style="margin-top:20px">' +
+        '<a class="btn btn-green btn-sm" href="demo.html">See it in a run</a>' +
+        '<a class="btn btn-outline btn-sm" href="request-demo.html">Request documentation</a>' +
+        '<a class="btn btn-outline btn-sm" href="pricing.html">Access required</a>' +
+      "</div></article>";
+  }
+
+  function draw() {
+    var t = document.getElementById("m-search").value.trim().toLowerCase(),
+        g = document.getElementById("m-group").value;
+    var list = M.filter(function (m) {
+      var hay = (m.n + " " + m.full + " " + m.p + " " + m.e + " " + m.q.join(" ") + " " +
+        m.i.join(" ") + " " + m.o.join(" ")).toLowerCase();
+      return (!t || hay.indexOf(t) > -1) && (!g || m.g === g);
+    });
+    if (!list.some(function (m) { return m.id === current; }) && list.length) current = list[0].id;
+    listEl.innerHTML = list.length ? list.map(row).join("") :
+      '<div class="empty">No model matches that filter.</div>';
+    cntEl.textContent = list.length + " of " + M.length + " model services";
+    var m = M.filter(function (x) { return x.id === current; })[0];
+    detEl.innerHTML = m ? detail(m) : "";
+  }
+
+  listEl.addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-id]");
+    if (!a) return;
+    e.preventDefault();
+    current = a.getAttribute("data-id");
+    draw();
+    if (window.matchMedia("(max-width:980px)").matches) {
+      detEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+  ["m-search", "m-group"].forEach(function (id) {
+    var el = document.getElementById(id);
+    el.addEventListener("input", draw);
+    el.addEventListener("change", draw);
+  });
+
+  var hash = location.hash.replace("#", "");
+  if (hash && M.some(function (m) { return m.id === hash; })) current = hash;
+  draw();
+})();
+</script>
+</body>
+</html>

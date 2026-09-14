@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How EDIS works | Architecture, routing and model execution</title>
+<meta name="description" content="From a policy question to a routed workflow: intent classification, agent selection, model execution, validation, provenance and reporting.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Product &rsaquo; How EDIS works</div>
+  <div class="eyebrow">Architecture</div>
+  <h1>How EDIS works</h1>
+  <p>A policy question is classified, routed to registered agents, resolved into a model workflow,
+  queued, executed, validated and reported &mdash; with the chain visible to the user throughout.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="subnav">
+    <a href="#pipeline">Pipeline</a><a href="#routing">Routing checks</a>
+    <a href="#workflow">Cross-model workflow</a><a href="#queue">Job queue</a>
+    <a href="#provenance">Provenance</a><a href="#modes">Executive and expert modes</a>
+    <a href="#security">Security</a>
+  </div>
+
+  <div id="pipeline" class="anchor">
+    <div class="eyebrow">The pipeline</div>
+    <h2>Eight stages between question and report</h2>
+    <p class="lead muted" style="max-width:78ch">Nothing in this sequence is optional. A question that
+    cannot pass a stage &mdash; because a dataset is missing, a model has not converged or the user is
+    not licensed for the country requested &mdash; stops there and says so.</p>
+    <div class="flow flow--grid mt24">
+      <div class="step"><span class="n">01</span><b>User question</b><span>Natural language, with country, region, baseline year, horizon, currency and scenario.</span></div>
+      <div class="step"><span class="n">02</span><b>EDIS orchestrator</b><span>Intent classification and normalisation against the registered question library.</span></div>
+      <div class="step"><span class="n">03</span><b>Agent selection</b><span>The agents whose specifications accept this question class are assembled.</span></div>
+      <div class="step"><span class="n">04</span><b>Data, models, GIS</b><span>Required model services and datasets are resolved and availability confirmed.</span></div>
+      <div class="step"><span class="n">05</span><b>Simulation</b><span>The workflow is queued; model workers execute in dependency order.</span></div>
+      <div class="step"><span class="n">06</span><b>Validation</b><span>Convergence, consistency and plausibility checks; failure is reported, not smoothed.</span></div>
+      <div class="step"><span class="n">07</span><b>Policy intelligence</b><span>Results assembled into summary, results, charts, maps, budget and distributional views.</span></div>
+      <div class="step"><span class="n">08</span><b>Report</b><span>Brief or technical report generated with assumptions, limitations and a run ID.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec-soft anchor" id="routing"><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Routing</div>
+      <h2>Twelve checks before a model runs</h2>
+      <p>When a question is entered, EDIS works through a fixed sequence. Every step is logged, and
+      the log is what the run record and the report annex are built from.</p>
+      <p class="callout mb0"><strong>The rule:</strong> never send every question directly to a
+      language model. The model layer answers; the AI layer decides which model, and explains.</p>
+    </div>
+    <div class="tablewrap">
+      <table class="tbl">
+        <thead><tr><th style="width:56px">#</th><th>Check</th></tr></thead>
+        <tbody>
+          <tr><td class="num">01</td><td>Classify intent against the question library</td></tr>
+          <tr><td class="num">02</td><td>Identify country</td></tr>
+          <tr><td class="num">03</td><td>Identify sector or sectors</td></tr>
+          <tr><td class="num">04</td><td>Identify scenario and shocks</td></tr>
+          <tr><td class="num">05</td><td>Identify relevant agents</td></tr>
+          <tr><td class="num">06</td><td>Determine required models</td></tr>
+          <tr><td class="num">07</td><td>Check data availability and quality score</td></tr>
+          <tr><td class="num">08</td><td>Check user and organisation permissions</td></tr>
+          <tr><td class="num">09</td><td>Construct the workflow and execution order</td></tr>
+          <tr><td class="num">10</td><td>Execute through the job queue</td></tr>
+          <tr><td class="num">11</td><td>Validate results and record status</td></tr>
+          <tr><td class="num">12</td><td>Assemble the response and the report</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec-dark anchor" id="workflow"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Cross-model workflow</div>
+    <h2>The FINEX-to-MEL chain</h2>
+    <p class="muted">The integrated workflow that gives EDIS its answer to a budget question. Results
+    feed forward through the chain, and the MEL layer feeds back into the next fiscal framework.</p>
+  </div>
+  <div class="arrowlist" style="justify-content:center;margin-bottom:32px">
+    <b>FINEX</b> &rarr; <b>MTEF</b> &rarr; <b>Sector model</b> &rarr; <b>UCSN</b> &rarr;
+    <b>Budget Output Engine</b> &rarr; <b>PIAS</b> &rarr; <b>CDCGE</b> &rarr; <b>Poverty</b> &rarr;
+    <b>MEL</b> &rarr; <b>feedback to FINEX</b>
+  </div>
+  <div class="grid g2" style="gap:32px;align-items:start">
+    <div id="wf-chain"></div>
+    <div>
+      <h3>Why the chain is visible</h3>
+      <p class="muted">Analysts are asked to defend results. A result that arrives without a visible
+      derivation cannot be defended. EDIS therefore shows which model is running, which have
+      completed, which are waiting and which have failed &mdash; while the run is in progress, not
+      only afterwards.</p>
+      <h3 class="mt32">Run states</h3>
+      <p><span class="badge wait">Queued</span> <span class="badge run">Running</span>
+      <span class="badge run">Validating</span> <span class="badge ok">Completed</span>
+      <span class="badge err">Failed</span> <span class="badge err">Non-converged</span></p>
+      <h3 class="mt32">Model status</h3>
+      <p><span class="badge ok">Ready</span> <span class="badge partial">Partial</span>
+      <span class="badge err">Data missing</span> <span class="badge err">Model error</span>
+      <span class="badge ok">Validated</span></p>
+      <p class="muted small">A user must be able to see whether a result is reliable before acting on
+      it. Status badges appear on the model, on the run and on every displayed figure.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="anchor" id="queue"><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Execution</div>
+      <h2>Long simulations never block the interface</h2>
+      <p>A general equilibrium run or a network optimisation can take minutes. EDIS submits it to a
+      queue and returns control immediately; the workspace updates as workers report progress.</p>
+      <div class="arrowlist mt24">
+        <b>Run request</b> &rarr; <b>Job queue</b> &rarr; <b>Model worker</b> &rarr;
+        <b>Status</b> &rarr; <b>Result store</b> &rarr; <b>Interface update</b>
+      </div>
+      <p class="mt24 muted">Results are written to a result store keyed by run ID, so a scenario can
+      be reopened, compared, shared with a colleague or cited in a report months later and return
+      exactly the same numbers.</p>
+    </div>
+    <div>
+      <div class="chartbox">
+        <h4>Technology</h4>
+        <ul class="checklist" style="margin-top:6px">
+          <li>Julia and Genie.jl for the platform services</li>
+          <li>Stipple.jl for reactive analytical interfaces</li>
+          <li>PostgreSQL for the registries, runs and results</li>
+          <li>Redis and background workers for the job queue</li>
+          <li>REST APIs and WebSockets for long-running model jobs</li>
+          <li>Containerised model services, scaled independently</li>
+        </ul>
+        <p class="small muted mt24 mb0">Models are not rewritten into JavaScript. The front end calls
+        model services; the models remain where they are maintained.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec-soft anchor" id="provenance"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Provenance</div>
+    <h2>Eleven fields behind every number</h2>
+    <p class="muted">No numerical answer appears in EDIS without a traceable record. This is what a
+    reviewer, an auditor or a parliamentary committee will ask for.</p>
+  </div>
+  <div class="prov" style="max-width:none">
+    <dl>
+      <dt>Data source</dt><dd>Named dataset and custodian</dd>
+      <dt>Data year</dt><dd>Reference period of the data</dd>
+      <dt>Country</dt><dd>Country instance of the model</dd>
+      <dt>Model</dt><dd>Model service that produced the figure</dd>
+      <dt>Model version</dt><dd>Exact version, not &ldquo;latest&rdquo;</dd>
+      <dt>Scenario</dt><dd>Named scenario and its shocks</dd>
+      <dt>Run ID</dt><dd>Unique, reproducible run identifier</dd>
+      <dt>Timestamp</dt><dd>When the run executed</dd>
+      <dt>Parameters</dt><dd>Every parameter that differed from default</dd>
+      <dt>Transformations</dt><dd>Deflators, conversions, aggregations applied</dd>
+      <dt>Validation status</dt><dd>Validated, partial, or failed with the reason</dd>
+    </dl>
+  </div>
+  <p class="center mt32"><a class="btn btn-primary" href="data.html">How data is sourced and scored</a></p>
+</div></section>
+
+<section class="anchor" id="modes"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Two audiences, one engine</div>
+    <h2>Executive mode and expert mode</h2>
+    <p class="muted">The same run, presented at the altitude the user needs. Mode is a preference, not
+    a different product, and a user with the right permissions can move between them.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card">
+      <span class="tag" style="background:#123f63">Executive mode</span>
+      <h3>For ministers, permanent secretaries and senior policymakers</h3>
+      <ul style="padding-left:1.1em">
+        <li>Top findings, stated in three lines</li>
+        <li>Key risks and what would change the conclusion</li>
+        <li>Budget implications, including recurrent cost created</li>
+        <li>Policy options, ranked, with trade-offs stated</li>
+        <li>Recommended actions and the decision each one requires</li>
+        <li>Scenario comparison, side by side</li>
+      </ul>
+      <p class="muted small mb0">Technical complexity is not exposed unless it is asked for.</p>
+    </div>
+    <div class="card">
+      <span class="tag" style="background:#2e7d39">Expert mode</span>
+      <h3>For economists, modellers and technical analysts</h3>
+      <ul style="padding-left:1.1em">
+        <li>Model parameters and the closure rule in force</li>
+        <li>Scenario shocks as entered, with units</li>
+        <li>Convergence diagnostics and solver status</li>
+        <li>Iteration results and residuals</li>
+        <li>Full data tables and equation references</li>
+        <li>Sensitivity analysis across the elasticity set</li>
+      </ul>
+      <p class="muted small mb0">Advanced configuration is available where the licence permits it.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec-soft anchor" id="security"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Security and separation</div>
+    <h2>Government data does not leak between organisations</h2>
+  </div>
+  <div class="grid g4">
+    <div class="card flat"><h3>Identity</h3><p class="small">Authentication, session security, password policy, and organisation-scoped accounts with invitation flows.</p></div>
+    <div class="card flat"><h3>Authorisation</h3><p class="small">Role-based access control down to the model, agent, dataset, country and report level.</p></div>
+    <div class="card flat"><h3>Isolation</h3><p class="small">Organisation separation enforced in the data layer, with cross-organisation isolation tested.</p></div>
+    <div class="card flat"><h3>Accountability</h3><p class="small">Audit logs, API quotas, rate limiting and secure secrets management. Private datasets are never exposed.</p></div>
+  </div>
+  <p class="center mt32">
+    <a class="btn btn-green" href="demo.html">See a run end to end</a>
+    <a class="btn btn-outline" href="models.html">Open the model explorer</a>
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+document.getElementById("wf-chain").innerHTML = window.EDIS.chain([
+  { name: "FINEX", note: "Fiscal envelope and financing", status: "ok" },
+  { name: "MTEF", note: "Ceilings and multi-year phasing", status: "ok" },
+  { name: "Sector model", note: "Agriculture, health, energy, transport", status: "ok" },
+  { name: "UCSN", note: "Unit costs and service norms", status: "ok" },
+  { name: "Budget Output Engine", note: "Money to deliverable outputs", status: "ok" },
+  { name: "PIAS", note: "Appraisal, ranking, optimisation", status: "run" },
+  { name: "CDCGE", note: "Economy-wide closure", status: "wait" },
+  { name: "Poverty microsimulation", note: "Distributional incidence", status: "wait" },
+  { name: "MEL Framework", note: "Results-framework mapping", status: "wait" }
+], { title: "Integrated workflow", run: "EDIS-RUN-2026-1184" });
+</script>
+</body>
+</html>

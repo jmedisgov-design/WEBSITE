@@ -1,0 +1,12 @@
+# Office lock files and OS clutter
+~$*
+*.tmp
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# earlier draft archive, not part of the site
+webfiles.zip
+
+# local verification harness
+_sweep/

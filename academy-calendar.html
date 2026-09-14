@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Training calendar | EDIS Academy</title>
+<meta name="description" content="The EDIS Academy training year, 15 January 2027 to 25 January 2028. Fourteen courses, each run four times: in person in Nairobi and Accra, and live virtual on East Africa and West Africa time.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; <a href="academy.html">EDIS Academy</a> &rsaquo; Training calendar</div>
+  <div class="eyebrow">Training programme</div>
+  <h1>Every cohort, on one grid</h1>
+  <p id="lede">Fourteen courses, each run four times in the training year that opens on 15 January 2027 &mdash;
+  the first cohorts start on Monday 18 January &mdash; and closes on 25 January 2028:
+  twice <strong>in person</strong>, in Nairobi and in Accra, and twice <strong>live virtual</strong>,
+  on East Africa and on West Africa time. A venue or a virtual classroom never holds two cohorts at
+  once, and no two cohorts of the same course overlap.</p>
+  <div class="btnrow">
+    <a class="btn btn-green" href="#register">Find a cohort</a>
+    <a class="btn btn-ghost" href="enrol.html">Enrol or nominate</a>
+    <a class="btn btn-ghost" href="assets/downloads/edis-academy-2027-28.ics" download>Add to your calendar</a>
+  </div>
+</div></section>
+
+<section class="stats sec-tight"><div class="wrap"><div class="grid">
+  <div><div class="n" id="k-courses">14</div><div class="l">Courses</div></div>
+  <div><div class="n" id="k-cohorts">56</div><div class="l">Cohorts</div></div>
+  <div><div class="n" id="k-days">&mdash;</div><div class="l">Contact days</div></div>
+  <div><div class="n" id="k-weeks">&mdash;</div><div class="l">Weeks end to end</div></div>
+  <div><div class="n" id="k-queue">&mdash;</div><div class="l">Modules still to be written</div></div>
+</div></div></section>
+
+<section class="anchor" id="year"><div class="wrap">
+  <div class="eyebrow">The programme at a glance</div>
+  <h2 class="mb24">Four lanes: two cities, two time zones</h2>
+  <p class="muted" style="max-width:74ch;margin-top:-14px">Each row is a place a course is taught.
+  Every course appears once in each row, and its four runs are spread across the year so both regions
+  have an early and a late chance to take it, in person or online. Select any bar to read that course
+  and take a place on it.</p>
+  <div class="calscroll mt24"><div class="yeargrid" id="yeargrid"></div></div>
+  <div class="callegend" id="legend"></div>
+  <p class="small muted" style="margin-top:10px">Each bar carries its course number. Hover or tab to a
+  bar to preview the cohort below the grid; select it to open the course.</p>
+  <div class="calpick mt24" id="picked"></div>
+</div></section>
+
+<section class="sec-soft anchor" id="register"><div class="wrap">
+  <div class="eyebrow">Register</div>
+  <h2 class="mb24" id="reg-title">Fifty-six cohorts</h2>
+  <div class="filters">
+    <label class="field" style="flex:1 1 220px"><span>Search</span>
+      <input type="search" id="q" placeholder="climate, budget, MEL, 04..."></label>
+    <label class="field" style="flex:0 1 280px"><span>Course</span>
+      <select id="f-course"><option value="">All fourteen courses</option></select></label>
+    <label class="field" style="flex:0 1 230px"><span>Where</span>
+      <select id="f-lane"><option value="">Anywhere</option></select></label>
+    <label class="field" style="flex:0 1 180px"><span>Starting</span>
+      <select id="f-month"><option value="">Any month</option></select></label>
+  </div>
+  <div class="ratecard">
+    <span><b>Tuition</b></span>
+    <span>Live virtual <b>US$80</b> per contact day</span>
+    <span>In person <b>US$200</b> per contact day</span>
+    <span>The fee follows the cohort: an in-person cohort is charged at the in-person rate, a virtual
+    cohort at the virtual rate, times the course&rsquo;s contact days.</span>
+  </div>
+  <p class="counter" id="count"></p>
+  <div class="tablewrap">
+    <table class="tbl">
+      <thead><tr>
+        <th>Dates</th><th>Course</th><th>Title</th><th class="c">Days</th><th>Where</th>
+        <th>Sessions</th><th class="c">Fee</th><th>Enrolment opens</th><th></th>
+      </tr></thead>
+      <tbody id="c-body"></tbody>
+    </table>
+  </div>
+  <div class="empty mt24" id="c-none" hidden>No cohort matches that filter.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">How the grid was built</div>
+  <h2 class="mb24">Scheduling rules</h2>
+  <div class="grid g4">
+    <div class="card"><div class="kicker">Rule 01</div><h3>One course a school</h3>
+      <p>Each numbered directory of the Academy is one course. The units inside it are its modules,
+      and folders with no materials yet are listed as modules still to be written.</p></div>
+    <div class="card"><div class="kicker">Rule 02</div><h3>Five to ten days</h3>
+      <p>A course runs four days plus one for each module, bounded to five and ten, with a day more
+      where the modules average fifty or more specified hours. Executive Programmes run their
+      audience tracks side by side in five days.</p></div>
+    <div class="card"><div class="kicker">Rule 03</div><h3>Four cohorts</h3>
+      <p>In person in Nairobi, in person in Accra, live virtual on East Africa time and live virtual
+      on West Africa time. A course&rsquo;s four runs start at least four weeks apart and sit about a
+      quarter apart where the calendar allows.</p></div>
+    <div class="card"><div class="kicker">Rule 04</div><h3>Holidays and order</h3>
+      <p>A cohort does not teach on its hub&rsquo;s public holidays &mdash; Kenya for Nairobi and East
+      Africa time, Ghana for Accra and West Africa time &mdash; and runs on instead. Entry courses run
+      first, and courses with a recommended earlier course follow it.</p></div>
+  </div>
+  <div class="callout mt32">
+    <h4>Enrolment, nomination and assessment</h4>
+    <p>Individual enrolment opens eight weeks before the first contact day and institutional
+    nominations close four weeks before, so a course can be built around the institution&rsquo;s own
+    questions. The final assessment is submitted within two weeks of the last contact day. Courses
+    whose materials are still being written are held on the calendar from July 2027 and are confirmed
+    when their materials pass review.</p>
+  </div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="grid g3">
+    <div class="card flat"><div class="kicker">Closures</div><h3>Weeks the Academy does not teach</h3>
+      <dl class="dl" id="closed-list"></dl></div>
+    <div class="card flat"><div class="kicker">Awards</div><h3>Certification boards</h3>
+      <dl class="dl" id="board-list"></dl></div>
+    <div class="card flat"><div class="kicker">Extended</div><h3>Cohorts absorbing a holiday</h3>
+      <dl class="dl" id="ext-list"></dl></div>
+  </div>
+  <p class="small muted mt24">Public holidays are taken from the Kenyan and Ghanaian calendars. Eid
+  dates are subject to sighting and are confirmed when gazetted; a cohort affected by a change is told
+  before enrolment closes.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Not yet written</div>
+  <h2 class="mb24">The build queue</h2>
+  <p class="muted" style="max-width:74ch;margin-top:-14px">These module folders exist in the Academy
+  directories but carry no teaching materials yet. Where a course has other modules it is taught
+  without them; Industry Modelling and Executive Programmes have none yet, so their dates are
+  provisional.</p>
+  <div class="calqueue mt32" id="queue"></div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Enrolment</div>
+    <h2>Take a place, or nominate a team</h2>
+    <p class="muted">Individual enrolment opens per cohort. Institutions nominating a group are
+    scheduled directly, and a training partner can deliver any of these courses under licence.</p>
+  </div>
+  <p class="btnrow" style="justify-content:center">
+    <a class="btn btn-green btn-lg" href="enrol.html">Enrol or nominate</a>
+    <a class="btn btn-outline btn-lg" href="courses.html">Course catalogue</a>
+    <a class="btn btn-outline btn-lg" href="partners.html">Become a training partner</a>
+  </p>
+  <p class="muted center mt32" style="font-size:.88rem">
+    Take the year with you:
+    <a href="assets/downloads/edis-academy-2027-28.ics" download>calendar feed (.ics)</a> for
+    faculty and participants, or the
+    <a href="assets/downloads/edis-academy-2027-28.csv" download>cohort register (.csv)</a>
+    for a registration system or LMS.
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var D = window.EDIS_DATA, H = window.EDIS, C = D.CALENDAR, LANES = D.CAL_LANES,
+      CLOSED = D.CAL_CLOSED, RATES = D.CAL_RATES;
+
+  var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var FULL = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
+  var LETTER = { NBO: "N", ACC: "A", VEA: "E", VWA: "W" };
+  function ymd(s) { return new Date(+s.slice(0, 4), +s.slice(4, 6) - 1, +s.slice(6, 8)); }
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function dm(s)  { var d = ymd(s); return pad(d.getDate()) + " " + MON[d.getMonth()]; }
+  function dmy(s) { return dm(s) + " " + s.slice(0, 4); }
+  function week(s, first) { return Math.floor((ymd(s) - first) / 604800000); }
+  function money(n) { return "US$" + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+  function laneName(id) { return LANES.filter(function (l) { return l[0] === id; })[0][1]; }
+  function hubClass(r) { return r.mode === "In person" ? "hub-" + r.venue.toLowerCase() : "hub-virtual"; }
+
+  /* ------------------------------------------------------------ year grid */
+  var first = ymd(D.CAL_YEAR.start), last = ymd(D.CAL_YEAR.end),
+      nweeks = Math.floor((last - first) / 604800000) + 1, weeks = [], i;
+  for (i = 0; i < nweeks; i++) weeks.push(new Date(first.getTime() + i * 604800000));
+  var closedIdx = {};
+  CLOSED.forEach(function (c) { var w = week(c[0], first); if (w >= 0 && w < nweeks) closedIdx[w] = c[1]; });
+
+  var g = document.getElementById("yeargrid"), out = [];
+  g.style.setProperty("--nw", nweeks);
+  g.style.minWidth = (186 + nweeks * 23) + "px";
+  out.push('<div class="gcorner">Where</div>');
+  for (i = 0; i < nweeks;) {
+    var m = weeks[i].getMonth(), y = weeks[i].getFullYear(), j = i;
+    while (j < nweeks && weeks[j].getMonth() === m) j++;
+    out.push('<div class="gmonth" style="grid-column:span ' + (j - i) + '">' + MON[m] +
+             "<span>" + String(y).slice(2) + "</span></div>");
+    i = j;
+  }
+  LANES.forEach(function (l) {
+    out.push('<div class="glabel"><b style="color:' + (l[2] === "In person" ? "#123f63" : "#2e7d39") + '">' +
+             LETTER[l[0]] + "</b><span>" + H.esc(l[1]) + "<br><small>" + H.esc(l[2]) + "</small></span></div>");
+    out.push('<div class="glane" style="--nw:' + nweeks + '">');
+    for (i = 0; i < nweeks; i++) {
+      out.push('<i class="gcell' + (closedIdx[i] !== undefined ? " closed" : "") + '" style="grid-column:' + (i + 1) + '"></i>');
+    }
+    C.filter(function (r) { return r.lane === l[0]; }).forEach(function (r) {
+      var a = week(r.start, first), b = week(r.end, first);
+      out.push('<a class="bar s' + r.family + (r.mode === "In person" ? " bar--ip" : "") +
+        (r.status !== "Available" ? " bar--dev" : "") + '" href="courses.html#' + encodeURIComponent(r.key) +
+        '" style="grid-column:' + (a + 1) + "/" + (b + 2) + '" data-c="' + r.cohort + '" title="' +
+        H.esc("Course " + r.code + " " + r.title) + " · " + H.esc(r.venue) + " · " + dm(r.start) + " to " +
+        dmy(r.end) + " · " + money(r.fee) + (r.status !== "Available" ? " · " + r.status : "") +
+        ' · opens the course">' + H.esc(r.code) + "</a>");
+    });
+    out.push("</div>");
+  });
+  g.innerHTML = out.join("");
+
+  document.getElementById("legend").innerHTML = D.CAL_FAMILIES.map(function (f) {
+    return '<span><i class="fam-' + f[0] + '"></i>' + H.esc(f[1]) + "</span>";
+  }).join("") + '<span><i class="k-dev"></i>Dates provisional &mdash; materials in development</span>' +
+    '<span><i class="k-off"></i>Academy closed</span>';
+
+  /* -------------------------------------------------------------- filters */
+  var fc = document.getElementById("f-course"), fl = document.getElementById("f-lane"),
+      fm = document.getElementById("f-month"), q = document.getElementById("q"), seen = {};
+  C.forEach(function (r) {
+    if (seen[r.key]) return; seen[r.key] = 1;
+    var o = document.createElement("option"); o.value = r.key; o.textContent = r.code + " — " + r.title; fc.appendChild(o);
+  });
+  [].slice.call(fc.options, 1).sort(function (a, b) { return a.textContent < b.textContent ? -1 : 1; })
+    .forEach(function (o) { fc.appendChild(o); });
+  LANES.forEach(function (l) {
+    var o = document.createElement("option"); o.value = l[0];
+    o.textContent = l[1] + (l[2] === "In person" ? " (in person)" : ""); fl.appendChild(o);
+  });
+  seen = {};
+  C.forEach(function (r) {
+    var k = r.start.slice(0, 6); if (seen[k]) return; seen[k] = 1;
+    var o = document.createElement("option"); o.value = k; o.textContent = FULL[+k.slice(4, 6) - 1] + " " + k.slice(0, 4);
+    fm.appendChild(o);
+  });
+
+  var body = document.getElementById("c-body"), cnt = document.getElementById("count"),
+      none = document.getElementById("c-none");
+
+  function draw() {
+    var t = q.value.trim().toLowerCase(), k = fc.value, l = fl.value, mo = fm.value;
+    var list = C.filter(function (r) {
+      return (!t || (r.code + " course " + r.code + " " + r.title + " " + r.cohort + " " + r.venue).toLowerCase().indexOf(t) > -1) &&
+        (!k || r.key === k) && (!l || r.lane === l) && (!mo || r.start.slice(0, 6) === mo);
+    });
+    body.innerHTML = list.map(function (r) {
+      return '<tr id="' + r.cohort + '">' +
+        '<td class="cal-when"><b>' + dm(r.start) + "</b><span>to " + dmy(r.end) + "</span></td>" +
+        '<td class="rowlabel"><a href="courses.html#' + encodeURIComponent(r.key) + '">Course ' + H.esc(r.code) + "</a></td>" +
+        '<td class="cal-title">' + H.esc(r.title) + "<small>" + H.esc(r.cohort) + " · " + r.hours + " contact hours" +
+          (r.status !== "Available" ? " · " + H.esc(r.status) : "") +
+          (r.holidays ? " · extended for " + H.esc(r.holidays) : "") + "</small></td>" +
+        '<td class="num">' + r.days + "</td>" +
+        '<td><span class="hubtag ' + hubClass(r) + '">' + H.esc(r.venue) + '</span><div class="small muted">' +
+          H.esc(r.mode) + "</div></td>" +
+        '<td class="small">' + H.esc(r.sessionHours) + "</td>" +
+        '<td class="num">' + money(r.fee) + "</td>" +
+        "<td>" + dmy(r.enrol) + "</td>" +
+        '<td><a class="btn btn-outline btn-sm" href="enrol.html?course=' + encodeURIComponent(r.key) +
+          "&cohort=" + encodeURIComponent(r.cohort) + '">Enrol</a></td></tr>';
+    }).join("");
+    cnt.textContent = list.length + " of " + C.length + " cohorts";
+    none.hidden = list.length > 0;
+  }
+  [q, fc, fl, fm].forEach(function (el) { el.addEventListener("input", draw); el.addEventListener("change", draw); });
+  draw();
+
+  /* ------------------------------------------------- the selected cohort */
+  var pick = document.getElementById("picked");
+  function showPick(coh, scroll) {
+    var r = C.filter(function (x) { return x.cohort === coh; })[0];
+    if (!r) return;
+    var siblings = C.filter(function (x) { return x.key === r.key && x.cohort !== r.cohort; })
+                    .sort(function (a, b) { return a.start < b.start ? -1 : 1; });
+    pick.innerHTML =
+      '<div class="calpick-head"><div><div class="kicker">Course ' + H.esc(r.code) + " &middot; cohort " +
+        H.esc(r.cohort) + "</div><h3>" + H.esc(r.title) + "</h3></div>" +
+        '<span class="hubtag ' + hubClass(r) + '">' + H.esc(r.venue) + "</span></div>" +
+      '<div class="prov" style="margin-top:14px"><dl>' +
+        "<dt>Runs</dt><dd>" + dmy(r.start) + " to " + dmy(r.end) + "</dd>" +
+        "<dt>Mode</dt><dd>" + H.esc(r.mode) + " &mdash; " + H.esc(r.place) + "</dd>" +
+        "<dt>Sessions</dt><dd>" + H.esc(r.sessionHours) + "</dd>" +
+        "<dt>Length</dt><dd>" + r.days + " contact days &middot; " + r.hours + " contact hours</dd>" +
+        "<dt>Fee</dt><dd><strong>" + money(r.fee) + "</strong> &mdash; " + r.days + " days at " +
+          money(RATES[r.mode]) + " a day</dd>" +
+        "<dt>Enrolment opens</dt><dd>" + dmy(r.enrol) + "</dd>" +
+        "<dt>Nominations close</dt><dd>" + dmy(r.nominate) + "</dd>" +
+        "<dt>Assessment due</dt><dd>" + dmy(r.assess) + "</dd>" +
+        (r.holidays ? "<dt>Extended for</dt><dd>" + H.esc(r.holidays) + "</dd>" : "") +
+        (r.status !== "Available" ? "<dt>Status</dt><dd>" + H.esc(r.status) + " &mdash; dates provisional</dd>" : "") +
+        "<dt>Also runs</dt><dd>" + siblings.map(function (s) {
+          return H.esc(s.venue) + " " + dm(s.start) + " " + s.start.slice(0, 4); }).join("; ") + "</dd>" +
+      "</dl></div>" +
+      '<div class="card-actions" style="margin-top:16px">' +
+        '<a class="btn btn-green btn-sm" href="courses.html#' + encodeURIComponent(r.key) + '">Read the full course</a>' +
+        '<a class="btn btn-primary btn-sm" href="enrol.html?course=' + encodeURIComponent(r.key) + "&cohort=" +
+          encodeURIComponent(r.cohort) + '">Register for this cohort</a>' +
+        '<a class="btn btn-outline btn-sm" href="#' + encodeURIComponent(r.cohort) + '" data-row="' + H.esc(r.cohort) +
+          '">Show it in the register</a></div>';
+    [].forEach.call(g.querySelectorAll(".bar"), function (b) { b.classList.toggle("is-on", b.getAttribute("data-c") === coh); });
+    if (scroll) pick.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
+  function preview(e) { var b = e.target.closest && e.target.closest(".bar"); if (b) showPick(b.getAttribute("data-c"), false); }
+  g.addEventListener("mouseover", preview);
+  g.addEventListener("focusin", preview);
+  pick.addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-row]"); if (!a) return;
+    e.preventDefault();
+    q.value = ""; fc.value = ""; fl.value = ""; fm.value = ""; draw();
+    var row = document.getElementById(a.getAttribute("data-row")); if (!row) return;
+    [].forEach.call(body.rows, function (x) { x.classList.remove("is-picked"); });
+    row.classList.add("is-picked"); row.scrollIntoView({ block: "center", behavior: "smooth" });
+  });
+  var initial = location.hash.replace("#", "");
+  showPick(C.some(function (r) { return r.cohort === initial; }) ? initial : C[0].cohort, !!initial);
+
+  /* ---------------------------------------------------------- side panels */
+  function dl(id, pairs) {
+    document.getElementById(id).innerHTML = pairs.map(function (p) {
+      return "<dt>" + H.esc(p[0]) + "</dt><dd>" + H.esc(p[1]) + "</dd>"; }).join("");
+  }
+  dl("closed-list", CLOSED.filter(function (c) { return c[0] <= D.CAL_YEAR.end; })
+    .map(function (c) { return ["Week of " + dmy(c[0]), c[1]]; }));
+  dl("board-list", D.CAL_BOARDS.map(function (b) {
+    return [b[0] + " · " + b[1], b[3] + " cohorts assessed " + b[2]]; }));
+  dl("ext-list", C.filter(function (r) { return r.holidays; }).map(function (r) {
+    return ["Course " + r.code + " · " + r.venue + " · runs to " + dmy(r.end), r.holidays]; }));
+
+  document.getElementById("queue").innerHTML = D.CAL_QUEUE.map(function (s) {
+    return "<div><h4>" + H.esc(s[0]) + "</h4><ul>" +
+      s[1].map(function (n) { return "<li>" + H.esc(n) + "</li>"; }).join("") + "</ul></div>";
+  }).join("");
+
+  /* statistics, counted from the registry */
+  var keys = {};
+  C.forEach(function (r) { keys[r.key] = 1; });
+  document.getElementById("k-courses").textContent = Object.keys(keys).length;
+  document.getElementById("k-cohorts").textContent = C.length;
+  document.getElementById("k-days").textContent = C.reduce(function (a, r) { return a + r.days; }, 0);
+  document.getElementById("k-weeks").textContent = D.CAL_YEAR.weeks;
+  document.getElementById("k-queue").textContent = D.CAL_QUEUE.reduce(function (a, s) { return a + s[1].length; }, 0);
+})();
+</script>
+</body>
+</html>

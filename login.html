@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign in | EDIS</title>
+<meta name="description" content="Sign in to the EDIS workspace, or create a free registered account.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Sign in</div>
+  <div class="eyebrow">Access</div>
+  <h1>Sign in to EDIS</h1>
+  <p>Institutional users sign in with the account their organisation administrator created.
+  Individuals can register for a free account with limited monthly usage.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <form class="authbox" id="signin" autocomplete="on">
+        <h2>Sign in</h2>
+        <p class="muted small">Front-end demonstration. Authentication, organisation scoping and
+        role-based access control are enforced by the platform services, not in the browser.</p>
+        <label class="field"><span>Work email <span class="reqmark">*</span></span>
+          <input type="email" name="email" required placeholder="name@ministry.go.ug"></label>
+        <label class="field"><span>Password <span class="reqmark">*</span></span>
+          <input type="password" name="password" required></label>
+        <label class="field"><span>Organisation (optional)</span>
+          <input type="text" name="org" placeholder="Leave blank to use your default"></label>
+        <button class="btn btn-primary btn-lg" type="submit" style="width:100%">Sign in</button>
+        <p class="authnote">No account? <a href="request-demo.html">Register or request access</a><br>
+        Institutional user? Ask your organisation administrator for an invitation.<br>
+        AICTEM platform staff? <a href="admin-login.html">Administrator sign-in</a></p>
+      </form>
+      <div class="formnote mt24" id="signin-note" hidden>
+        This is the public site&rsquo;s sign-in form. Continue to the workspace preview to see what a
+        signed-in user works in. <a href="workspace.html">Open the workspace preview</a>.
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">Access flow</div>
+      <h2>How a user reaches the workspace</h2>
+      <div class="flow" style="flex-direction:column">
+        <div class="step"><span class="n">01</span><b>Visitor</b><span>Explores the public site, the demonstration and the published reports.</span></div>
+        <div class="step"><span class="n">02</span><b>Create account</b><span>Registers with a work email, or is invited by an organisation administrator.</span></div>
+        <div class="step"><span class="n">03</span><b>Choose access</b><span>Free registered account, or a professional, institutional, government, enterprise or Academy licence.</span></div>
+        <div class="step"><span class="n">04</span><b>Verify</b><span>Email verification, and institutional verification where the licence requires it.</span></div>
+        <div class="step"><span class="n">05</span><b>Organisation</b><span>Joins an existing organisation, or one is created with an administrator.</span></div>
+        <div class="step"><span class="n">06</span><b>Subscription</b><span>Licence activated; model, agent, country and report permissions applied.</span></div>
+        <div class="step"><span class="n">07</span><b>Workspace</b><span>Signed in, with the sidebar, Ask EDIS, scenarios, projects, maps and reports.</span></div>
+      </div>
+      <p class="mt32"><a class="btn btn-green" href="workspace.html">Preview the workspace</a>
+      &nbsp;<a class="btn btn-outline" href="pricing.html">Compare access levels</a></p>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+document.getElementById("signin").addEventListener("submit", function (e) {
+  e.preventDefault();
+  document.getElementById("signin-note").hidden = false;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIS and spatial planning | EDIS</title>
+<meta name="description" content="The EDIS maps workspace: layers, spatial queries, facility catchments, travel time, investment mapping and scenario overlays.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Product &rsaquo; GIS</div>
+  <div class="eyebrow">Product</div>
+  <h1>Not only what is needed &mdash; where</h1>
+  <p>A geographic information system lets EDIS answer questions about location: which communities
+  lack access to a service, where a facility should be sited, who a road actually reaches, and how a
+  scenario changes the map.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Maps workspace</div>
+      <h2>Layers, queries and scenario overlays</h2>
+      <p>The maps workspace combines the spatial layers a planning ministry already holds with the
+      results of a model run, so a scenario can be read as a map rather than a table.</p>
+      <h3 class="mt32">Available layers</h3>
+      <div class="grid g2" style="gap:8px 24px">
+        <ul class="checklist" style="margin:0">
+          <li>Population and settlements</li>
+          <li>Administrative boundaries</li>
+          <li>Roads and the transport network</li>
+          <li>Health facilities</li>
+          <li>Schools and education facilities</li>
+          <li>Energy infrastructure and the grid</li>
+          <li>Water points and schemes</li>
+        </ul>
+        <ul class="checklist" style="margin:0">
+          <li>Agricultural land and cropping</li>
+          <li>Mineral occurrences and licences</li>
+          <li>Industrial areas and parks</li>
+          <li>Broadband and backbone coverage</li>
+          <li>Climate hazard and exposure</li>
+          <li>Projects and the investment pipeline</li>
+          <li>Scenario result overlays</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="chartbox">
+        <h4>Regional result overlay &mdash; demonstration</h4>
+        <div id="map-demo"></div>
+        <div class="legend">
+          <span><i style="background:#e8f2ec"></i>Smaller change</span>
+          <span><i style="background:#165237"></i>Larger change</span>
+        </div>
+        <p class="small muted mt24 mb0"><span class="demo-flag">Demonstration data</span>
+        Schematic region view. In a licensed instance this is a full cartographic map at district
+        and settlement level.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Spatial analysis</div>
+    <h2>What the spatial layer computes</h2>
+  </div>
+  <div class="grid g3">
+    <div class="card"><div class="kicker">Access</div><h3>Catchments and coverage</h3>
+      <p>Which population a facility actually serves, and which settlements fall outside every
+      catchment. The basis for a defensible statement about who is unserved.</p></div>
+    <div class="card"><div class="kicker">Access</div><h3>Travel time surfaces</h3>
+      <p>Time to the nearest functioning facility over the real network, not straight-line distance.
+      Recomputed when a road investment changes the network.</p></div>
+    <div class="card"><div class="kicker">Planning</div><h3>Siting options</h3>
+      <p>Candidate locations ranked by population served, cost, network access and overlap with
+      existing provision, passed to the appraisal system.</p></div>
+    <div class="card"><div class="kicker">Planning</div><h3>Gap analysis</h3>
+      <p>Where demand and provision diverge most, by district and by service, with the standard the
+      gap is measured against stated explicitly.</p></div>
+    <div class="card"><div class="kicker">Investment</div><h3>Investment mapping</h3>
+      <p>Where the pipeline is concentrated, where it is absent, and how a proposed portfolio
+      changes the regional distribution of provision.</p></div>
+    <div class="card"><div class="kicker">Scenario</div><h3>Scenario overlays</h3>
+      <p>Model results mapped back onto geography: poverty change by region, access change by
+      district, output change by cropping zone.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:center">
+    <div>
+      <div class="eyebrow">Worked example</div>
+      <h2>Where should the next health centres go?</h2>
+      <p>The Health Agent asks the Health model for the facility requirement, UCSN for what each
+      facility costs to build and to run, GIS for the candidate locations and the population each
+      would serve, and PIAS to rank them within the budget available.</p>
+      <div class="arrowlist mt24">
+        <b>Health</b> &rarr; <b>Demography</b> &rarr; <b>GIS</b> &rarr; <b>UCSN</b> &rarr;
+        <b>PIAS</b> &rarr; <b>MTEF</b>
+      </div>
+      <p class="mt24"><a class="btn btn-green" href="demo.html">See the full response interface</a></p>
+    </div>
+    <div class="chartbox">
+      <h4>Population beyond one hour of care, by region</h4>
+      <div id="gap-chart"></div>
+      <p class="small muted mt24 mb0"><span class="demo-flag">Demonstration data</span></p>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var H = window.EDIS;
+  document.getElementById("map-demo").innerHTML = H.gridMap([
+    ["Central", 4.1], ["Eastern", 9.2], ["Northern", 11.4], ["Western", 7.3],
+    ["West Nile", 10.8], ["Karamoja", 13.1], ["Busoga", 8.9], ["Bukedi", 9.6],
+    ["Teso", 10.1], ["Lango", 9.8], ["Acholi", 11.9], ["Ankole", 6.2]
+  ], { cols: 4, fmt: function (v) { return "+" + v.toFixed(1) + " pp"; },
+       title: "Change in population within standard access" });
+
+  document.getElementById("gap-chart").innerHTML = H.bar([
+    ["Karamoja", 61], ["Acholi", 48], ["West Nile", 44], ["Teso", 39],
+    ["Lango", 35], ["Bukedi", 31], ["Busoga", 26], ["Western", 22],
+    ["Ankole", 17], ["Central", 9]
+  ], { fmt: function (v) { return v + "%"; }, padL: 110, rowH: 30,
+       title: "Population beyond one hour of care" });
+})();
+</script>
+</body>
+</html>

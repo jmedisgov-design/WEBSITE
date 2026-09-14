@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Course catalogue | EDIS Academy</title>
+<meta name="description" content="Fourteen EDIS Academy courses, one for each school of the Academy: the modules each course teaches, how long it runs and why, its four cohorts in Nairobi, Accra and online, and its certificate.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; <a href="academy.html">EDIS Academy</a> &rsaquo; Courses</div>
+  <div class="eyebrow">Course catalogue</div>
+  <h1>Fourteen courses, one for each school</h1>
+  <p>Each course brings together the modules of one Academy school and runs for five to ten contact
+  days. Every course is offered four times: in person in <strong>Nairobi</strong> and in
+  <strong>Accra</strong>, and live online on <strong>East Africa</strong> and on
+  <strong>West Africa</strong> time. Select a course to see its modules, its dates and how to take
+  a place.</p>
+  <div class="btnrow">
+    <a class="btn btn-green" href="#explorer">Browse the catalogue</a>
+    <a class="btn btn-ghost" href="academy-calendar.html">Training calendar</a>
+  </div>
+</div></section>
+
+<section class="stats sec-tight"><div class="wrap"><div class="grid">
+  <div><div class="n" id="k-courses">14</div><div class="l">Courses</div></div>
+  <div><div class="n" id="k-modules">&mdash;</div><div class="l">Modules taught</div></div>
+  <div><div class="n" id="k-cohorts">56</div><div class="l">Cohorts a year</div></div>
+  <div><div class="n" id="k-days">&mdash;</div><div class="l">Contact days per course, 5 to 10</div></div>
+  <div><div class="n" id="k-quiz">&mdash;</div><div class="l">Assessment items</div></div>
+</div></div></section>
+
+<section class="sec-soft anchor" id="explorer"><div class="wrap">
+  <div class="eyebrow">Course explorer</div>
+  <h2 class="mb24">Select a course</h2>
+  <div class="g-sidebar grid">
+    <div>
+      <div class="filters filters--stack">
+        <label class="field"><span>Search</span>
+          <input type="search" id="c-search" placeholder="CGE, budget, climate, poverty, MEL..."></label>
+        <label class="field"><span>Length</span>
+          <select id="c-days"><option value="">Any length</option></select></label>
+        <label class="field"><span>Status</span>
+          <select id="c-status"><option value="">Any status</option>
+            <option>Available</option><option>In development</option></select></label>
+      </div>
+      <div class="ratecard">
+        <span><b>Tuition</b></span>
+        <span>Live virtual <b>US$80</b> per contact day</span>
+        <span>In person <b>US$200</b> per contact day</span>
+        <span>Each course runs twice in person and twice live virtual &mdash; the fee follows the
+        cohort you choose.</span>
+      </div>
+      <p class="counter" id="c-count"></p>
+      <div id="c-list"></div>
+    </div>
+    <div id="c-detail"></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">How a course is put together</div>
+    <h2>Five to ten days, set by what the course contains</h2>
+    <p class="muted">A course is one school of the Academy. Its length comes from the number of
+    modules in it and how deep they are, not from a slot on the timetable.</p>
+  </div>
+  <div class="grid g4">
+    <div class="card flat"><div class="kicker">Rule 01</div><h3>One day a module</h3>
+      <p class="small">A course runs four days plus one contact day for each module it teaches, so a
+      single-module course runs five days and a course of six or more modules runs the ten-day
+      maximum.</p></div>
+    <div class="card flat"><div class="kicker">Rule 02</div><h3>Depth adds a day</h3>
+      <p class="small">Where the modules average fifty or more specified learning hours &mdash; the
+      large sector models &mdash; the course takes one day more, up to ten.</p></div>
+    <div class="card flat"><div class="kicker">Rule 03</div><h3>Six contact hours a day</h3>
+      <p class="small">Contact time is shared between the modules in proportion to their specified
+      hours. The full materials for every module are issued for the work around the contact days.</p></div>
+    <div class="card flat"><div class="kicker">Rule 04</div><h3>Four cohorts</h3>
+      <p class="small">Every course runs in person in Nairobi and in Accra, and live virtual on East
+      Africa and West Africa time, spread across the year so each region has an early and a late
+      option.</p></div>
+  </div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Enrolment</div>
+    <h2>Take a place, or nominate a team</h2>
+    <p class="muted">Individual enrolment opens eight weeks before a cohort starts. Institutions
+    nominating a group are scheduled directly, so the course can be built around the
+    institution&rsquo;s own questions.</p>
+  </div>
+  <p class="btnrow" style="justify-content:center">
+    <a class="btn btn-green btn-lg" href="enrol.html">Enrol or nominate</a>
+    <a class="btn btn-outline btn-lg" href="academy-calendar.html">See all dates</a>
+    <a class="btn btn-outline btn-lg" href="partners.html">Become a training partner</a>
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/courses.js"></script>
+<script src="assets/js/outlines.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var H = window.EDIS, C = window.EDIS_COURSES, D = window.EDIS_DATA,
+      CAL = D.CALENDAR, RATES = D.CAL_RATES, OUT = window.EDIS_OUTLINES || {};
+
+  var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function dmy(s) { return (+s.slice(6, 8)) + " " + MON[+s.slice(4, 6) - 1] + " " + s.slice(0, 4); }
+  function money(n) { return "US$" + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+  function hrs(n) { return String(n).replace(/\.0$/, ""); }
+  var FULLMON = ["January", "February", "March", "April", "May", "June", "July", "August",
+                 "September", "October", "November", "December"];
+  function monthYear(s) { return s ? FULLMON[+s.slice(4, 6) - 1] + " " + s.slice(0, 4) : "later in the year"; }
+  function feeV(c) { return c.days * RATES["Live virtual"]; }
+  function feeP(c) { return c.days * RATES["In person"]; }
+  function cohorts(c) {
+    return CAL.filter(function (r) { return r.key === c.key; })
+              .sort(function (a, b) { return a.start < b.start ? -1 : 1; });
+  }
+  function hubClass(r) { return r.mode === "In person" ? "hub-" + r.venue.toLowerCase() : "hub-virtual"; }
+
+  /* a hash may name a course (#C03) or, from older links, a module (#MOD_309) */
+  function resolve(hash) {
+    var h = (hash || "").replace("#", ""), found = { course: "", module: "" };
+    C.forEach(function (c) {
+      if (c.key === h) found.course = c.key;
+      c.modules.forEach(function (m) { if (m.key === h) { found.course = c.key; found.module = m.key; } });
+    });
+    return found;
+  }
+
+  var start = resolve(location.hash);
+  var current = start.course || C[0].key, focusModule = start.module;
+
+  var listEl = document.getElementById("c-list"), detEl = document.getElementById("c-detail"),
+      cntEl = document.getElementById("c-count"), search = document.getElementById("c-search"),
+      fDays = document.getElementById("c-days"), fStatus = document.getElementById("c-status");
+
+  /* statistics and the length filter, from the registry */
+  var lengths = {}, nMod = 0, nQuiz = 0;
+  C.forEach(function (c) { lengths[c.days] = 1; nMod += c.modules.length; nQuiz += c.materials.quiz; });
+  Object.keys(lengths).map(Number).sort(function (a, b) { return a - b; }).forEach(function (d) {
+    var o = document.createElement("option"); o.value = d; o.textContent = d + " days"; fDays.appendChild(o);
+  });
+  document.getElementById("k-courses").textContent = C.length;
+  document.getElementById("k-modules").textContent = nMod;
+  document.getElementById("k-cohorts").textContent = CAL.length;
+  var ds = C.map(function (c) { return c.days; });
+  document.getElementById("k-days").textContent = Math.min.apply(null, ds) + "–" + Math.max.apply(null, ds);
+  document.getElementById("k-quiz").textContent = String(nQuiz).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
+  function row(c) {
+    var on = c.key === current;
+    return '<a href="#' + c.key + '" data-k="' + c.key + '" class="card flat" ' +
+      'style="display:block;margin-bottom:10px;padding:14px 16px;color:inherit' +
+      (on ? ";border-color:#3f9b46;background:#f6fbf7" : "") + '">' +
+      '<div style="display:flex;justify-content:space-between;gap:10px;align-items:center">' +
+        '<strong style="color:#123f63">Course ' + H.esc(c.code) + "</strong>" +
+        '<span class="badge run">' + c.days + " days</span></div>" +
+      '<div class="small" style="color:#1d2733;font-weight:600">' + H.esc(c.title) + "</div>" +
+      '<div class="small muted">' + c.moduleCount + (c.moduleCount === 1 ? " module" : " modules") +
+        (c.status !== "Available" ? ' &middot; <span style="color:#9c6a13;font-weight:700">' +
+          H.esc(c.status) + "</span>" : "") + "</div>" +
+      '<div class="small" style="margin-top:4px;color:#2e7d39;font-weight:700">' +
+        money(feeV(c)) + " virtual / " + money(feeP(c)) + " in person</div></a>";
+  }
+
+  function table(head, body) {
+    return '<div class="tablewrap"><table class="tbl tbl--compact"><thead><tr>' +
+      head.map(function (h) { return "<th>" + h + "</th>"; }).join("") +
+      "</tr></thead><tbody>" + body + "</tbody></table></div>";
+  }
+
+  function datesBlock(c) {
+    var list = cohorts(c);
+    return '<div class="cohortgrid">' + list.map(function (r) {
+        return '<div class="cohortcard" id="coh-' + H.esc(r.cohort) + '">' +
+          '<div class="cohortcard-top"><span class="hubtag ' + hubClass(r) + '">' + H.esc(r.venue) + "</span>" +
+            '<span class="small muted">' + H.esc(r.mode) + "</span></div>" +
+          '<div class="cohortcard-when">' + dmy(r.start) + " &ndash; " + dmy(r.end) + "</div>" +
+          '<dl class="dl">' +
+            "<dt>Sessions</dt><dd>" + H.esc(r.sessionHours) + "</dd>" +
+            "<dt>Fee</dt><dd><strong>" + money(r.fee) + "</strong></dd>" +
+            "<dt>Enrolment opens &middot; nominate by</dt><dd>" + dmy(r.enrol) + " &middot; " + dmy(r.nominate) + "</dd>" +
+            (r.holidays ? "<dt>Extended for</dt><dd>" + H.esc(r.holidays) + "</dd>" : "") +
+          "</dl>" +
+          '<div class="cohortcard-foot"><span class="mono small muted">' + H.esc(r.cohort) + "</span>" +
+            '<a class="btn btn-green btn-sm" href="enrol.html?course=' + encodeURIComponent(c.key) +
+            "&amp;cohort=" + encodeURIComponent(r.cohort) + '">Register</a></div></div>';
+      }).join("") + "</div>" +
+      '<p class="small muted" style="margin-top:10px">A cohort does not teach on its hub&rsquo;s public ' +
+      "holidays and runs on to the next working day instead. The final assessment is submitted within " +
+      "two weeks of the last contact day.</p>";
+  }
+
+  function moduleCard(m, i) {
+    var outline = OUT[m.key];
+    return '<details class="modcard" id="mod-' + H.esc(m.key) + '"' +
+      (m.key === focusModule ? " open" : "") + ">" +
+      "<summary>" +
+        '<span class="modnum">' + (i + 1) + "</span>" +
+        '<span class="modhead"><b>' + H.esc(m.code) + " &mdash; " + H.esc(m.title) + "</b>" +
+          '<small>' + hrs(m.contactHours) + " contact hours in this course &middot; written as " +
+          hrs(m.hours) + " specified learning hours &middot; " + m.lectures + " lectures, " +
+          m.labs + " laboratories</small></span>" +
+      "</summary>" +
+      '<div class="modbody">' +
+        (m.summary ? "<p>" + H.esc(m.summary) + "</p>" : "") +
+        (m.outcomes.length ? '<h5>Learning outcomes</h5><ol>' + m.outcomes.map(function (o) {
+          return "<li>" + H.esc(o) + "</li>"; }).join("") + "</ol>" : "") +
+        (m.engine ? '<p class="small muted"><strong>Model.</strong> ' + H.esc(m.engine) + "</p>" : "") +
+        (m.prereq ? '<p class="small muted"><strong>Module prerequisites, as published.</strong> ' +
+          H.esc(m.prereq) + "</p>" : "") +
+        (outline
+          ? '<h5>Module outline</h5>' +
+            (m.outlinePdf ? '<p class="btnrow" style="margin:0 0 12px"><a class="btn btn-outline btn-sm" ' +
+              'href="assets/downloads/outlines/' + encodeURIComponent(m.key.replace("_", "-")) +
+              '-course-outline.pdf" download>Download the outline (PDF)</a></p>' : "") +
+            '<div class="outline">' + outline + "</div>"
+          : '<p class="small muted">This module does not publish a separate outline document.</p>') +
+      "</div></details>";
+  }
+
+  function detail(c) {
+    var out = [], list = cohorts(c);
+    out.push('<article class="card flat">');
+    out.push('<div style="display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap">' +
+      "<div>" +
+        '<div class="kicker">Course ' + H.esc(c.code) + " &middot; " + H.esc(c.folder) + "</div>" +
+        '<h2 style="margin-bottom:.15em">' + H.esc(c.title) + "</h2>" +
+        '<p class="muted" style="margin:0">' + c.moduleCount + (c.moduleCount === 1 ? " module" : " modules") +
+          (c.modules.length ? "" : " planned") + " &middot; " + c.days + " contact days &middot; " +
+          c.hours + " contact hours</p>" +
+      "</div>" +
+      '<div style="text-align:right">' +
+        '<span class="badge ' + (c.status === "Available" ? "ok" : "partial") + '">' + H.esc(c.status) + "</span>" +
+        '<div class="coursefee">' + money(feeV(c)) + '</div><div class="small muted">live virtual</div>' +
+        '<div class="coursefee">' + money(feeP(c)) + '</div><div class="small muted">in person</div>' +
+      "</div></div>");
+
+    out.push('<div class="lead" style="margin-top:18px"><p>' + H.esc(c.about[0]) + "</p></div>");
+    c.about.slice(1).forEach(function (p) { out.push("<p>" + H.esc(p) + "</p>"); });
+
+    out.push('<h3 style="margin-top:26px">When it runs</h3>');
+    out.push(datesBlock(c));
+
+    out.push('<div class="callout" style="margin-top:22px"><h4>Why ' + c.days + " days</h4>" +
+      '<p class="mb0">' + H.esc(c.daysRule.charAt(0).toUpperCase() + c.daysRule.slice(1)) +
+      (c.daysRule.slice(-1) === "." ? "" : ".") + " Every course runs between five and ten contact days: " +
+      "four days plus one for each module, with a day more where the modules are unusually deep.</p></div>");
+
+    out.push("<hr>");
+    if (c.modules.length) {
+      out.push("<h3>Modules</h3>");
+      out.push('<p class="small muted">Taught in this order. Open a module for its own published summary, ' +
+        "learning outcomes and outline.</p>");
+      out.push(c.modules.map(moduleCard).join(""));
+    }
+    if (c.planned.length) {
+      out.push('<h4 style="margin-top:24px">' + (c.modules.length ? "Modules still to be written" :
+        "Planned modules") + "</h4>");
+      out.push('<ul style="margin:8px 0 0;padding-left:1.2em">' + c.planned.map(function (p) {
+        return '<li>' + H.esc(p) + ' <span class="badge partial">not yet written</span></li>'; }).join("") + "</ul>");
+      if (!c.modules.length) {
+        out.push('<div class="callout warn"><p class="mb0">No teaching materials exist for this course yet. ' +
+          "Its cohorts are held on the calendar from " + monthYear(D.CAL_YEAR.provisionalFrom) + " and will be confirmed when the materials " +
+          "pass review.</p></div>");
+      }
+    }
+
+    if (c.dayPlan.length) {
+      out.push('<h4 style="margin-top:28px">Day by day</h4>');
+      out.push(table(["Day", "Taught that day", "Hours"], c.dayPlan.map(function (d) {
+        return '<tr><td class="num">' + d[0] + "</td><td>" + d[1].map(function (x) {
+          return H.esc(x[0]) + ' <span class="muted small">' + hrs(x[1]) + " h</span>"; }).join(" &middot; ") +
+          '</td><td class="num">' + hrs(d[1].reduce(function (a, x) { return a + x[1]; }, 0)) + "</td></tr>";
+      }).join("")));
+    }
+
+    out.push('<h4 style="margin-top:28px">Certificate</h4>');
+    out.push("<p><strong>" + H.esc(c.award) + "</strong></p>");
+    out.push(table(["Requirement", "Threshold"], c.requirements.map(function (x) {
+      return "<tr><td>" + H.esc(x[0]) + '</td><td class="rowlabel">' + H.esc(x[1]) + "</td></tr>";
+    }).join("")));
+
+    if (c.modules.length) {
+      out.push('<h4 style="margin-top:26px">What the course carries</h4>');
+      out.push('<div class="kpis">' +
+        '<div class="kpi"><div class="k">Lecture decks</div><div class="v">' + c.materials.lectures + "</div></div>" +
+        '<div class="kpi"><div class="k">Laboratory decks</div><div class="v">' + c.materials.labs + "</div></div>" +
+        '<div class="kpi"><div class="k">Data files</div><div class="v">' + c.materials.data + "</div></div>" +
+        '<div class="kpi"><div class="k">Assessment items</div><div class="v">' + c.materials.quiz + "</div></div>" +
+        "</div>");
+    }
+
+    var prior = C.filter(function (x) { return x.key === c.prior; })[0];
+    out.push('<div class="prov" style="margin-top:24px"><dl>' +
+      "<dt>Recommended first</dt><dd>" + (prior ? '<a href="#' + prior.key + '" data-k="' + prior.key +
+        '">Course ' + H.esc(prior.code) + " &mdash; " + H.esc(prior.title) + "</a>" : "Nothing") + "</dd>" +
+      "<dt>Prerequisites</dt><dd>" + H.esc(c.prereq) + "</dd>" +
+      "<dt>Who it is for</dt><dd>" + H.esc(c.audience) + "</dd>" +
+      "<dt>Delivery</dt><dd>In person in Nairobi and Accra; live virtual on East Africa and West Africa time</dd>" +
+      "<dt>Pass mark</dt><dd>" + c.passMark + " %</dd>" +
+      "<dt>Fee</dt><dd>" + money(feeV(c)) + " live virtual, or " + money(feeP(c)) + " in person &mdash; " +
+        c.days + " contact days at " + money(RATES["Live virtual"]) + " or " + money(RATES["In person"]) +
+        " a day</dd>" +
+      "</dl></div>");
+
+    out.push('<div class="card-actions" style="margin-top:20px">' +
+      '<a class="btn btn-green btn-sm" href="enrol.html?course=' + encodeURIComponent(c.key) + '">Enrol on this course</a>' +
+      '<a class="btn btn-outline btn-sm" href="academy-calendar.html#' +
+        encodeURIComponent(list.length ? list[0].cohort : "") + '">See it on the calendar</a>' +
+      '<a class="btn btn-outline btn-sm" href="partners.html">Deliver it as a partner</a>' +
+      "</div></article>");
+    return out.join("");
+  }
+
+  function draw() {
+    var t = search.value.trim().toLowerCase(), d = fDays.value, s = fStatus.value;
+    var list = C.filter(function (c) {
+      var hay = ("course " + c.code + " " + c.title + " " + c.about.join(" ") + " " + c.planned.join(" ") + " " +
+        c.modules.map(function (m) { return m.code + " " + m.title + " " + m.summary; }).join(" ")).toLowerCase();
+      return (!t || hay.indexOf(t) > -1) && (!d || String(c.days) === d) && (!s || c.status === s);
+    });
+    if (!list.some(function (c) { return c.key === current; }) && list.length) current = list[0].key;
+    listEl.innerHTML = list.length ? list.map(row).join("") : '<div class="empty">No course matches that filter.</div>';
+    cntEl.textContent = list.length + " of " + C.length + " courses";
+    var c = C.filter(function (x) { return x.key === current; })[0];
+    detEl.innerHTML = c && list.length ? detail(c) : "";
+  }
+
+  function open(key, scroll) {
+    current = key; focusModule = "";
+    try { history.replaceState(null, "", "#" + key); } catch (err) { /* file:// */ }
+    draw();
+    if (scroll || (window.matchMedia && window.matchMedia("(max-width:980px)").matches)) {
+      detEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  listEl.addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-k]");
+    if (!a) return;
+    e.preventDefault(); open(a.getAttribute("data-k"), false);
+  });
+  detEl.addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-k]");
+    if (!a) return;
+    e.preventDefault(); open(a.getAttribute("data-k"), true);
+  });
+  [search, fDays, fStatus].forEach(function (el) {
+    el.addEventListener("input", draw); el.addEventListener("change", draw);
+  });
+  window.addEventListener("hashchange", function () {
+    var f = resolve(location.hash);
+    if (f.course) { current = f.course; focusModule = f.module; draw(); }
+  });
+
+  draw();
+  if (focusModule) {
+    var el = document.getElementById("mod-" + focusModule);
+    if (el) el.scrollIntoView({ block: "center" });
+  }
+})();
+</script>
+</body>
+</html>

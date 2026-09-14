@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enrol on a course | EDIS Academy</title>
+<meta name="description" content="Take a place on an EDIS Academy cohort, or nominate a team from your institution. Choose the course and the dates, and the Academy confirms the place and provisions laboratory access.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; <a href="academy.html">EDIS Academy</a>
+    &rsaquo; <a href="courses.html">Courses</a> &rsaquo; Enrol</div>
+  <div class="eyebrow">Enrolment</div>
+  <h1 id="page-title">Take a place on a cohort</h1>
+  <p id="page-lede">Choose the course and the cohort &mdash; each course runs four times, in person in Nairobi
+  and Accra and live virtual on East Africa and West Africa time. Individual enrolment
+  opens eight weeks before a cohort starts; institutions nominating a team are scheduled directly,
+  so the course can be built around the institution&rsquo;s own questions.</p>
+</div></section>
+
+<section><div class="wrap"><div class="g-sidebar grid">
+  <div>
+    <div class="card flat" id="chosen" hidden></div>
+
+    <form id="enrol-form" class="card flat" style="padding:28px;margin-top:24px">
+      <div class="formgrid">
+        <label class="field full"><span>Course <span class="reqmark">*</span></span>
+          <select name="course" id="f-course" required></select></label>
+        <label class="field full"><span>Cohort <span class="reqmark">*</span></span>
+          <select name="cohort" id="f-cohort" required></select>
+          <span class="small muted" id="cohort-note"></span></label>
+        <p class="field full small muted" id="mode-note" style="margin:-6px 0 0">Each cohort is either in person in Nairobi or Accra, or live virtual on East Africa or West Africa time. Choose the cohort that suits you; the fee follows it.</p>
+        <label class="field"><span>Enrolling as <span class="reqmark">*</span></span>
+          <select name="enrolment_type" id="f-type" required>
+            <option value="Individual">An individual</option>
+            <option value="Institutional nomination">An institution nominating a team</option>
+          </select></label>
+        <label class="field" id="wrap-count" hidden><span>Participants to nominate</span>
+          <input type="number" name="participants" min="2" max="60" value="6"></label>
+        <label class="field"><span>Name <span class="reqmark">*</span></span>
+          <input type="text" name="name" required></label>
+        <label class="field"><span>Institution <span class="reqmark">*</span></span>
+          <input type="text" name="institution" required></label>
+        <label class="field"><span>Role <span class="reqmark">*</span></span>
+          <input type="text" name="role" required placeholder="e.g. Senior Economist, Budget Directorate"></label>
+        <label class="field"><span>Country <span class="reqmark">*</span></span>
+          <input type="text" name="country" required></label>
+        <label class="field"><span>Work email <span class="reqmark">*</span></span>
+          <input type="email" name="email" required></label>
+        <label class="field full"><span>What you need the course to answer</span>
+          <textarea name="message" placeholder="e.g. We are rebuilding the MTEF ceilings for FY2027/28 and need the team to run the model themselves rather than commission it."></textarea></label>
+      </div>
+      <div class="btnrow mt24">
+        <button class="btn btn-green btn-lg" type="submit">Send enrolment request</button>
+        <span class="small muted">We reply from <a href="mailto:info@aictem.org">info@aictem.org</a>.</span>
+      </div>
+    </form>
+    <div class="formnote mt24" id="sent" hidden></div>
+  </div>
+
+  <div>
+    <div class="eyebrow">What happens next</div>
+    <h2>Four steps</h2>
+    <div class="flow" style="flex-direction:column">
+      <div class="step"><span class="n">01</span><b>Confirmation</b>
+        <span>We confirm the place, or offer the next cohort if this one is full. Institutional
+        nominations are confirmed against the institution&rsquo;s own dates.</span></div>
+      <div class="step"><span class="n">02</span><b>Prerequisites</b>
+        <span>We check the stated prerequisites with you. Where one is missing we say which earlier
+        course covers it rather than letting the cohort discover it in the laboratory.</span></div>
+      <div class="step"><span class="n">03</span><b>Laboratory access</b>
+        <span>Model access, the training datasets and a sandboxed workspace are provisioned when
+        enrolment opens, eight weeks before the first contact day.</span></div>
+      <div class="step"><span class="n">04</span><b>Assessment and certificate</b>
+        <span>The final assessment is submitted within two weeks of the last contact day. The
+        certificate is issued at the next quarterly board and is verifiable against the Academy
+        register.</span></div>
+    </div>
+
+    <div class="callout mt32">
+      <h4>Not sure which course?</h4>
+      <p class="mb0">The <a href="courses.html">catalogue</a> gives every course in full, including
+      its prerequisites, learning outcomes and module structure. The
+      <a href="academy-calendar.html">training calendar</a> shows the whole programme at once.</p>
+    </div>
+
+    <div class="card flat mt24">
+      <h3>Other routes</h3>
+      <ul class="checklist" style="margin-top:12px">
+        <li><a href="partners.html">Training partnerships</a> for universities and institutes
+          delivering these courses themselves</li>
+        <li><a href="pricing.html">Academy access</a> and the wider licence levels</li>
+        <li><a href="request-demo.html">A demonstration</a> of the platform first</li>
+        <li><a href="contact.html">Talk to the Academy</a> about an institutional programme</li>
+      </ul>
+    </div>
+  </div>
+</div></div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/courses.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var H = window.EDIS, C = window.EDIS_COURSES, D = window.EDIS_DATA, CAL = D.CALENDAR, RATES = D.CAL_RATES;
+
+  var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function dmy(s) { return (+s.slice(6, 8)) + " " + MON[+s.slice(4, 6) - 1] + " " + s.slice(0, 4); }
+  function money(n) { return "US$" + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+  function qs(k) {
+    var m = new RegExp("[?&]" + k + "=([^&]*)").exec(location.search);
+    return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+  }
+
+  var selCourse = document.getElementById("f-course"), selCohort = document.getElementById("f-cohort"),
+      note = document.getElementById("cohort-note"), chosen = document.getElementById("chosen"),
+      selType = document.getElementById("f-type"), wrapCount = document.getElementById("wrap-count");
+
+  C.forEach(function (c) {
+    var o = document.createElement("option");
+    o.value = c.key;
+    o.textContent = "Course " + c.code + " — " + c.title + " (" + c.days + " days)" +
+      (c.status !== "Available" ? " — " + c.status : "");
+    selCourse.appendChild(o);
+  });
+
+  function course() { return C.filter(function (c) { return c.key === selCourse.value; })[0]; }
+  function cohort() { return CAL.filter(function (r) { return r.cohort === selCohort.value; })[0]; }
+
+  function fillCohorts(preferred) {
+    var c = course(), list = c ? CAL.filter(function (r) { return r.key === c.key; })
+      .sort(function (a, b) { return a.start < b.start ? -1 : 1; }) : [];
+    selCohort.innerHTML = "";
+    ["In person", "Live virtual"].forEach(function (mode) {
+      var grp = document.createElement("optgroup");
+      grp.label = mode;
+      list.filter(function (r) { return r.mode === mode; }).forEach(function (r) {
+        var o = document.createElement("option");
+        o.value = r.cohort;
+        o.textContent = dmy(r.start) + " to " + dmy(r.end) + " · " + r.venue + " · " + money(r.fee);
+        grp.appendChild(o);
+      });
+      if (grp.children.length) selCohort.appendChild(grp);
+    });
+    if (preferred && list.some(function (r) { return r.cohort === preferred; })) selCohort.value = preferred;
+    if (!selCohort.value && selCohort.options.length) selCohort.selectedIndex = 0;
+    note.textContent = c && c.status !== "Available"
+      ? "This course's materials are still being written, so its dates are provisional. We will confirm them before enrolment closes."
+      : "";
+    summarise();
+  }
+
+  function summarise() {
+    var c = course(), r = cohort();
+    if (!c) { chosen.hidden = true; return; }
+    var html = '<div class="kicker">Course ' + H.esc(c.code) + " &middot; " + c.moduleCount +
+      (c.moduleCount === 1 ? " module" : " modules") + "</div>" +
+      '<h2 style="margin-bottom:.15em">' + H.esc(c.title) + "</h2>" +
+      '<p class="muted" style="margin:.2em 0 14px">' + c.days + " contact days &middot; " + c.hours + " contact hours</p>";
+    if (r) {
+      html += '<p class="coursefee-line">Fee <strong>' + money(r.fee) + "</strong> " +
+        '<span class="muted small">' + H.esc(r.mode.toLowerCase()) + ", " + money(RATES[r.mode]) +
+        " a day &times; " + c.days + " contact days.</span></p>" +
+        '<div class="prov"><dl>' +
+        "<dt>Runs</dt><dd>" + dmy(r.start) + " to " + dmy(r.end) + "</dd>" +
+        "<dt>Where</dt><dd>" + H.esc(r.place) + "</dd>" +
+        "<dt>Sessions</dt><dd>" + H.esc(r.sessionHours) + "</dd>" +
+        "<dt>Enrolment opens</dt><dd>" + dmy(r.enrol) + "</dd>" +
+        "<dt>Nominations close</dt><dd>" + dmy(r.nominate) + "</dd>" +
+        "<dt>Assessment due</dt><dd>" + dmy(r.assess) + "</dd>" +
+        "<dt>Cohort</dt><dd>" + H.esc(r.cohort) + "</dd>" +
+        (r.holidays ? "<dt>Extended for</dt><dd>" + H.esc(r.holidays) + "</dd>" : "") +
+        "</dl></div>" +
+        '<p class="small muted" style="margin-top:12px">' + (r.mode === "In person"
+          ? "Taught at the AICTEM regional hub. Travel and accommodation are not included in the fee."
+          : "Taught live into the EDIS laboratory; join from wherever you are.") + "</p>";
+    }
+    html += '<p class="small muted" style="margin-top:10px"><strong>Prerequisites.</strong> ' + H.esc(c.prereq) + "</p>" +
+      '<p class="btnrow" style="margin-top:6px"><a class="btn btn-outline btn-sm" href="courses.html#' +
+      encodeURIComponent(c.key) + '">Read the full course</a></p>';
+    chosen.innerHTML = html;
+    chosen.hidden = false;
+    document.getElementById("page-title").textContent = "Enrol on Course " + c.code;
+    document.getElementById("page-lede").textContent = c.title + ". " +
+      (r ? r.venue + ", " + dmy(r.start) + " to " + dmy(r.end) + "." : "Choose a cohort below.") +
+      " Confirm your details and the Academy will reply with the place and the laboratory access.";
+  }
+
+  selCourse.addEventListener("change", function () { fillCohorts(); });
+  selCohort.addEventListener("change", summarise);
+  selType.addEventListener("change", function () { wrapCount.hidden = selType.value !== "Institutional nomination"; });
+
+  /* pre-select from the query string; older links may name a module (?course=MOD_309) */
+  var wantCourse = qs("course"), wantCohort = qs("cohort");
+  var byCohort = CAL.filter(function (x) { return x.cohort === wantCohort; })[0];
+  var match = C.filter(function (c) {
+    return c.key === wantCourse || c.modules.some(function (m) { return m.key === wantCourse; });
+  })[0];
+  if (byCohort) selCourse.value = byCohort.key;
+  else if (match) selCourse.value = match.key;
+  fillCohorts(wantCohort);
+
+  document.getElementById("enrol-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var data = new FormData(e.target), sent = document.getElementById("sent"), c = course(), r = cohort();
+    var subject = "EDIS Academy enrolment - Course " + (c ? c.code : "") + " - " + (r ? r.cohort : "") +
+      " - " + (data.get("institution") || "");
+    var body = [];
+    if (c) body.push("course_title: Course " + c.code + " " + c.title);
+    if (r) body.push("cohort: " + r.cohort + " (" + r.mode + ", " + r.venue + ", " + dmy(r.start) + " to " + dmy(r.end) + ")");
+    if (r) body.push("fee: " + money(r.fee));
+    data.forEach(function (v, k) { if (v && k !== "cohort") body.push(k + ": " + v); });
+    sent.innerHTML = "Thank you. This static preview does not post to a server. " +
+      "Your enrolment request has been prepared as an email &mdash; " +
+      '<a href="mailto:info@aictem.org?subject=' + encodeURIComponent(subject) + "&body=" +
+      encodeURIComponent(body.join("\n")) + '">open it in your mail client</a>, or write to ' +
+      '<a href="mailto:info@aictem.org">info@aictem.org</a>.';
+    sent.hidden = false;
+    sent.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+})();
+</script>
+</body>
+</html>

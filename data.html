@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data and provenance | EDIS</title>
+<meta name="description" content="How EDIS sources, scores, versions and traces the data behind every result. Data first: no model executes against an unverified dataset.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Product &rsaquo; Data</div>
+  <div class="eyebrow">Product</div>
+  <h1>Data first</h1>
+  <p>No model executes against an unverified dataset. Every dataset in EDIS carries provenance,
+  metadata, a quality score, a version, an update history and licensing information &mdash; and every
+  number the platform displays can be traced back to it.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">What EDIS organises</div>
+    <h2>The development data system</h2>
+    <p class="muted">EDIS does not replace national statistical or administrative systems. It makes
+    their information usable together, for integrated decisions, without moving custody of the data.</p>
+  </div>
+  <div class="grid g4">
+    <div class="card flat"><h3>Economic and fiscal</h3><p class="small">National accounts, balance of payments, price indices, fiscal accounts, budget estimates, execution reports, debt register, revenue statistics, social accounting matrices and input&ndash;output tables.</p></div>
+    <div class="card flat"><h3>Social and household</h3><p class="small">Population census and projections, household surveys, labour force surveys, demographic and health surveys, education management information, health facility and service data.</p></div>
+    <div class="card flat"><h3>Infrastructure and spatial</h3><p class="small">Administrative boundaries, settlement and population grids, road inventories and traffic counts, generation and grid layers, water points, facility registers, broadband coverage, project locations.</p></div>
+    <div class="card flat"><h3>Environment and risk</h3><p class="small">Rainfall and temperature series, climate projections, hazard and exposure layers, soil and land use, emissions inventories, commodity price series.</p></div>
+  </div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Quality control</div>
+      <h2>Every dataset is scored before it is used</h2>
+      <p>A dataset enters the platform through a registration step. Until it passes, no model that
+      depends on it can be marked ready for the country and year concerned.</p>
+      <ul class="checklist mt24">
+        <li><strong>Provenance</strong> &mdash; custodian, collection method, reference period</li>
+        <li><strong>Licensing</strong> &mdash; what may be redistributed, and to whom</li>
+        <li><strong>Coverage</strong> &mdash; geographic and temporal completeness</li>
+        <li><strong>Consistency</strong> &mdash; reconciliation against related series</li>
+        <li><strong>Currency</strong> &mdash; how recent, and how often it is updated</li>
+        <li><strong>Quality score</strong> &mdash; recorded, versioned and shown to the user</li>
+      </ul>
+    </div>
+    <div>
+      <div class="tablewrap">
+        <table class="tbl">
+          <thead><tr><th>Dataset</th><th>Custodian</th><th>Year</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="rowlabel">National household survey</td><td>National statistics office</td><td class="num">2019/20</td><td><span class="badge ok">Validated</span></td></tr>
+            <tr><td class="rowlabel">Approved estimates and BFP</td><td>Finance ministry</td><td class="num">2024/25</td><td><span class="badge ok">Validated</span></td></tr>
+            <tr><td class="rowlabel">Health facility master list</td><td>Health ministry</td><td class="num">2024</td><td><span class="badge ok">Validated</span></td></tr>
+            <tr><td class="rowlabel">Social accounting matrix</td><td>AICTEM</td><td class="num">2022</td><td><span class="badge ok">Validated</span></td></tr>
+            <tr><td class="rowlabel">Road inventory and condition</td><td>Roads authority</td><td class="num">2023</td><td><span class="badge partial">Partial</span></td></tr>
+            <tr><td class="rowlabel">Broadband coverage layers</td><td>Communications regulator</td><td class="num">&mdash;</td><td><span class="badge err">Data missing</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted mt24">Illustrative register view. In a licensed country instance this table is
+      the live data catalogue, filtered by what the organisation is permitted to see.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Provenance</div>
+    <h2>The record attached to every figure</h2>
+    <p class="muted">No numerical answer appears without this record. It is what makes a result
+    defensible in a budget committee, a board paper or a peer review.</p>
+  </div>
+  <div class="prov" style="max-width:none">
+    <dl>
+      <dt>Data source</dt><dd>Utopia National Household Survey</dd>
+      <dt>Data year</dt><dd>2019/20</dd>
+      <dt>Country</dt><dd>Utopia</dd>
+      <dt>Model</dt><dd>Poverty microsimulation</dd>
+      <dt>Model version</dt><dd>2.4</dd>
+      <dt>Scenario</dt><dd>AGR-CAPEX-1T</dd>
+      <dt>Run ID</dt><dd>EDIS-DEMO-2026-0413</dd>
+      <dt>Timestamp</dt><dd>2026-04-13 09:41 UTC</dd>
+      <dt>Parameters</dt><dd>Targeting rule: geographic; pass-through: 0.7</dd>
+      <dt>Transformations</dt><dd>Deflated to 2024 prices; district aggregation</dd>
+      <dt>Validation status</dt><dd>Validated</dd>
+    </dl>
+  </div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Institutional data</div>
+      <h2>Government data stays where it belongs</h2>
+      <p>Under a government licence, institutional data can be integrated into a private workspace.
+      That data is isolated to the organisation, is never used to answer another organisation&rsquo;s
+      question, and every access is recorded in the audit trail.</p>
+      <ul class="checklist">
+        <li>Organisation-scoped storage and permissions</li>
+        <li>Private workspaces with audit trails</li>
+        <li>Cross-organisation isolation enforced and tested</li>
+        <li>Configurable retention and export controls</li>
+        <li>No private dataset is exposed through the public site or the demonstration</li>
+      </ul>
+    </div>
+    <div>
+      <div class="eyebrow">Open data</div>
+      <h2>What is public stays public</h2>
+      <p>Published indicators, selected dashboards and the reports library are available without an
+      account. AICTEM&rsquo;s existing publications, research papers and diagnostic reports remain
+      where they are, at aictem.org, and EDIS links to them rather than replacing them.</p>
+      <p class="btnrow">
+        <a class="btn btn-primary" href="resources.html">Resources</a>
+        <a class="btn btn-outline" href="https://aictem.org" target="_blank" rel="noopener">AICTEM publications</a>
+      </p>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request a quote, proposal or demonstration | EDIS</title>
+<meta name="description" content="Request an EDIS quote, proforma invoice, formal proposal, demonstration or sandbox. Institutional and government procurement is supported without a credit card, including development-partner financed deployments.">
+<link rel="canonical" href="https://edisgov.org/request-quote.html">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; <a href="pricing.html">Pricing</a>
+    &rsaquo; Request</div>
+  <div class="eyebrow">Institutional and government procurement</div>
+  <h1 id="page-title">Request a quote, proposal or demonstration</h1>
+  <p id="page-lede">Government and institutional buyers rarely purchase with a card. Tell us what
+  you need and in what form &mdash; a quote, a proforma invoice, a formal proposal, a demonstration
+  or a sandbox on sample data &mdash; and AICTEM will respond with a document your procurement
+  process can use.</p>
+</div></section>
+
+<section><div class="wrap"><div class="g-sidebar grid">
+  <div>
+    <div class="card flat" id="chosen" hidden></div>
+
+    <form id="quote-form" class="card flat" style="padding:28px;margin-top:24px">
+      <h3>Your request</h3>
+      <div class="formgrid mt24">
+        <label class="field full"><span>What do you need <span class="reqmark">*</span></span>
+          <select name="request_type" id="f-intent" required></select></label>
+        <label class="field"><span>Plan of interest</span>
+          <select name="plan" id="f-plan"></select></label>
+        <label class="field"><span>Number of users</span>
+          <input type="number" name="users" id="f-users" min="1" max="2000" value="25"></label>
+        <label class="field full"><span>Modules or sectors required</span>
+          <input type="text" name="modules" id="f-modules"
+            placeholder="e.g. FINEX, MTEF, Public Investment, Energy"></label>
+
+        <label class="field"><span>Country <span class="reqmark">*</span></span>
+          <input type="text" name="country" required></label>
+        <label class="field"><span>Country income classification</span>
+          <select name="income_band" id="f-band"></select></label>
+        <label class="field"><span>Institution <span class="reqmark">*</span></span>
+          <input type="text" name="institution" required></label>
+        <label class="field"><span>Institution type</span>
+          <select name="institution_type" id="f-insttype"></select></label>
+        <label class="field"><span>Department or directorate</span>
+          <input type="text" name="department"></label>
+
+        <label class="field"><span>Contact name <span class="reqmark">*</span></span>
+          <input type="text" name="name" required></label>
+        <label class="field"><span>Job title <span class="reqmark">*</span></span>
+          <input type="text" name="job_title" required
+            placeholder="e.g. Commissioner, Budget Directorate"></label>
+        <label class="field"><span>Institutional email <span class="reqmark">*</span></span>
+          <input type="email" name="email" required></label>
+        <label class="field"><span>Phone</span>
+          <input type="tel" name="phone"></label>
+
+        <label class="field"><span>Estimated deployment date</span>
+          <input type="month" name="deployment_date"></label>
+        <label class="field"><span>Funding source</span>
+          <select name="funding_source" id="f-funding"></select></label>
+        <label class="field"><span>Procurement method</span>
+          <select name="procurement_method" id="f-method"></select></label>
+        <label class="field" id="wrap-donor" hidden><span>Development partner</span>
+          <select name="donor_partner" id="f-donor"></select></label>
+        <label class="field full" id="wrap-beneficiary" hidden>
+          <span>Government beneficiary</span>
+          <input type="text" name="beneficiary"
+            placeholder="The government or institution the deployment is for"></label>
+        <label class="field" id="wrap-duration" hidden><span>Duration</span>
+          <select name="duration">
+            <option>1 year</option><option selected>3 years</option>
+            <option>5 years</option><option>Not yet determined</option>
+          </select></label>
+        <label class="field" id="wrap-budget" hidden><span>Estimated budget (USD)</span>
+          <input type="text" name="estimated_budget" placeholder="e.g. 250,000"></label>
+
+        <label class="field"><span>Training participants</span>
+          <input type="number" name="training_participants" min="0" max="500" value="0"></label>
+        <label class="field full"><span>Comments &mdash; the questions you need EDIS to answer</span>
+          <textarea name="comments" placeholder="e.g. We are rebuilding the MTEF ceilings for FY2027/28 and need our own analysts to run the model rather than commission it."></textarea></label>
+      </div>
+      <div class="btnrow mt24">
+        <button class="btn btn-green btn-lg" type="submit">Send request</button>
+        <span class="small muted">We reply from
+          <a href="mailto:info@aictem.org">info@aictem.org</a>.</span>
+      </div>
+    </form>
+    <div class="formnote mt24" id="sent" hidden></div>
+  </div>
+
+  <div>
+    <div class="eyebrow">What happens next</div>
+    <h2>Four steps</h2>
+    <div class="flow" style="flex-direction:column">
+      <div class="step"><span class="n">01</span><b>Scoping</b>
+        <span>A short call to establish the institution, the country, the policy questions and who
+        needs to be in the room. No commitment.</span></div>
+      <div class="step"><span class="n">02</span><b>Demonstration</b>
+        <span>EDIS is run against one of your own questions, with the model chain, the provenance
+        and the limitations shown as they would be in production.</span></div>
+      <div class="step"><span class="n">03</span><b>Proposal</b>
+        <span>A written commercial proposal: subscription, implementation, training and support,
+        with development access pricing applied where it is available.</span></div>
+      <div class="step"><span class="n">04</span><b>Contract and implementation</b>
+        <span>Country configuration, data setup, calibration, user provisioning, training and
+        testing, against an agreed plan.</span></div>
+    </div>
+
+    <div class="callout mt32">
+      <h4>Procurement without a card</h4>
+      <p class="mb0">Institutional contracts support quotes, proforma invoices, formal proposals,
+      purchase orders, framework agreements and development-partner procurement. Only the
+      individual plans use online payment.</p>
+    </div>
+
+    <div class="card flat mt24">
+      <h3>Also available</h3>
+      <ul class="checklist" style="margin-top:12px">
+        <li><a href="pricing.html#calculator">Estimate an institutional deployment</a> before you ask</li>
+        <li><a href="pricing.html#configurator">Build your EDIS package</a> from a recommendation</li>
+        <li><a href="government.html">EDIS for governments</a> &mdash; workflows by institution</li>
+        <li><a href="academy.html">EDIS Academy</a> for training and cohorts</li>
+        <li><a href="demo.html">The public demonstration</a>, with no account required</li>
+      </ul>
+    </div>
+  </div>
+</div></div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/pricing.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var P = window.EDIS_PRICING, H = window.EDIS;
+
+  function qs(k) {
+    var m = new RegExp("[?&]" + k + "=([^&]*)").exec(location.search);
+    return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+  }
+  function fill(sel, pairs, blank) {
+    var el = document.getElementById(sel);
+    if (blank) el.add(new Option(blank, ""));
+    pairs.forEach(function (p) { el.add(new Option(p[1], p[0])); });
+    return el;
+  }
+
+  var intent = fill("f-intent", P.PROCUREMENT_INTENTS);
+  fill("f-plan", P.PLANS.map(function (p) { return [p.id, p.name]; }), "Not sure yet");
+  fill("f-band", P.COUNTRY_BANDS.map(function (b) { return [b.id, b.name]; }), "Not sure");
+  fill("f-insttype", P.INSTITUTION_PACKAGES.map(function (i) { return [i.id, i.name]; }), "Other");
+  fill("f-funding", P.FUNDING_SOURCES.map(function (f) { return [f, f]; }));
+  fill("f-method", P.PROCUREMENT_METHODS.map(function (m) { return [m, m]; }));
+  fill("f-donor", P.DONOR_PARTNERS.map(function (d) { return [d, d]; }));
+
+  /* pre-fill from the pricing page, calculator or configurator */
+  var wantPlan = qs("plan"), wantIntent = qs("intent");
+  if (wantIntent) intent.value = wantIntent;
+  if (wantPlan && P.plan(wantPlan)) document.getElementById("f-plan").value = wantPlan;
+  if (qs("users")) document.getElementById("f-users").value = qs("users");
+  if (qs("band")) document.getElementById("f-band").value = qs("band");
+  if (qs("institution")) document.getElementById("f-insttype").value = qs("institution");
+  var mods = qs("modules") || qs("sectors");
+  if (mods) document.getElementById("f-modules").value = mods.replace(/,/g, ", ");
+
+  var TITLES = {
+    quote: "Request a quote", proforma: "Request a proforma invoice",
+    proposal: "Request a formal proposal", demo: "Request an EDIS demonstration",
+    sandbox: "Request a sandbox demonstration",
+    procurement: "Contact the procurement team",
+    donor: "Fund EDIS for a government", subscribe: "Start an EDIS subscription",
+    national: "Discuss a national deployment", sovereign: "Contact AICTEM"
+  };
+
+  function donorMode() { return intent.value === "donor"; }
+
+  function summarise() {
+    var p = P.plan(document.getElementById("f-plan").value);
+    var t = TITLES[intent.value] || "Request a quote, proposal or demonstration";
+    document.getElementById("page-title").textContent = t;
+
+    ["wrap-donor", "wrap-beneficiary", "wrap-duration", "wrap-budget"].forEach(function (id) {
+      document.getElementById(id).hidden = !donorMode();
+    });
+    if (donorMode()) {
+      document.getElementById("page-lede").textContent =
+        "Development partners can finance EDIS for a government, alone or shared with the " +
+        "government and AICTEM. Tell us the beneficiary, the modules and the duration, and we " +
+        "will scope it with you and the government together.";
+    }
+
+    var box = document.getElementById("chosen");
+    if (!p) { box.hidden = true; return; }
+    var impl = P.IMPLEMENTATION.filter(function (i) { return i.plan === p.id; })[0] || {};
+    box.innerHTML =
+      '<div class="kicker">' + H.esc(p.group === "individual" ? "Individual plan"
+        : p.group === "national" ? "National deployment" : "Institutional plan") + "</div>" +
+      "<h2 style=\"margin-bottom:.15em\">" + H.esc(p.name) + "</h2>" +
+      '<p class="muted" style="margin:.2em 0 14px">' + H.esc(p.tagline) + "</p>" +
+      '<div class="prov"><dl>' +
+        "<dt>Published price</dt><dd>" + H.esc(P.priceLabel(p, "monthly")) + "</dd>" +
+        "<dt>Users</dt><dd>" + H.esc(p.users.label) + "</dd>" +
+        "<dt>Implementation</dt><dd>" +
+          (impl.custom ? "Custom"
+            : impl.from ? "From " + P.money(impl.from) + " one-time"
+            : "Minimal or included") + "</dd>" +
+      "</dl></div>" +
+      '<p class="small muted" style="margin-top:14px">Published figures are indicative. ' +
+      "Institutional pricing is contracted and reflects model configuration, national data " +
+      "integration, calibration, training and support.</p>" +
+      '<p class="btnrow" style="margin-top:6px">' +
+      '<a class="btn btn-outline btn-sm" href="pricing.html#compare">Compare the plans</a></p>';
+    box.hidden = false;
+  }
+
+  intent.addEventListener("change", summarise);
+  document.getElementById("f-plan").addEventListener("change", summarise);
+  summarise();
+
+  document.getElementById("quote-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var data = new FormData(e.target), note = document.getElementById("sent");
+    var p = P.plan(data.get("plan"));
+    var label = TITLES[data.get("request_type")] || "EDIS request";
+    var subject = "EDIS " + label + " - " + (data.get("institution") || "") +
+                  " - " + (data.get("country") || "");
+    var body = [];
+    if (p) body.push("plan: " + p.name);
+    data.forEach(function (v, k) { if (v) body.push(k + ": " + v); });
+    body.push("source: request-quote.html" + location.search);
+    note.innerHTML = "Thank you. This static preview does not post to a server. " +
+      "Your request has been prepared as an email &mdash; " +
+      '<a href="mailto:info@aictem.org?subject=' + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body.join("\n")) +
+      '">open it in your mail client</a>, or write to ' +
+      '<a href="mailto:info@aictem.org">info@aictem.org</a>. ' +
+      "AICTEM responds to institutional requests with a written proposal.";
+    note.hidden = false;
+    note.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+})();
+</script>
+</body>
+</html>

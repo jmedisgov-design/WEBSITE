@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Super Admin portal | EDIS</title>
+<meta name="description" content="EDIS Super Admin portal preview: organisations, subscriptions, usage, failures, API consumption, storage, Academy enrolments and the audit trail.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<!-- shown when the session gate is not set -->
+<section id="locked" hidden><div class="wrap" style="padding:64px 0">
+  <div class="authbox">
+    <h2>Administrator sign-in required</h2>
+    <p class="muted">The Super Admin portal preview opens after the administrator sign-in step.</p>
+    <p class="btnrow"><a class="btn btn-primary btn-lg" href="admin-login.html" style="width:100%;text-align:center">Go to administrator sign-in</a></p>
+    <p class="authnote"><a href="index.html">Back to the public site</a></p>
+  </div>
+</div></section>
+
+<div id="portal" hidden>
+
+<div class="strip">Super Admin preview &mdash; every figure below is demonstration data, and the
+browser-side gate that opened this page is not security.</div>
+
+<div class="ws">
+  <nav class="ws-side" aria-label="Administration">
+    <div class="grp">Platform</div>
+    <a href="#overview" class="active">Overview</a>
+    <a href="#organisations">Organisations</a>
+    <a href="#subscriptions">Subscriptions</a>
+    <div class="grp">Operations</div>
+    <a href="#usage">Usage and analytics</a>
+    <a href="#failures">Failures</a>
+    <a href="#api">API</a>
+    <a href="#storage">Storage</a>
+    <div class="grp">Programmes</div>
+    <a href="#academy">Academy</a>
+    <div class="grp">Governance</div>
+    <a href="#audit">Audit trail</a>
+    <a href="workspace.html">Institution workspace</a>
+    <a href="#" id="signout">Sign out</a>
+  </nav>
+
+  <div class="ws-main">
+    <div class="ws-head">
+      <h2>EDIS Super Admin</h2>
+      <div class="ws-user">
+        <span class="badge lock">Super Admin</span>
+        <span class="avatar" id="who-init"></span>
+        <span id="who-name"></span>
+      </div>
+    </div>
+    <p class="counter" id="generated"></p>
+
+    <!-- OVERVIEW -->
+    <section class="ws-card anchor" id="overview">
+      <h3>Platform overview</h3>
+      <div class="kpis" id="headline"></div>
+      <div class="grid g2 mt24" style="gap:20px;align-items:start">
+        <div class="chartbox"><h4>Questions asked, last 30 days</h4><div id="ch-questions"></div></div>
+        <div class="chartbox"><h4>Revenue by licence category, indicative annualised (USD thousands)</h4><div id="ch-revenue"></div></div>
+      </div>
+    </section>
+
+    <!-- ORGANISATIONS -->
+    <section class="ws-card anchor" id="organisations">
+      <h3>Organisations</h3>
+      <p class="muted small">Every organisation with an EDIS licence, its plan, seat count, country
+      scope and contract status.</p>
+      <div class="tablewrap">
+        <table class="tbl">
+          <thead><tr><th>Organisation</th><th>Type</th><th>Plan</th><th>Seats</th><th>Country scope</th><th>Status</th><th>Expires</th></tr></thead>
+          <tbody id="orgs"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SUBSCRIPTIONS -->
+    <section class="ws-card anchor" id="subscriptions">
+      <h3>Subscriptions and revenue categories</h3>
+      <p class="muted small">Indicative annualised contract value by licence category. Commercial
+      terms are held in the licence record, not in the site.</p>
+      <div class="tablewrap">
+        <table class="tbl tbl--compact">
+          <thead><tr><th>Category</th><th>Indicative annualised</th><th>Share</th></tr></thead>
+          <tbody id="rev"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- USAGE -->
+    <section class="ws-card anchor" id="usage">
+      <h3>Usage and product analytics</h3>
+      <div class="grid g2" style="gap:20px;align-items:start">
+        <div class="chartbox"><h4>Most used agents, runs in the last 30 days</h4><div id="ch-agents"></div></div>
+        <div class="chartbox"><h4>Most used models, runs in the last 30 days</h4><div id="ch-models"></div></div>
+      </div>
+      <div class="callout mt24">
+        <h4>Privacy-conscious by default</h4>
+        <p class="mb0">Administrators see aggregates: counts, categories, failure rates and quota
+        consumption. The content of a user&rsquo;s questions, scenarios and private workspaces is not
+        exposed to an administrator unless their permissions explicitly allow it, and every such
+        access is written to the audit trail.</p>
+      </div>
+    </section>
+
+    <!-- FAILURES -->
+    <section class="ws-card anchor" id="failures">
+      <h3>Model and data failures</h3>
+      <p class="muted small">Failures are surfaced, not suppressed. A non-converged or data-missing
+      run stays in the record with its diagnostics so the cause can be fixed.</p>
+      <div class="tablewrap">
+        <table class="tbl">
+          <thead><tr><th>Run ID</th><th>Model</th><th>State</th><th>Diagnostic</th><th>Organisation</th><th>Date</th></tr></thead>
+          <tbody id="fails"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- API -->
+    <section class="ws-card anchor" id="api">
+      <h3>API usage</h3>
+      <div class="grid g2" style="gap:20px;align-items:start">
+        <div class="chartbox"><h4>API requests, last 30 days (thousands)</h4><div id="ch-api"></div></div>
+        <div>
+          <div class="tablewrap">
+            <table class="tbl tbl--compact">
+              <thead><tr><th>Organisation</th><th>Endpoint families</th><th>Requests</th><th>Status</th></tr></thead>
+              <tbody id="apitbl"></tbody>
+            </table>
+          </div>
+          <p class="small muted mt24 mb0">A key can never exceed the permissions of the licence it
+          belongs to. Revoking a key takes effect at the service, not in the client.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORAGE -->
+    <section class="ws-card anchor" id="storage">
+      <h3>Storage</h3>
+      <div class="tablewrap">
+        <table class="tbl tbl--compact">
+          <thead><tr><th>Store</th><th>Used</th><th>Against allocation</th></tr></thead>
+          <tbody id="store"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ACADEMY -->
+    <section class="ws-card anchor" id="academy">
+      <h3>Academy</h3>
+      <div class="tablewrap">
+        <table class="tbl tbl--compact">
+          <thead><tr><th>Measure</th><th>Value</th></tr></thead>
+          <tbody id="acad"></tbody>
+        </table>
+      </div>
+      <p class="btnrow mt24">
+        <a class="btn btn-outline btn-sm" href="academy-calendar.html">Training calendar</a>
+        <a class="btn btn-outline btn-sm" href="courses.html">Course catalogue</a>
+      </p>
+    </section>
+
+    <!-- AUDIT -->
+    <section class="ws-card anchor" id="audit">
+      <h3>Administrator audit trail</h3>
+      <p class="muted small">Every administrative action is recorded with the actor, the action and
+      the target. The trail is append-only and retained for the contracted period.</p>
+      <div class="tablewrap">
+        <table class="tbl">
+          <thead><tr><th>Timestamp</th><th>Actor</th><th>Action</th><th>Target</th></tr></thead>
+          <tbody id="audit-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="ws-card">
+      <h3>Before this is used for real</h3>
+      <ul class="checklist" style="margin-top:12px">
+        <li>Administrator authentication moves to a server-side session with multi-factor authentication</li>
+        <li>Every request re-checks the role; nothing is trusted from the browser</li>
+        <li>Each action writes an audit entry before it takes effect</li>
+        <li>Administrator roles are separated: support, billing, platform and security</li>
+        <li>Access to any private organisation content requires an explicit, logged permission</li>
+      </ul>
+    </section>
+  </div>
+</div>
+</div>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/admin.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var A = window.EDIS_ADMIN, H = window.EDIS, M = A.METRICS;
+
+  if (!A.unlocked()) { document.getElementById("locked").hidden = false; return; }
+  document.getElementById("portal").hidden = false;
+
+  document.getElementById("who-init").textContent = A.DEMO.initials;
+  document.getElementById("who-name").textContent = A.DEMO.name;
+  document.getElementById("generated").textContent = "Demonstration snapshot · generated " + M.generated;
+
+  document.getElementById("signout").addEventListener("click", function (e) {
+    e.preventDefault(); A.lock(); location.href = "admin-login.html";
+  });
+
+  /* ---- headline KPIs ---- */
+  document.getElementById("headline").innerHTML = M.headline.map(function (k) {
+    return '<div class="kpi"><div class="k">' + H.esc(k[0]) + '</div><div class="v ' + k[2] + '">' +
+      H.esc(k[1]) + '</div><div class="s">' + H.esc(k[3]) + "</div></div>";
+  }).join("");
+
+  /* ---- charts ---- */
+  document.getElementById("ch-questions").innerHTML = H.line(M.questionsPerDay, {
+    xStep: 3, title: "Questions asked per day",
+    fmtY: function (v) { return Math.round(v); } });
+
+  document.getElementById("ch-api").innerHTML = H.line(M.apiCalls, {
+    xStep: 3, title: "API requests per day, thousands",
+    fmtY: function (v) { return Math.round(v) + "k"; } });
+
+  document.getElementById("ch-revenue").innerHTML = H.bar(M.revenue, {
+    padL: 168, rowH: 32, title: "Revenue by category",
+    fmt: function (v) { return "$" + v + "k"; } });
+
+  document.getElementById("ch-agents").innerHTML = H.bar(M.agents, {
+    padL: 168, rowH: 30, title: "Most used agents",
+    fmt: function (v) { return v.toLocaleString(); } });
+
+  document.getElementById("ch-models").innerHTML = H.bar(M.models, {
+    padL: 180, rowH: 30, title: "Most used models",
+    fmt: function (v) { return v.toLocaleString(); } });
+
+  /* ---- tables ---- */
+  document.getElementById("orgs").innerHTML = M.organisations.map(function (r) {
+    return '<tr><td class="rowlabel">' + H.esc(r[0]) + "</td><td>" + H.esc(r[1]) +
+      "</td><td>" + H.esc(r[2]) + '</td><td class="num">' + r[3] + "</td><td>" + H.esc(r[4]) +
+      '</td><td><span class="badge ' + (r[5] === "Active" ? "ok" : r[5] === "Suspended" ? "err" : "partial") +
+      '">' + H.esc(r[5]) + '</span></td><td class="num">' + H.esc(r[6]) + "</td></tr>";
+  }).join("");
+
+  var total = M.revenue.reduce(function (a, r) { return a + r[1]; }, 0);
+  document.getElementById("rev").innerHTML = M.revenue.map(function (r) {
+    return '<tr><td class="rowlabel">' + H.esc(r[0]) + '</td><td class="num">$' +
+      r[1].toLocaleString() + 'k</td><td class="num">' +
+      Math.round(r[1] / total * 100) + "%</td></tr>";
+  }).join("") + '<tr><td class="rowlabel">Total</td><td class="num">$' + total.toLocaleString() +
+    'k</td><td class="num">100%</td></tr>';
+
+  document.getElementById("fails").innerHTML = M.failures.map(function (r) {
+    return '<tr><td class="mono small">' + H.esc(r[0]) + '</td><td class="rowlabel">' + H.esc(r[1]) +
+      '</td><td><span class="badge ' + H.badgeClass(r[2]) + '">' + H.esc(r[2]) + "</span></td>" +
+      '<td class="small muted">' + H.esc(r[3]) + "</td><td>" + H.esc(r[4]) +
+      '</td><td class="num">' + H.esc(r[5]) + "</td></tr>";
+  }).join("");
+
+  document.getElementById("apitbl").innerHTML = M.api.map(function (r) {
+    return '<tr><td class="rowlabel">' + H.esc(r[0]) + '</td><td class="small">' + H.esc(r[1]) +
+      '</td><td class="num">' + H.esc(r[2]) + '</td><td><span class="badge ' +
+      (r[3] === "Within quota" ? "ok" : r[3] === "Key revoked" ? "err" : "partial") + '">' +
+      H.esc(r[3]) + "</span></td></tr>";
+  }).join("");
+
+  document.getElementById("store").innerHTML = M.storage.map(function (r) {
+    return '<tr><td class="rowlabel">' + H.esc(r[0]) + '</td><td class="num">' + H.esc(r[1]) +
+      '</td><td class="small muted">' + H.esc(r[2]) + "</td></tr>";
+  }).join("");
+
+  document.getElementById("acad").innerHTML = M.academy.map(function (r) {
+    return '<tr><td class="rowlabel">' + H.esc(r[0]) + '</td><td class="num">' + H.esc(r[1]) + "</td></tr>";
+  }).join("");
+
+  document.getElementById("audit-body").innerHTML = M.audit.map(function (r) {
+    return '<tr><td class="mono small">' + H.esc(r[0]) + "</td><td>" + H.esc(r[1]) +
+      '</td><td class="rowlabel">' + H.esc(r[2]) + '</td><td class="small muted">' +
+      H.esc(r[3]) + "</td></tr>";
+  }).join("");
+})();
+</script>
+</body>
+</html>

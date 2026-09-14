@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>API access | EDIS</title>
+<meta name="description" content="Programmatic access to EDIS indicators, model results, scenario runs, GIS layers, forecasts and reports, with keys, quotas, endpoint permissions and usage logs.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Product &rsaquo; API</div>
+  <div class="eyebrow">Product</div>
+  <h1>EDIS as a service in your own systems</h1>
+  <p>Institutions that already run a planning portal, a data warehouse or a results dashboard can
+  call EDIS directly. API access is added to an existing licence and inherits every permission that
+  licence carries.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Endpoint areas</div>
+    <h2>Six families of endpoints</h2>
+    <p class="muted">Availability is set per key. An organisation can expose indicators to a public
+    dashboard while keeping scenario execution restricted to named internal services.</p>
+  </div>
+  <div class="grid g3">
+    <div class="card"><div class="kicker">GET</div><h3>Indicators</h3>
+      <p>Published and licensed indicators by country, region, district and year, with the source
+      dataset and reference period attached to every series.</p></div>
+    <div class="card"><div class="kicker">GET</div><h3>Model results</h3>
+      <p>Results from completed runs, addressed by run ID, returning the same values the interface
+      shows together with the full provenance record.</p></div>
+    <div class="card"><div class="kicker">POST / GET</div><h3>Scenario runs</h3>
+      <p>Submit a scenario, receive a run ID, poll or subscribe for state changes, then retrieve
+      results when the run completes. Subject to the run allowance.</p></div>
+    <div class="card"><div class="kicker">GET</div><h3>GIS</h3>
+      <p>Layers, catchments, travel-time surfaces and scenario overlays, returned as GeoJSON or as
+      tiles, within the licensed country set.</p></div>
+    <div class="card"><div class="kicker">GET</div><h3>Forecasts</h3>
+      <p>Baseline and scenario projection paths by indicator and horizon, with the model version
+      and calibration vintage that produced them.</p></div>
+    <div class="card"><div class="kicker">POST / GET</div><h3>Reports</h3>
+      <p>Request generation of a report format against a completed run, and retrieve the document
+      when it is ready.</p></div>
+  </div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Controls</div>
+      <h2>What an administrator manages</h2>
+      <ul class="checklist">
+        <li><strong>Keys</strong> &mdash; issued, rotated and revoked per service, never per person</li>
+        <li><strong>Quotas</strong> &mdash; requests, model runs and storage, set against the licence</li>
+        <li><strong>Endpoint permissions</strong> &mdash; which families a key may call</li>
+        <li><strong>Country scope</strong> &mdash; which countries a key may address</li>
+        <li><strong>Rate limiting</strong> &mdash; per key and per organisation</li>
+        <li><strong>Request logs</strong> &mdash; complete, retained and exportable</li>
+        <li><strong>Usage dashboard</strong> &mdash; consumption against quota, in the admin portal</li>
+      </ul>
+    </div>
+    <div>
+      <div class="chartbox">
+        <h4>Request shape</h4>
+        <pre class="mono small" style="background:#0e3150;color:#cfe0ee;padding:18px;border-radius:8px;overflow-x:auto;margin:0"><code>POST /v1/scenarios/run
+Authorization: Bearer &lt;api-key&gt;
+Content-Type: application/json
+
+{
+  "country": "UT",
+  "question_id": "Q-HLT-007",
+  "scenario": {
+    "name": "HLT-BUDGET-20",
+    "shocks": [
+      { "type": "expenditure",
+        "vote": "health",
+        "change_pct": 20 }
+    ],
+    "baseline_year": 2024,
+    "horizon": 2030
+  }
+}
+
+202 Accepted
+{ "run_id": "EDIS-RUN-2026-1184",
+  "state": "queued" }</code></pre>
+        <p class="small muted mt24 mb0">Illustrative. The published specification is issued with the
+        key and versioned alongside the platform.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Rules</div>
+    <h2>The API cannot exceed the licence</h2>
+  </div>
+  <div class="grid g4">
+    <div class="card flat"><h3>Same permissions</h3><p class="small">A key can never reach data, a model or a country the organisation is not licensed for. Permission is checked at the service, not in the client.</p></div>
+    <div class="card flat"><h3>Same provenance</h3><p class="small">Every response carries the model version, data source, scenario and run ID. There is no bare-number endpoint.</p></div>
+    <div class="card flat"><h3>Same failure behaviour</h3><p class="small">A non-converged or failed run returns that state. The API does not substitute an estimate.</p></div>
+    <div class="card flat"><h3>Same audit trail</h3><p class="small">API calls are logged exactly as interface actions are, and appear in the organisation&rsquo;s audit record.</p></div>
+  </div>
+  <p class="center mt32">
+    <a class="btn btn-green" href="request-demo.html">Request API access</a>
+    <a class="btn btn-outline" href="pricing.html">See access levels</a>
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

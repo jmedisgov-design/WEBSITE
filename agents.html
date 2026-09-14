@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI agents and the question library | EDIS</title>
+<meta name="description" content="EDIS agents route policy questions to the right models and data. Browse sector agents, strategic agents and the registered question library.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Product &rsaquo; AI agents</div>
+  <div class="eyebrow">Product</div>
+  <h1>Agents know which model to call</h1>
+  <p>An agent is not a persona. It is a registered specification: the questions it accepts, the
+  models it calls, the data it needs, the scenarios it supports and the access level required to
+  use it. Cross-sector questions call several agents at once.</p>
+  <div class="btnrow">
+    <a class="btn btn-green" href="#explorer">Open the agent explorer</a>
+    <a class="btn btn-ghost" href="#library">Question library</a>
+  </div>
+</div></section>
+
+<!-- STRATEGIC AGENTS -->
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Strategic agents</div>
+    <h2>The agents that call everything else</h2>
+    <p class="muted">Strategic agents answer questions no single sector can. They assemble workflows
+    across the fiscal framework, several sector models, the appraisal system and the economy-wide
+    model, then reconcile the results.</p>
+  </div>
+  <div class="grid g2" id="strategic"></div>
+</div></section>
+
+<!-- AGENT EXPLORER -->
+<section class="sec-soft anchor" id="explorer"><div class="wrap">
+  <div class="eyebrow">Agent explorer</div>
+  <h2 class="mb24">Every registered agent</h2>
+
+  <div class="filters">
+    <label class="field" style="flex:1 1 260px">
+      <span>Search agents</span>
+      <input type="search" id="a-search" placeholder="health, tariff, irrigation, debt...">
+    </label>
+    <label class="field" style="flex:0 1 220px">
+      <span>Group</span>
+      <select id="a-group">
+        <option value="">All groups</option>
+        <option>Macroeconomic and fiscal</option>
+        <option>Sector</option>
+        <option>Cross-cutting</option>
+        <option>Strategic</option>
+      </select>
+    </label>
+    <label class="field" style="flex:0 1 220px">
+      <span>Access level</span>
+      <select id="a-access">
+        <option value="">Any level</option>
+        <option>Registered</option>
+        <option>Professional</option>
+        <option>Institutional</option>
+        <option>Government</option>
+      </select>
+    </label>
+  </div>
+
+  <p class="counter" id="a-count"></p>
+  <div class="grid g3" id="agent-grid"></div>
+  <div class="empty" id="a-none" hidden>No agent matches that filter. Try a broader search, or
+    <a href="request-demo.html">tell us what you need</a> &mdash; the registry is extended as models
+    are added.</div>
+</div></section>
+
+<!-- QUESTION LIBRARY -->
+<section class="anchor" id="library"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Question library</div>
+    <h2>What EDIS can be asked, and how reliably</h2>
+    <p class="muted">Every question is registered with an identifier, an agent, a workflow, the models
+    it calls, the data it requires, its outputs and its validation status. Users can see what is
+    answerable before they ask.</p>
+  </div>
+
+  <div class="filters">
+    <label class="field" style="flex:1 1 260px">
+      <span>Search questions</span>
+      <input type="search" id="q-search" placeholder="poverty, VAT, roads, coverage...">
+    </label>
+    <label class="field" style="flex:0 1 190px">
+      <span>Sector</span><select id="q-sector"><option value="">All sectors</option></select>
+    </label>
+    <label class="field" style="flex:0 1 190px">
+      <span>Access</span><select id="q-access"><option value="">Any level</option></select>
+    </label>
+    <label class="field" style="flex:0 1 190px">
+      <span>Complexity</span><select id="q-cx"><option value="">Any</option></select>
+    </label>
+  </div>
+
+  <p class="counter" id="q-count"></p>
+  <div class="tablewrap">
+    <table class="tbl">
+      <thead><tr>
+        <th>ID</th><th>Question</th><th>Agent</th><th>Sector</th><th>Models</th>
+        <th>Access</th><th>Status</th><th>Complexity</th>
+      </tr></thead>
+      <tbody id="q-body"></tbody>
+    </table>
+  </div>
+  <div class="empty mt24" id="q-none" hidden>No registered question matches that filter.</div>
+</div></section>
+
+<section class="sec-dark"><div class="wrap center">
+  <div class="eyebrow">Ask the registry</div>
+  <h2>Need a question that is not registered?</h2>
+  <p class="muted" style="max-width:66ch;margin:0 auto 26px">The registry is extended as models,
+  datasets and country instances are added. If your institution needs a question class that does not
+  yet exist, it becomes a specification first &mdash; agent, models, data, outputs, validation &mdash;
+  and only then an answer.</p>
+  <p class="btnrow" style="justify-content:center">
+    <a class="btn btn-green btn-lg" href="request-demo.html">Request a demonstration</a>
+    <a class="btn btn-ghost btn-lg" href="models.html">Open the model explorer</a>
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var D = window.EDIS_DATA, H = window.EDIS, A = D.AGENTS, Q = D.QUESTIONS;
+
+  function card(a) {
+    return '<article class="card">' +
+      '<div class="kicker">' + H.esc(a.g) + "</div>" +
+      "<h3>" + H.esc(a.n) + "</h3><p>" + H.esc(a.d) + "</p>" +
+      '<dl class="dl">' +
+        "<dt>Questions it answers</dt><dd>" +
+          a.q.map(function (x) { return "&ldquo;" + H.esc(x) + "&rdquo;"; }).join("<br>") + "</dd>" +
+        "<dt>Models it calls</dt><dd>" + H.esc(a.m.join(" / ")) + "</dd>" +
+        "<dt>Data it uses</dt><dd>" + H.esc(a.dt.join(" / ")) + "</dd>" +
+        "<dt>Scenarios available</dt><dd>" + H.esc(a.sc.join(" / ")) + "</dd>" +
+      "</dl>" +
+      '<div class="card-actions"><span class="badge lock">' + H.esc(a.acc) +
+      " access</span></div></article>";
+  }
+
+  document.getElementById("strategic").innerHTML =
+    A.filter(function (a) { return a.g === "Strategic"; }).slice(0, 4).map(card).join("");
+
+  var grid = document.getElementById("agent-grid"),
+      count = document.getElementById("a-count"),
+      none = document.getElementById("a-none");
+
+  function drawAgents() {
+    var t = document.getElementById("a-search").value.trim().toLowerCase(),
+        g = document.getElementById("a-group").value,
+        acc = document.getElementById("a-access").value;
+    var list = A.filter(function (a) {
+      var hay = (a.n + " " + a.d + " " + a.q.join(" ") + " " + a.m.join(" ") + " " +
+        a.dt.join(" ") + " " + a.sc.join(" ")).toLowerCase();
+      return (!t || hay.indexOf(t) > -1) && (!g || a.g === g) && (!acc || a.acc === acc);
+    });
+    grid.innerHTML = list.map(card).join("");
+    count.textContent = list.length + " of " + A.length + " agents";
+    none.hidden = list.length > 0;
+  }
+  ["a-search", "a-group", "a-access"].forEach(function (id) {
+    var el = document.getElementById(id);
+    el.addEventListener("input", drawAgents);
+    el.addEventListener("change", drawAgents);
+  });
+  drawAgents();
+
+  /* ---------------- question library ---------------- */
+  function uniq(idx) {
+    var seen = {}, out = [];
+    Q.forEach(function (r) { if (!seen[r[idx]]) { seen[r[idx]] = 1; out.push(r[idx]); } });
+    return out.sort();
+  }
+  function fill(id, idx) {
+    var sel = document.getElementById(id);
+    uniq(idx).forEach(function (v) {
+      var o = document.createElement("option"); o.textContent = v; sel.appendChild(o);
+    });
+  }
+  fill("q-sector", 3); fill("q-access", 5); fill("q-cx", 7);
+
+  var qBody = document.getElementById("q-body"),
+      qCount = document.getElementById("q-count"),
+      qNone = document.getElementById("q-none");
+
+  function drawQuestions() {
+    var t = document.getElementById("q-search").value.trim().toLowerCase(),
+        s = document.getElementById("q-sector").value,
+        a = document.getElementById("q-access").value,
+        c = document.getElementById("q-cx").value;
+    var list = Q.filter(function (r) {
+      var hay = r.join(" ").toLowerCase();
+      return (!t || hay.indexOf(t) > -1) && (!s || r[3] === s) && (!a || r[5] === a) && (!c || r[7] === c);
+    });
+    qBody.innerHTML = list.map(function (r) {
+      return "<tr>" +
+        '<td class="mono small">' + H.esc(r[0]) + "</td>" +
+        '<td class="rowlabel">' + H.esc(r[1]) + "</td>" +
+        "<td>" + H.esc(r[2]) + "</td><td>" + H.esc(r[3]) + "</td>" +
+        '<td class="small">' + H.esc(r[4]) + "</td>" +
+        '<td><span class="badge">' + H.esc(r[5]) + "</span></td>" +
+        '<td><span class="badge ' + H.badgeClass(r[6]) + '">' + H.esc(r[6]) + "</span></td>" +
+        "<td>" + H.esc(r[7]) + "</td></tr>";
+    }).join("");
+    qCount.textContent = list.length + " of " + Q.length + " registered questions";
+    qNone.hidden = list.length > 0;
+  }
+  ["q-search", "q-sector", "q-access", "q-cx"].forEach(function (id) {
+    var el = document.getElementById(id);
+    el.addEventListener("input", drawQuestions);
+    el.addEventListener("change", drawQuestions);
+  });
+  drawQuestions();
+})();
+</script>
+</body>
+</html>

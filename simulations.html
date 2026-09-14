@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simulations and the scenario builder | EDIS</title>
+<meta name="description" content="Build, run, compare, save and share policy scenarios. Sixteen shock families, a job queue for long model runs, and a comparison view.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Product &rsaquo; Simulations</div>
+  <div class="eyebrow">Product</div>
+  <h1>Scenarios, not one-off answers</h1>
+  <p>A policy question is rarely settled by a single number. The scenario builder lets an analyst
+  vary a shock, run it, save it, clone it, compare it against the baseline and against a colleague&rsquo;s
+  scenario, and download the comparison.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Scenario builder</div>
+    <h2>Sixteen shock families</h2>
+    <p class="muted">Shocks are entered in the units a ministry uses, converted by the platform, and
+    recorded in the run provenance exactly as entered.</p>
+  </div>
+  <div class="grid g4">
+    <div class="card flat"><div class="kicker">Fiscal</div><h3>Government expenditure</h3><p class="small">By vote, programme or sector, with a phasing profile across the framework period.</p></div>
+    <div class="card flat"><div class="kicker">Fiscal</div><h3>Tax rates</h3><p class="small">VAT, income tax, excise, customs duty, with revenue and incidence effects.</p></div>
+    <div class="card flat"><div class="kicker">Macro</div><h3>Interest rates</h3><p class="small">Domestic and external borrowing costs, feeding the debt path and financing mix.</p></div>
+    <div class="card flat"><div class="kicker">Macro</div><h3>Exchange rate</h3><p class="small">Level and path, with pass-through to prices, imports and debt service.</p></div>
+    <div class="card flat"><div class="kicker">External</div><h3>Oil price</h3><p class="small">Import bill, transport cost, generation cost and fiscal effects.</p></div>
+    <div class="card flat"><div class="kicker">External</div><h3>Commodity prices</h3><p class="small">Export earnings, fiscal revenue and producer income by commodity.</p></div>
+    <div class="card flat"><div class="kicker">Investment</div><h3>Public investment</h3><p class="small">Envelope, allocation rule and project set, appraised and optimised through PIAS.</p></div>
+    <div class="card flat"><div class="kicker">Sector</div><h3>Agricultural productivity</h3><p class="small">Yield and area response to inputs, irrigation, extension and research.</p></div>
+    <div class="card flat"><div class="kicker">Sector</div><h3>Energy investment</h3><p class="small">Generation mix, transmission build and last-mile access programmes.</p></div>
+    <div class="card flat"><div class="kicker">Sector</div><h3>Road investment</h3><p class="small">Corridor and feeder packages, with maintenance funding held separate.</p></div>
+    <div class="card flat"><div class="kicker">Trade</div><h3>Trade policy</h3><p class="small">Non-tariff measures, rules of origin, partner sets and integration scenarios.</p></div>
+    <div class="card flat"><div class="kicker">Trade</div><h3>Tariffs</h3><p class="small">Schedule changes by product and partner, including AfCFTA phase-downs.</p></div>
+    <div class="card flat"><div class="kicker">Climate</div><h3>Climate shock</h3><p class="small">Warming pathway, rainfall variability and discrete extreme events.</p></div>
+    <div class="card flat"><div class="kicker">Social</div><h3>Population growth</h3><p class="small">Fertility, mortality, migration and urbanisation paths.</p></div>
+    <div class="card flat"><div class="kicker">Social</div><h3>Health coverage</h3><p class="small">Coverage targets, workforce expansion and user-fee policy.</p></div>
+    <div class="card flat"><div class="kicker">Social</div><h3>Education enrolment</h3><p class="small">Enrolment targets, transition rates and pupil&ndash;teacher ratios.</p></div>
+  </div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Scenario operations</div>
+      <h2>What an analyst can do with a scenario</h2>
+      <ul class="checklist">
+        <li><strong>Create</strong> from a template, a registered question or a blank sheet</li>
+        <li><strong>Clone</strong> an existing scenario and vary one shock</li>
+        <li><strong>Run</strong> through the job queue, without blocking the interface</li>
+        <li><strong>Compare</strong> two or more scenarios against each other and the baseline</li>
+        <li><strong>Save</strong> into a project, with the full parameter set</li>
+        <li><strong>Share</strong> with named colleagues inside the organisation</li>
+        <li><strong>Download</strong> results as Excel, CSV, Word, PDF, charts and maps</li>
+      </ul>
+      <p class="mt32"><a class="btn btn-green" href="workspace.html">See the workspace</a>
+      &nbsp;<a class="btn btn-outline" href="demo.html">Run the demonstration</a></p>
+    </div>
+    <div>
+      <div class="chartbox">
+        <h4>Scenario comparison &mdash; demonstration</h4>
+        <div id="cmp"></div>
+        <div class="legend">
+          <span><i style="background:#3f9b46"></i>Optimised allocation</span>
+          <span><i style="background:#c1611f"></i>Pro-rata allocation</span>
+        </div>
+        <p class="small muted mt24 mb0"><span class="demo-flag">Demonstration data</span>
+        GDP deviation from baseline, per cent.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Execution</div>
+      <h2>The run queue</h2>
+      <p>A scenario is submitted, not executed inline. The queue gives every run an identifier, a
+      state and a place in the result store, so nothing is lost when a browser is closed.</p>
+      <div class="arrowlist mt24">
+        <b>Run request</b> &rarr; <b>Job queue</b> &rarr; <b>Model worker</b> &rarr;
+        <b>Status</b> &rarr; <b>Result store</b> &rarr; <b>Interface update</b>
+      </div>
+      <p class="mt24"><span class="badge wait">Queued</span> <span class="badge run">Running</span>
+      <span class="badge run">Validating</span> <span class="badge ok">Completed</span>
+      <span class="badge err">Failed</span> <span class="badge err">Non-converged</span></p>
+      <div class="callout warn mt24">
+        <h4>Failure is reported, not smoothed</h4>
+        <p class="mb0">If a model does not converge, EDIS says so and shows the diagnostics. It does
+        not fall back to a language model, an extrapolation or a previous run.</p>
+      </div>
+    </div>
+    <div id="queue-chain"></div>
+  </div>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var H = window.EDIS;
+  document.getElementById("cmp").innerHTML = H.line([
+    { name: "Optimised", color: "#3f9b46",
+      points: [[2024, 0], [2026, .28], [2028, .66], [2030, .96], [2032, 1.17], [2035, 1.34]] },
+    { name: "Pro-rata", color: "#c1611f",
+      points: [[2024, 0], [2026, .19], [2028, .44], [2030, .66], [2032, .81], [2035, .92]] }
+  ], { y0: 0, y1: 1.5, xStep: 2, title: "Scenario comparison",
+       fmtY: function (v) { return v.toFixed(1) + "%"; } });
+
+  document.getElementById("queue-chain").innerHTML = H.chain([
+    { name: "FINEX", note: "Fiscal envelope", status: "ok" },
+    { name: "MTEF", note: "Phasing", status: "ok" },
+    { name: "Sector models", note: "Five sectors in parallel", status: "ok" },
+    { name: "UCSN", note: "Unit costs", status: "ok" },
+    { name: "PIAS", note: "Appraisal and optimisation", status: "ok" },
+    { name: "CDCGE", note: "Economy-wide closure", status: "run" },
+    { name: "Poverty microsimulation", note: "Waiting on CDCGE vectors", status: "wait" },
+    { name: "MEL Framework", note: "Waiting", status: "wait" }
+  ], { title: "Run EDIS-RUN-2026-1184", run: "Validating" });
+})();
+</script>
+</body>
+</html>

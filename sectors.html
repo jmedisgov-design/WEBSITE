@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sectors | EDIS</title>
+<meta name="description" content="Sixteen sector and cross-cutting sheets: coverage, questions, models, data and status, from macroeconomy and budget to climate, poverty, public investment and MEL.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<section class="pagehead"><div class="wrap">
+  <div class="crumbs"><a href="index.html">Home</a> &rsaquo; <a href="solutions.html">Solutions</a> &rsaquo; By sector</div>
+  <div class="eyebrow">Coverage</div>
+  <h1>Sixteen sectors on one framework</h1>
+  <p>Sector models share a unit-cost library, a spatial layer and an economy-wide closure, so a
+  health question and an energy question are answered on the same basis and can be compared inside
+  a single budget decision.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="filters">
+    <label class="field" style="flex:1 1 300px"><span>Search sectors</span>
+      <input type="search" id="s-search" placeholder="irrigation, coverage, tariff, grid..."></label>
+    <label class="field" style="flex:0 1 220px"><span>Status</span>
+      <select id="s-status">
+        <option value="">Any status</option>
+        <option>Validated</option><option>Partial</option><option>Data missing</option>
+      </select></label>
+  </div>
+  <p class="counter" id="s-count"></p>
+  <div class="tablewrap">
+    <table class="tbl">
+      <thead><tr><th>Sector</th><th>What EDIS covers</th><th>Typical questions</th><th>Models</th><th>Status</th></tr></thead>
+      <tbody id="s-body"></tbody>
+    </table>
+  </div>
+  <div class="empty mt24" id="s-none" hidden>No sector matches that filter.</div>
+</div></section>
+
+<section class="sec-soft"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Sector sheets</div>
+    <h2>What each sector holds</h2>
+  </div>
+  <div class="grid g3" id="s-cards"></div>
+
+  <div class="callout mt32" id="sector-pricing">
+    <h4>Available with EDIS Sector</h4>
+    <p>Each sector above is licensed as an EDIS Sector package: the sector model, its EDIS agents,
+    dashboards, data, scenario analysis, costing, budget linkage, GIS where relevant, MEL, CDCGE
+    linkage, reporting and sector training. Talk to AICTEM about institutional access.</p>
+    <div class="tablewrap mt24" style="max-width:640px">
+      <table class="tbl tbl--compact" id="sector-price-table"></table>
+    </div>
+    <p class="btnrow mt24">
+      <a class="btn btn-green" href="pricing.html#configurator">Configure a sector package</a>
+      <a class="btn btn-outline" href="request-quote.html?plan=sector&amp;intent=quote">Request a sector quote</a>
+    </p>
+  </div>
+</div></section>
+
+<section><div class="wrap center">
+  <div class="eyebrow">Cross-sector</div>
+  <h2>The questions that cross every sector</h2>
+  <p class="muted" style="max-width:70ch;margin:0 auto 26px">A national plan, a budget envelope or an
+  industrialisation strategy is not a sector question. Strategic agents assemble workflows across the
+  fiscal framework, several sector models, the appraisal system and the economy-wide model, then
+  reconcile the results into one answer.</p>
+  <p class="btnrow" style="justify-content:center">
+    <a class="btn btn-green" href="agents.html">See the strategic agents</a>
+    <a class="btn btn-outline" href="models.html">Open the model explorer</a>
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/pricing.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+(function () {
+  var D = window.EDIS_DATA, H = window.EDIS, S = D.SECTORS, P = window.EDIS_PRICING;
+
+  /* sector package pricing, from the canonical record */
+  if (P && document.getElementById("sector-price-table")) {
+    document.getElementById("sector-price-table").innerHTML =
+      "<thead><tr><th>Sector package</th><th>Indicative a year</th><th></th></tr></thead><tbody>" +
+      P.SECTOR_PACKAGES.map(function (x) {
+        return '<tr><td class="rowlabel">' + H.esc(x.name) + "</td><td>" +
+          P.money(x.from) + " to " + P.money(x.to) + "</td>" +
+          '<td><a class="btn btn-outline btn-sm" href="request-quote.html?plan=sector&sectors=' +
+          encodeURIComponent(x.id) + '&intent=quote">Enquire</a></td></tr>';
+      }).join("") + "</tbody>";
+  }
+  var body = document.getElementById("s-body"),
+      cnt = document.getElementById("s-count"),
+      none = document.getElementById("s-none");
+
+  function draw() {
+    var t = document.getElementById("s-search").value.trim().toLowerCase(),
+        st = document.getElementById("s-status").value;
+    var list = S.filter(function (s) {
+      var hay = (s.n + " " + s.c + " " + s.q + " " + s.m + " " + s.d).toLowerCase();
+      return (!t || hay.indexOf(t) > -1) && (!st || s.st === st);
+    });
+    body.innerHTML = list.map(function (s) {
+      return '<tr id="' + s.id + '" class="anchor">' +
+        '<td class="rowlabel">' + H.esc(s.n) + "</td>" +
+        "<td>" + H.esc(s.c) + "</td>" +
+        '<td class="small muted">' + H.esc(s.q) + "</td>" +
+        '<td class="small">' + H.esc(s.m) + "</td>" +
+        '<td><span class="badge ' + H.badgeClass(s.st) + '">' + H.esc(s.st) + "</span></td></tr>";
+    }).join("");
+    cnt.textContent = list.length + " of " + S.length + " sectors";
+    none.hidden = list.length > 0;
+  }
+  ["s-search", "s-status"].forEach(function (id) {
+    var el = document.getElementById(id);
+    el.addEventListener("input", draw);
+    el.addEventListener("change", draw);
+  });
+  draw();
+
+  document.getElementById("s-cards").innerHTML = S.map(function (s) {
+    return '<article class="card"><div style="display:flex;justify-content:space-between;' +
+      'align-items:flex-start;gap:10px"><h3 style="margin:0">' + H.esc(s.n) + "</h3>" +
+      '<span class="badge ' + H.badgeClass(s.st) + '">' + H.esc(s.st) + "</span></div>" +
+      '<p style="margin-top:12px">' + H.esc(s.c) + "</p>" +
+      '<dl class="dl"><dt>Typical questions</dt><dd>' + H.esc(s.q) + "</dd>" +
+      "<dt>Models</dt><dd>" + H.esc(s.m) + "</dd>" +
+      "<dt>Data</dt><dd>" + H.esc(s.d) + "</dd></dl></article>";
+  }).join("");
+})();
+</script>
+</body>
+</html>

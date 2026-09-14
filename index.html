@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EDIS &mdash; Economic Development Intelligence System | AICTEM</title>
+<meta name="description" content="EDIS connects economic models, sector planning systems, GIS, public finance and AI agents to help governments and institutions make better development decisions.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site"></header>
+<main>
+
+<!-- ========================================================= HERO -->
+<section class="hero"><div class="wrap">
+  <div class="hero-split">
+    <div>
+      <span class="pill">A platform of AICTEM</span>
+      <h1>From data to decisions.</h1>
+      <p class="lead">EDIS connects economic models, sector planning systems, GIS, public finance
+      and AI agents to help governments and institutions make better development decisions.</p>
+      <div class="cta">
+        <a class="btn btn-green btn-lg" href="demo.html">Ask EDIS</a>
+        <a class="btn btn-ghost btn-lg" href="request-demo.html">Request a demo</a>
+        <a class="btn btn-ghost btn-lg" href="models.html">Explore models</a>
+      </div>
+      <div class="hero-note">
+        <span><b>21</b> model services</span>
+        <span><b>28</b> registered agents</span>
+        <span><b>16</b> sectors</span>
+        <span><b>52</b> African economies in scope</span>
+      </div>
+    </div>
+
+    <!-- live demonstration console -->
+    <div class="console" id="hero-console">
+      <div class="console-bar">
+        <span class="lamp"></span><span class="lamp"></span><span class="lamp"></span>
+        <span class="ttl">EDIS &mdash; demonstration run</span>
+      </div>
+      <div class="console-q">
+        <label>Policy question</label>
+        <div class="qtext" id="hc-q"></div>
+      </div>
+      <div class="console-meta" id="hc-meta"></div>
+      <div id="hc-chain"></div>
+      <div class="console-out" id="hc-out" hidden>
+        <div class="kpis" id="hc-kpis"></div>
+      </div>
+      <div class="console-foot">
+        <span id="hc-run">Awaiting run</span>
+        <span><span class="demo-flag">Demonstration data</span></span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ========================================================= WHAT EDIS DOES -->
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">What EDIS does</div>
+    <h2>One question, four capabilities, one traceable answer</h2>
+    <p class="muted">EDIS is the intelligent user-facing layer over AICTEM&rsquo;s modelling, data, GIS,
+    optimization, simulation, forecasting, budgeting and policy-analysis infrastructure. A question
+    entered once is routed across all of it.</p>
+  </div>
+  <div class="grid g4">
+    <div class="card">
+      <div class="ico" style="background:#14507d"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.1A8.4 8.4 0 1 1 21 11.5z"/></svg></div>
+      <span class="tag" style="background:#14507d">Ask</span>
+      <h3><a href="agents.html">AI agents</a></h3>
+      <p>Twenty-eight registered agents interpret a policy question, select the models that can
+      answer it, and assemble the workflow. Agents orchestrate; they do not guess numbers.</p>
+      <a class="card-more" href="agents.html">Browse the agent registry&nbsp;&rarr;</a>
+    </div>
+    <div class="card">
+      <div class="ico" style="background:#2e8b57"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></div>
+      <span class="tag" style="background:#2e8b57">Model</span>
+      <h3><a href="models.html">Models and simulation</a></h3>
+      <p>FINEX, MTEF, CDCGE, UCSN, PIAS and fifteen sector and cross-cutting model services
+      produce every quantitative estimate, forecast, optimization and appraisal.</p>
+      <a class="card-more" href="models.html">Open the model explorer&nbsp;&rarr;</a>
+    </div>
+    <div class="card">
+      <div class="ico" style="background:#6b4fa1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 8 3 16 6 23 3 23 18 16 21 8 18 1 21"/><line x1="8" y1="3" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="21"/></svg></div>
+      <span class="tag" style="background:#6b4fa1">Map</span>
+      <h3><a href="gis.html">GIS and spatial planning</a></h3>
+      <p>Population, settlements, roads, facilities, grids, hazard and projects. EDIS answers not
+      only what is needed but where it is needed, and who it reaches.</p>
+      <a class="card-more" href="gis.html">See the maps workspace&nbsp;&rarr;</a>
+    </div>
+    <div class="card">
+      <div class="ico" style="background:#c1611f"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></div>
+      <span class="tag" style="background:#c1611f">Report</span>
+      <h3><a href="reports.html">Reports and provenance</a></h3>
+      <p>Executive summaries, policy briefs, technical reports and investment appraisals, each
+      carrying the model used, the data used, the scenario, the assumptions and a run ID.</p>
+      <a class="card-more" href="reports.html">See report formats&nbsp;&rarr;</a>
+    </div>
+  </div>
+</div></section>
+
+<!-- ========================================================= STATS -->
+<section class="stats sec-tight"><div class="wrap"><div class="grid">
+  <div><div class="n">21</div><div class="l">Model services</div></div>
+  <div><div class="n">28</div><div class="l">Registered agents</div></div>
+  <div><div class="n">16</div><div class="l">Sectors covered</div></div>
+  <div><div class="n">9</div><div class="l">Report formats</div></div>
+  <div><div class="n">52</div><div class="l">African economies in scope</div></div>
+</div></div></section>
+
+<!-- ========================================================= HOW IT WORKS -->
+<section class="sec-soft"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">How EDIS works</div>
+    <h2>A question becomes a routed workflow</h2>
+    <p class="muted">EDIS never sends a policy question straight to a language model and returns the
+    reply. The question is classified, the country and sector identified, the agents selected, the
+    models determined, the data and permissions checked, and only then is a workflow executed.</p>
+  </div>
+  <div class="flow flow--grid">
+    <div class="step"><span class="n">01</span><b>Question</b><span>A policy question in ordinary language, with country, region, horizon and currency.</span></div>
+    <div class="step"><span class="n">02</span><b>Orchestrator</b><span>Intent classification, country and sector identification, scenario detection.</span></div>
+    <div class="step"><span class="n">03</span><b>Agent selection</b><span>The registered agents that accept this class of question are assembled.</span></div>
+    <div class="step"><span class="n">04</span><b>Data and models</b><span>Required model services are resolved; data availability and permissions are checked.</span></div>
+    <div class="step"><span class="n">05</span><b>Simulation</b><span>The workflow is queued and executed by model workers, with live status.</span></div>
+    <div class="step"><span class="n">06</span><b>Validation</b><span>Convergence, plausibility and consistency checks before anything is shown.</span></div>
+    <div class="step"><span class="n">07</span><b>Policy intelligence</b><span>Results assembled into summary, charts, maps, budget and distributional views.</span></div>
+    <div class="step"><span class="n">08</span><b>Report</b><span>A downloadable brief or technical report with full provenance and a run ID.</span></div>
+  </div>
+  <p class="mt32"><a class="btn btn-primary" href="how-it-works.html">See the full architecture</a>
+  &nbsp;<a class="btn btn-outline" href="demo.html">Try the public demonstration</a></p>
+</div></section>
+
+<!-- ========================================================= QUESTIONS -->
+<section><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Questions EDIS answers</div>
+      <h2>The questions governments actually ask</h2>
+      <p>EDIS holds a registered question library. Every question is linked to an agent, a workflow,
+      a set of models, its data requirements, its outputs and its validation status &mdash; so users
+      can see in advance what can be answered, how, and how reliably.</p>
+      <p class="btnrow"><a class="btn btn-green" href="agents.html#library">Open the question library</a>
+      <a class="btn btn-outline" href="sectors.html">Browse by sector</a></p>
+    </div>
+    <div class="tablewrap">
+      <table class="tbl tbl--compact">
+        <thead><tr><th>Question</th><th>Sector</th><th>Access</th></tr></thead>
+        <tbody id="q-preview"></tbody>
+      </table>
+    </div>
+  </div>
+</div></section>
+
+<!-- ========================================================= WORKFLOW -->
+<section class="sec-dark"><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:center">
+    <div>
+      <div class="eyebrow">Cross-model workflow</div>
+      <h2>You can see what EDIS is doing</h2>
+      <p class="muted">A single question can run eight models in sequence. EDIS shows the chain as it
+      executes, marks each model complete, running, waiting or failed, and stops rather than
+      guessing when a model does not converge or a dataset is missing.</p>
+      <div class="arrowlist mt24">
+        <b>FINEX</b> &rarr; <b>MTEF</b> &rarr; <b>Sector model</b> &rarr; <b>UCSN</b> &rarr;
+        <b>Budget Output Engine</b> &rarr; <b>PIAS</b> &rarr; <b>CDCGE</b> &rarr;
+        <b>Poverty</b> &rarr; <b>MEL</b> &rarr; back to <b>FINEX</b>
+      </div>
+      <p class="mt24"><a class="btn btn-green" href="how-it-works.html#workflow">How the chain is built</a></p>
+    </div>
+    <div id="home-chain"></div>
+  </div>
+</div></section>
+
+<!-- ========================================================= SECTORS -->
+<section class="sec-soft"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Coverage</div>
+    <h2>Sixteen sectors, one framework</h2>
+    <p class="muted">Sector models share a costing spine, a spatial layer and an economy-wide closure,
+    so a health question and an energy question can be compared on the same basis.</p>
+  </div>
+  <div class="grid g4" id="sector-chips"></div>
+  <p class="center mt32"><a class="btn btn-primary" href="sectors.html">Open the sector index</a></p>
+</div></section>
+
+<!-- ========================================================= AUDIENCES -->
+<section><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Who uses EDIS</div>
+    <h2>Built for the institutions that allocate resources</h2>
+  </div>
+  <div class="grid g3" id="aud-cards"></div>
+  <p class="center mt32"><a class="btn btn-primary" href="solutions.html#institutions">See all ten institution types</a></p>
+</div></section>
+
+<!-- ========================================================= NOT AN LLM -->
+<section class="sec-soft"><div class="wrap">
+  <div class="grid g2" style="gap:48px;align-items:start">
+    <div>
+      <div class="eyebrow">Design principle</div>
+      <h2>EDIS is not a chatbot with a policy opinion</h2>
+      <p>The AI layer and the analytical layer are separated by design and the separation is
+      enforced in the architecture, not merely described in the marketing.</p>
+      <div class="lanes mt24">
+        <div class="lane ai">
+          <h4>The AI layer</h4>
+          <ul>
+            <li><b>Understands</b> the question</li>
+            <li><b>Routes</b> it to registered agents</li>
+            <li><b>Orchestrates</b> the model workflow</li>
+            <li><b>Explains</b> what the results mean</li>
+            <li><b>Writes</b> the report around them</li>
+          </ul>
+        </div>
+        <div class="lane an">
+          <h4>The AICTEM analytical layer</h4>
+          <ul>
+            <li><b>Calculates</b> and forecasts</li>
+            <li><b>Simulates</b> scenarios</li>
+            <li><b>Optimizes</b> allocations</li>
+            <li><b>Maps</b> and analyses space</li>
+            <li><b>Validates</b> every result</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">Provenance</div>
+      <h2>No number without a source</h2>
+      <p>Every result carries a complete provenance record. If a figure cannot be traced to a model
+      version, a dataset and a run, EDIS does not display it.</p>
+      <div class="prov mt24">
+        <dl>
+          <dt>Data source</dt><dd>Utopia National Household Survey</dd>
+          <dt>Data year</dt><dd>2019/20</dd>
+          <dt>Country</dt><dd>Utopia</dd>
+          <dt>Model</dt><dd>CDCGE</dd>
+          <dt>Model version</dt><dd>5.1</dd>
+          <dt>Scenario</dt><dd>AGR-CAPEX-1T</dd>
+          <dt>Run ID</dt><dd>EDIS-DEMO-2026-0413</dd>
+          <dt>Validation</dt><dd>Validated</dd>
+        </dl>
+      </div>
+      <p class="mt24"><span class="badge ok">Ready</span> <span class="badge partial">Partial</span>
+      <span class="badge err">Data missing</span> <span class="badge run">Running</span>
+      <span class="badge wait">Queued</span> <span class="badge err">Non-converged</span></p>
+      <p class="small muted">Model status badges appear on every result, so a user can tell whether an
+      answer is reliable before acting on it.</p>
+      <p><a class="card-more" href="data.html">How data provenance works&nbsp;&rarr;</a></p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ========================================================= ACADEMY + ACCESS -->
+<section><div class="wrap"><div class="grid g2" style="gap:48px;align-items:center">
+  <div>
+    <div class="eyebrow">EDIS Academy</div>
+    <h2>The platform teaches the models it runs</h2>
+    <p>Fourteen courses, one for each school of the Academy &mdash; from macroeconomics and public
+    finance, economic modelling and public investment to climate, the sector models, microsimulation
+    and MEL. Each runs five to ten days, in person in Nairobi and Accra and live virtual on East and
+    West Africa time, with certification and laboratory access to training datasets and models.</p>
+    <p class="btnrow"><a class="btn btn-green" href="academy.html">Explore the Academy</a>
+    <a class="btn btn-outline" href="courses.html">All 14 courses</a></p>
+  </div>
+  <div>
+    <div class="eyebrow">Access</div>
+    <h2>Eight levels of access, one platform</h2>
+    <p>Public, registered, professional, institutional, government, enterprise, Academy and API.
+    Access is controlled by licence, not by page: what a user can ask, which models they can run,
+    which countries they can see and how many runs they have are all set by the subscription.</p>
+    <p class="btnrow"><a class="btn btn-primary" href="pricing.html">View pricing</a>
+    <a class="btn btn-outline" href="government.html">For governments</a></p>
+  </div>
+</div></div></section>
+
+<!-- ========================================================= TRAINING CALENDAR -->
+<section class="sec-soft"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Training calendar</div>
+    <h2>The next cohorts</h2>
+    <p class="muted">Fourteen courses, each run four times between 15 January 2027 and 25 January
+    2028 &mdash; in person in Nairobi and Accra, and live virtual on East Africa and West Africa time.
+    Select a course to read it in full, or take a place.</p>
+  </div>
+  <div class="tablewrap">
+    <table class="tbl">
+      <thead><tr><th>Dates</th><th>Course</th><th>Title</th><th>Where</th><th>Length</th><th class="c">Fee</th><th></th></tr></thead>
+      <tbody id="next-cohorts"></tbody>
+    </table>
+  </div>
+  <p class="btnrow mt24" style="justify-content:center">
+    <a class="btn btn-green" href="academy-calendar.html">See the whole year</a>
+    <a class="btn btn-outline" href="courses.html">Browse the catalogue</a>
+    <a class="btn btn-outline" href="enrol.html">Enrol or nominate</a>
+  </p>
+</div></section>
+
+<!-- ===================================================== PRICING BAND -->
+<section class="anchor" id="pricing-band"><div class="wrap">
+  <div class="secthead center">
+    <div class="eyebrow">Pricing</div>
+    <h2>From individual analysis to national decision infrastructure</h2>
+    <p class="muted">Individual plans are paid online. Institutional and government deployments
+    are contracted, because what is licensed is a configured national estate rather than a number
+    of logins.</p>
+  </div>
+  <div class="grid g4" id="price-band"></div>
+  <p class="btnrow mt32" style="justify-content:center">
+    <a class="btn btn-green btn-lg" href="pricing.html">View pricing</a>
+    <a class="btn btn-outline btn-lg" href="request-quote.html?intent=demo">Request a demonstration</a>
+    <a class="btn btn-outline btn-lg" href="pricing.html#calculator">Estimate a deployment</a>
+  </p>
+</div></section>
+
+<!-- ========================================================= CTA -->
+<section class="sec-dark"><div class="wrap center">
+  <div class="eyebrow">Start here</div>
+  <h2>See EDIS answer a real policy question</h2>
+  <p class="muted" style="max-width:64ch;margin:0 auto 26px">Run the public demonstration, or ask us to
+  walk your team through the platform against your own country and sector.</p>
+  <p class="btnrow" style="justify-content:center">
+    <a class="btn btn-green btn-lg" href="demo.html">Open the demonstration</a>
+    <a class="btn btn-ghost btn-lg" href="request-demo.html">Request a demonstration</a>
+  </p>
+</div></section>
+
+</main>
+<footer class="site"></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/pricing.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/demo.js"></script>
+<script>
+(function () {
+  var D = window.EDIS_DATA, H = window.EDIS;
+
+  /* ---- pricing band ---- */
+  (function () {
+    var P = window.EDIS_PRICING;
+    if (!P || !document.getElementById("price-band")) return;
+    var band = [
+      ["For professionals", "professional", "Economists, consultants, analysts and academics.", "pricing.html#individual"],
+      ["For institutions",  "team",         "Research institutes, universities, NGOs and firms.", "pricing.html#institutional"],
+      ["For ministries",    "ministry",     "Line ministries, planning and public investment authorities.", "government.html"],
+      ["For governments",   "government_enterprise", "Ministries of Finance, central banks and statistics offices.", "government.html"]
+    ];
+    document.getElementById("price-band").innerHTML = band.map(function (b) {
+      var p = P.plan(b[1]);
+      var price = p.billing === "seat"
+        ? P.band(p.monthlyFrom, p.monthlyTo) + " <span>per user, per month</span>"
+        : P.money(p.annualFrom) + " <span>per year</span>";
+      return '<a class="card" href="' + b[3] + '" style="color:inherit">' +
+        '<div class="kicker">' + b[0] + "</div>" +
+        "<h3>" + p.name + "</h3>" +
+        '<p class="plan-price plan-price--inline"><span class="pre">From</span>' +
+        '<span class="amt">' + price.split(" <span>")[0] + "</span>" +
+        '<span class="per">' + price.split("<span>")[1].replace("</span>", "") + "</span></p>" +
+        "<p class=\"small muted\">" + b[2] + "</p></a>";
+    }).join("");
+  })();
+
+  /* ---- next Academy cohorts ---- */
+  (function () {
+    var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    function dmy(s) {
+      return (+s.slice(6, 8)) + " " + MON[+s.slice(4, 6) - 1] + " " + s.slice(0, 4);
+    }
+    /* the next cohorts from today, so the table never advertises one that has started */
+    var now = new Date(), today = String(now.getFullYear()) + ("0" + (now.getMonth() + 1)).slice(-2) +
+      ("0" + now.getDate()).slice(-2);
+    var upcoming = D.CALENDAR.filter(function (r) { return r.start >= today; });
+    if (!upcoming.length) upcoming = D.CALENDAR;
+    document.getElementById("next-cohorts").innerHTML =
+      upcoming.slice(0, 8).map(function (r) {
+        return '<tr><td class="rowlabel" style="white-space:nowrap">' + dmy(r.start) +
+          '<div class="small muted">to ' + dmy(r.end) + "</div></td>" +
+          '<td class="mono" style="white-space:nowrap"><a href="courses.html#' +
+            encodeURIComponent(r.key) + '">Course ' + H.esc(r.code) + "</a></td>" +
+          "<td>" + H.esc(r.title) + "</td>" +
+          '<td><span class="hubtag ' + (r.mode === "In person" ? "hub-" + r.venue.toLowerCase() : "hub-virtual") +
+            '">' + H.esc(r.venue) + "</span></td>" +
+          '<td><span class="badge run">' + r.days + " days</span></td>" +
+          '<td class="num">US$' + String(r.fee).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</td>" +
+          '<td><a class="btn btn-outline btn-sm" href="enrol.html?course=' +
+            encodeURIComponent(r.key) + "&cohort=" + encodeURIComponent(r.cohort) +
+            '">Register</a></td></tr>';
+      }).join("");
+  })();
+
+  /* ---- question preview ---- */
+  document.getElementById("q-preview").innerHTML = D.QUESTIONS.slice(0, 9).map(function (q) {
+    return "<tr><td>" + H.esc(q[1]) + "</td><td>" + H.esc(q[3]) +
+      '</td><td><span class="badge">' + H.esc(q[5]) + "</span></td></tr>";
+  }).join("");
+
+  /* ---- sector chips ---- */
+  document.getElementById("sector-chips").innerHTML = D.SECTORS.map(function (s) {
+    return '<a class="card flat" href="sectors.html#' + s.id + '" style="display:block;color:inherit">' +
+      '<div class="kicker">' + H.esc(s.m.split(" / ")[0]) + "</div>" +
+      "<h3 style=\"font-size:1.08rem;margin-bottom:.35em\">" + H.esc(s.n) + "</h3>" +
+      '<span class="badge ' + H.badgeClass(s.st) + '">' + H.esc(s.st) + "</span></a>";
+  }).join("");
+
+  /* ---- audience cards ---- */
+  document.getElementById("aud-cards").innerHTML = D.SOLUTIONS.slice(0, 6).map(function (s) {
+    return '<article class="card"><div class="kicker">' + H.esc(s.lic) + "</div>" +
+      '<h3><a href="solutions.html#' + s.id + '">' + H.esc(s.n) + "</a></h3>" +
+      "<p>" + H.esc(s.ben) + "</p>" +
+      '<a class="card-more" href="solutions.html#' + s.id + '">Read the sheet&nbsp;&rarr;</a></article>';
+  }).join("");
+
+  /* ---- static workflow chain in the dark band ---- */
+  document.getElementById("home-chain").innerHTML = H.chain([
+    { name: "FINEX", note: "Fiscal envelope", status: "ok" },
+    { name: "MTEF", note: "Ceilings and phasing", status: "ok" },
+    { name: "Health", note: "Coverage and workforce", status: "ok" },
+    { name: "UCSN", note: "Unit costs", status: "ok" },
+    { name: "CDCGE", note: "Economy-wide closure", status: "run" },
+    { name: "Poverty microsimulation", note: "Distributional incidence", status: "wait" },
+    { name: "MEL Framework", note: "Results mapping", status: "wait" }
+  ], { title: "Run in progress", run: "EDIS-DEMO-2026-0417" });
+
+  /* ---- hero console ---- */
+  var s = window.EDIS_DEMO.SCENARIOS[0];
+  var qEl = document.getElementById("hc-q"),
+      metaEl = document.getElementById("hc-meta"),
+      chainEl = document.getElementById("hc-chain"),
+      outEl = document.getElementById("hc-out"),
+      kpiEl = document.getElementById("hc-kpis"),
+      runEl = document.getElementById("hc-run");
+
+  metaEl.innerHTML = ["Country: " + s.country, "Baseline " + s.base, "Horizon " + s.horizon,
+    "Scenario " + s.scenario, "Agent: " + s.agent].map(function (t) {
+      return "<span>" + H.esc(t) + "</span>";
+    }).join("");
+
+  function paint(states) {
+    chainEl.innerHTML = H.chain(s.chain.map(function (c, i) {
+      return { name: c.name, note: c.note, status: states ? states[i] : "wait" };
+    }), { title: "Model chain", run: s.id });
+  }
+  paint(null);
+
+  var runner = new window.EDIS_DEMO.Runner(s, {
+    onReset: function () {
+      outEl.hidden = true; runEl.textContent = "Routing question";
+      qEl.innerHTML = '<span class="caret"></span>'; paint(null);
+    },
+    onType: function (t, done) {
+      qEl.innerHTML = H.esc(t) + (done ? "" : '<span class="caret"></span>');
+    },
+    onChain: function (states) {
+      paint(states);
+      runEl.textContent = "Executing model chain";
+    },
+    onDone: function (sc) {
+      kpiEl.innerHTML = sc.kpis.map(function (k) {
+        return '<div class="kpi"><div class="k">' + H.esc(k[0]) + '</div><div class="v ' + k[2] + '">' +
+          H.esc(k[1]) + '</div><div class="s">' + H.esc(k[3]) + "</div></div>";
+      }).join("");
+      outEl.hidden = false;
+      runEl.textContent = "Run " + sc.prov.run + " · " + sc.prov.status;
+    }
+  });
+
+  /* run once the console scrolls into view, then loop gently */
+  function begin() { runner.start(); }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting) { io.disconnect(); begin(); }
+    }, { threshold: .3 });
+    io.observe(document.getElementById("hero-console"));
+  } else { begin(); }
+})();
+</script>
+</body>
+</html>
