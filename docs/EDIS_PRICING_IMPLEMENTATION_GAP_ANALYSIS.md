@@ -27,7 +27,7 @@ services, not in the browser."* The sign-in form does not authenticate; it shows
 to `workspace.html`, which is a static preview of an authenticated workspace.
 
 Every form on the site (`request-demo.html`, `contact.html`, `enrol.html`) follows one pattern:
-prevent submit, assemble the fields, and compose a `mailto:info@aictem.org` link. Nothing posts.
+prevent submit, assemble the fields, and compose a `mailto:info@edisgov.org` link. Nothing posts.
 
 ### What this means for the brief
 
@@ -145,7 +145,7 @@ the single place navigation is defined. `assets/css/style.css` is the whole desi
 | 10 | Development access pricing | ✅ in config and calculator; ⚠️ admin configuration is 📄 |
 | 11 | Implementation fees | ✅ separated from subscription throughout |
 | 12 | Training pricing | ✅ linked to the real EDIS Academy pricing built earlier |
-| 13 | Pricing page design | ✅ `pricing.html` rebuilt in the AICTEM house style |
+| 13 | Pricing page design | ✅ `pricing.html` rebuilt in the EDIS house style |
 | 14 | Monthly/annual toggle | ✅ with computed annual saving |
 | 15 | Comparison table | ✅ 25 rows × 9 plans, ✓ / Limited / Add-on / Custom |
 | 16 | Model access matrix | ✅ as published data; 📄 enforcement is server-side |
@@ -155,7 +155,7 @@ the single place navigation is defined. `assets/css/style.css` is the whole desi
 | 20 | Procurement mode | ✅ quote / proforma / proposal / demo / procurement contact |
 | 21 | Donor mode | ✅ donor-supported deployment route |
 | 22 | CTA routing | ✅ every plan routes as specified |
-| 23 | Contact information | ✅ `info@aictem.org` and `aictem.org` only — no invented addresses |
+| 23 | Contact information | ✅ `info@edisgov.org` and `edisgov.org` only — no invented addresses |
 | 24 | Pricing calculator | ✅ indicative estimate, labelled non-binding |
 | 25 | Ministry configurator | ✅ with recommended packages per institution type |
 | 26 | Feature explanations | ✅ tooltips on every model term |
@@ -172,7 +172,7 @@ the single place navigation is defined. `assets/css/style.css` is the whole desi
 | 37 | Homepage integration | ✅ three-audience pricing band |
 | 38 | Sector page integration | ✅ price band and CTA per sector |
 | 39–42 | Government pages | ✅ four pages |
-| 43 | Visual design | ✅ existing AICTEM system, no new framework |
+| 43 | Visual design | ✅ existing EDIS system, no new framework |
 | 44 | Trust signals | ✅ six, no fabricated logos or testimonials |
 | 45 | Sales material | ✅ content components reusable in proposals |
 | 46 | SEO | ✅ metadata per page, sitemap updated |
@@ -187,7 +187,7 @@ the single place navigation is defined. `assets/css/style.css` is the whole desi
 
 1. **Published prices vs "no prices are hard-coded."** Resolved as above: one canonical record,
    no literals in pages, copy updated to say prices are indicative and institutional pricing is
-   contracted. If AICTEM does not want figures public at all, deleting one config file's `public`
+   contracted. If EDIS does not want figures public at all, deleting one config file's `public`
    flag hides every figure without touching a page.
 2. **Flat URLs instead of `/edis/...` paths.** Recorded in §2. Reversible with rewrite rules.
 3. **No enforcement.** The site must not imply that a browser check protects a model. All

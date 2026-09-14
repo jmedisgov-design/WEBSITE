@@ -89,8 +89,8 @@
         ["Utopia National Household Survey", "UBOS", "2019/20"],
         ["Annual Agricultural Survey", "UBOS", "2022"],
         ["Approved Estimates and Budget Framework Paper", "MoFPED", "2024/25"],
-        ["Social Accounting Matrix", "AICTEM", "2022 base"],
-        ["Population projections", "UBOS / AICTEM Demography", "2024"]
+        ["Social Accounting Matrix", "EDIS", "2022 base"],
+        ["Population projections", "UBOS / EDIS Demography", "2024"]
       ],
       prov: { run: "EDIS-DEMO-2026-0413", ver: "CDCGE 5.1 / Agriculture 3.0 / FINEX 4.2",
               status: "Validated", conf: "Medium-high", time: "Precomputed demonstration record" }
@@ -176,7 +176,7 @@
         ["Demographic and Health Survey", "UBOS", "2022"],
         ["National Health Accounts", "MoH", "2021/22"],
         ["Approved Estimates", "MoFPED", "2024/25"],
-        ["Population projections", "UBOS / AICTEM Demography", "2024"]
+        ["Population projections", "UBOS / EDIS Demography", "2024"]
       ],
       prov: { run: "EDIS-DEMO-2026-0417", ver: "Health 3.3 / UCSN 3.1 / CDCGE 5.1",
               status: "Validated", conf: "Medium-high", time: "Precomputed demonstration record" }
@@ -264,7 +264,7 @@
         ["Public Investment Management Information System", "MoFPED", "2024"],
         ["National Development Plan", "NPA", "Current cycle"],
         ["Utopia National Household Survey", "UBOS", "2019/20"],
-        ["Social Accounting Matrix", "AICTEM", "2022 base"],
+        ["Social Accounting Matrix", "EDIS", "2022 base"],
         ["Sector investment plans", "Sector ministries", "2023-2024"]
       ],
       prov: { run: "EDIS-DEMO-2026-0428", ver: "PIAS 2.2 / CDCGE 5.1 / MTEF 2.9",

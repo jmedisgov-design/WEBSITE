@@ -68,7 +68,7 @@
                  "Prospective customers", "Development practitioners"],
       includes: ["Selected public dashboards", "Selected public economic indicators",
                  "Sample sector dashboards", "Sample policy simulations",
-                 "Selected AICTEM publications", "Limited EDIS AI questions",
+                 "Selected EDIS publications", "Limited EDIS AI questions",
                  "Sample reports", "Limited data visualisation",
                  "EDIS Academy course information"],
       excludes: ["Full FINEX", "Full CDCGE", "Confidential national datasets",
@@ -252,7 +252,7 @@
       billing: "custom", annualFrom: 750000, typical: [750000, 1500000],
       users: { min: null, max: null, label: "Custom" },
       aiQueries: { period: "month", limit: null, label: "Custom" },
-      cta: { label: "Contact AICTEM", href: "request-quote.html?plan=sovereign&intent=sovereign" },
+      cta: { label: "Contact the EDIS team", href: "request-quote.html?plan=sovereign&intent=sovereign" },
       audience: ["Governments requiring EDIS as core national economic-management infrastructure"],
       inherits: "national",
       includes: ["Extensive national customisation", "Dedicated infrastructure",
@@ -398,7 +398,7 @@
     ["donor",     "Donor-supported deployment"],
     ["subscribe", "Start a subscription"],
     ["national",  "Discuss national deployment"],
-    ["sovereign", "Contact AICTEM"]
+    ["sovereign", "Contact the EDIS team"]
   ];
 
   var FUNDING_SOURCES = ["Government budget", "Development partner / donor",
@@ -413,7 +413,7 @@
                         "European Union", "FCDO", "GIZ", "Foundation",
                         "Regional institution", "Other development partner"];
 
-  var CONTACT = { email: "info@aictem.org", website: "aictem.org", org: "AICTEM" };
+  var CONTACT = { email: "info@edisgov.org", website: "edisgov.org", org: "EDIS" };
 
   /* ------------------------------------------------------------------ helpers */
   function plan(id) {

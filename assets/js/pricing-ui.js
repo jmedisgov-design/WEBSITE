@@ -257,7 +257,7 @@
 
       out.innerHTML =
         '<div class="estimate">' +
-          '<div class="est-flag">Indicative estimate &mdash; final commercial proposal subject to AICTEM review</div>' +
+          '<div class="est-flag">Indicative estimate &mdash; final commercial proposal subject to EDIS review</div>' +
           "<h3>" + esc(p.name) + "</h3>" +
           '<p class="muted small">' + n + " users" +
             (secs.length ? " &middot; " + secs.length + " sector package" + (secs.length > 1 ? "s" : "") : "") +
@@ -337,7 +337,7 @@
           '<p class="plan-price plan-price--inline"><span class="pre">From</span>' +
             '<span class="amt">' + (p.annualFrom ? money(p.annualFrom) : "Custom") + "</span>" +
             '<span class="per">' + (p.annualFrom ? "per year" : "") + "</span></p>" +
-          "<h4>AICTEM recommends</h4>" +
+          "<h4>EDIS recommends</h4>" +
           '<p class="chips">' + recommended.map(function (m) {
             return '<span class="chip chip--rec">' + esc(m) + "</span>";
           }).join("") + "</p>" +
@@ -370,7 +370,7 @@
     ["Do you provide discounts for African governments?",
      "Pricing is adjusted against the country's income classification through development access pricing, published above. It is applied at contract."],
     ["Can donors finance our EDIS subscription?",
-     "Yes. A deployment can be financed by a development partner, by the government, or shared between a donor, the government and AICTEM. We scope donor-supported deployments with the partner and the beneficiary together."],
+     "Yes. A deployment can be financed by a development partner, by the government, or shared between a donor, the government and EDIS. We scope donor-supported deployments with the partner and the beneficiary together."],
     ["Does EDIS include training?",
      "Institutional licences carry training credits, and Sector, Ministry, Government Enterprise, National and Sovereign all include training. Additional places and cohorts are priced per participant or per cohort."],
     ["Can EDIS be deployed in-country?",
@@ -385,7 +385,7 @@
      "Yes, and most governments do. A ministry deployment proves the workflow before the estate is widened."],
     ["Can we later upgrade to a national platform?",
      "Yes. Ministry and Government Enterprise contracts are designed to widen into a National Platform, and the configuration and calibration already paid for carry across."],
-    ["Does AICTEM provide technical support?",
+    ["Does EDIS provide technical support?",
      "Yes, against the licence. Professional Plus and above carry priority support; Government Enterprise, National and Sovereign carry a named account and implementation team."],
     ["Can EDIS be purchased through a development project?",
      "Yes. We support quotes, proforma invoices, formal proposals, purchase orders and development-partner procurement. Institutional contracts do not require a credit card."],
