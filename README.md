@@ -63,7 +63,7 @@ price cards; and copy that states what the system does and does not do.
 | `sectors.html` | Sixteen sector and cross-cutting sheets — coverage, questions, models, data and status — as a filterable table and as cards, plus sector-package pricing. Sits under Solutions; the URL is unchanged. |
 | `academy.html` | Delivery formats, the fourteen-course table (filterable by length and status), certification, fellowships, laboratories, training partners, enrolment. |
 | `courses.html` | Course catalogue, master–detail. **Fourteen courses, one per numbered directory of `D:/EDIP/Training/EDIS_Academy`.** Each shows its length and the reason for it, its four cohorts as cards (Nairobi, Accra, virtual East Africa time, virtual West Africa time) with fees and deadlines, its modules — each expanding to the module's own published summary, learning outcomes, prerequisites and outline — modules still to be written, a day-by-day plan, the certificate and materials counts. Deep-links as `courses.html#C04`; older module links such as `courses.html#MOD_309` open the course containing that module. |
-| `academy-calendar.html` | The training year, 15 Jan 2027 (first cohorts Monday 18 Jan) to 25 Jan 2028 — a 55-week grid in four lanes (Nairobi, Accra, virtual East Africa time, virtual West Africa time), coloured by course family, with provisional cohorts hatched. All 56 cohorts filterable by course, place and month, the scheduling rules, closures, certification boards, holiday extensions and the build queue. |
+| `academy-calendar.html` | The training year, 15 Jan 2027 (first cohorts Monday 18 Jan) to 2 Jun 2028 — a 73-week grid in four lanes (Nairobi, Accra, virtual East Africa time, virtual West Africa time), coloured by course family, with provisional cohorts hatched. All 56 cohorts filterable by course, place and month, the scheduling rules, closures, certification boards, holiday extensions and the build queue. |
 | `enrol.html` | Enrolment. Course and cohort selects, pre-filled from `enrol.html?course=C04&cohort=04-NBO-2704`; the cohort determines the mode and the fee. Older module links (`?course=MOD_309`) select the course that contains the module. |
 | `pricing.html` | Eight access levels, an 18-row capability matrix, the configurable-licensing model and its database objects. **No prices are hard-coded.** |
 | `resources.html` | Academy resources (catalogue, calendar, `.ics` feed, `.csv` register), platform documentation, case studies and FAQs. The earlier publications section and the course technical-manual downloads have both been removed at the client's request. |
@@ -114,6 +114,8 @@ The catalogue and calendar are generated from the directories, not typed. The ru
 - **Four cohorts per course:** in person in Nairobi, in person in Accra, live virtual on East Africa
   time (UTC+3), live virtual on West Africa time (UTC+0). Each lane holds one cohort at a time; a
   course's cohorts never overlap and start at least four weeks apart, targeted about 13 weeks apart.
+  In-person cohorts in Nairobi and Accra never overlap, with at least three clear travel days
+  between one and the next; the calendar runs to 2 June 2028 to fit them.
 - **Holidays:** a cohort skips its hub's weekday public holidays (Kenya for Nairobi and East Africa
   time, Ghana for Accra and West Africa time) and runs on. Eid dates are estimates subject to sighting.
 - **Courses with no materials** (11 Industry Modelling, 14 Executive Programmes) are scheduled from
