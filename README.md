@@ -156,13 +156,13 @@ These come from the brief and are worth keeping when the site is extended:
 
 The site is plain HTML, CSS and JavaScript with no dependencies and no build.
 
-- **Primary domain:** serve this directory at `edisgov.org`, leaving `aictem.org` untouched.
-  Existing AICTEM URLs, reports, publications and SEO are unaffected.
-- **Redirect:** point `edis.aictem.org` (and `www.edisgov.org`) to `https://edisgov.org` with a
-  301 redirect so AICTEM links keep working.
-
-`sitemap.xml`, `robots.txt` and the canonical URLs in the page heads already use
-`edisgov.org`. Relative paths are used throughout, so the site also works under any other host.
+- **Primary domain:** the site is served at `https://www.edisgov.org` from GitHub Pages
+  (repository `jmedisgov-design/WEBSITE`, branch `main`, root folder). The `CNAME` file names
+  `www.edisgov.org`; GitHub Pages redirects the bare `edisgov.org` to it.
+- **DNS (Namecheap):** four `A` records for `@` — `185.199.108.153`, `185.199.109.153`,
+  `185.199.110.153`, `185.199.111.153` — and a `CNAME` record for `www` pointing to
+  `jmedisgov-design.github.io`. Canonical URLs, the sitemap and `robots.txt` all use
+  `https://www.edisgov.org`. Relative paths are used throughout, so the site also works under any other host.
 
 ### Connecting it to the platform
 
