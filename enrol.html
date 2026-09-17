@@ -57,7 +57,7 @@
       </div>
       <div class="btnrow mt24">
         <button class="btn btn-green btn-lg" type="submit">Send enrolment request</button>
-        <span class="small muted">We reply from <a href="mailto:info@edisgov.org">info@edisgov.org</a>.</span>
+        <span class="small muted">We reply from <a href="mailto:info@aictem.org">info@aictem.org</a>.</span>
       </div>
     </form>
     <div class="formnote mt24" id="sent" hidden></div>
@@ -179,7 +179,7 @@
         (r.holidays ? "<dt>Extended for</dt><dd>" + H.esc(r.holidays) + "</dd>" : "") +
         "</dl></div>" +
         '<p class="small muted" style="margin-top:12px">' + (r.mode === "In person"
-          ? "Taught at the EDIS regional hub. Travel and accommodation are not included in the fee."
+          ? "Taught at the AICTEM regional hub. Travel and accommodation are not included in the fee."
           : "Taught live into the EDIS laboratory; join from wherever you are.") + "</p>";
     }
     html += '<p class="small muted" style="margin-top:10px"><strong>Prerequisites.</strong> ' + H.esc(c.prereq) + "</p>" +
@@ -219,9 +219,9 @@
     data.forEach(function (v, k) { if (v && k !== "cohort") body.push(k + ": " + v); });
     sent.innerHTML = "Thank you. This static preview does not post to a server. " +
       "Your enrolment request has been prepared as an email &mdash; " +
-      '<a href="mailto:info@edisgov.org?subject=' + encodeURIComponent(subject) + "&body=" +
+      '<a href="mailto:info@aictem.org?subject=' + encodeURIComponent(subject) + "&body=" +
       encodeURIComponent(body.join("\n")) + '">open it in your mail client</a>, or write to ' +
-      '<a href="mailto:info@edisgov.org">info@edisgov.org</a>.';
+      '<a href="mailto:info@aictem.org">info@aictem.org</a>.';
     sent.hidden = false;
     sent.scrollIntoView({ behavior: "smooth", block: "center" });
   });

@@ -1,6 +1,6 @@
 # EDIS pricing administration guide
 
-For EDIS administrators. What can be changed, where, and what it affects.
+For AICTEM administrators. What can be changed, where, and what it affects.
 
 > **Status.** The admin console described in §3 is **not built** — it requires a server, and the
 > EDIS website is currently static (see the gap analysis §1). §2 is how pricing is administered
@@ -54,7 +54,7 @@ The canonical record is **`assets/js/pricing.js`**. To change a price:
 
 ### Hiding prices entirely
 
-If EDIS decides published figures should not be public, set `is_public = FALSE` on the plans
+If AICTEM decides published figures should not be public, set `is_public = FALSE` on the plans
 (today: add the flag to `pricing.js` and have `priceLabel()` return "On request"). Every page,
 the comparison, the estimator and the government pages follow, because none of them holds a
 figure of its own.
@@ -126,4 +126,4 @@ subscription. If it exceeds the band's maximum, it needs finance approval and a
 
 ## 5. Contact
 
-Commercial and administrative questions: **info@edisgov.org** · **edisgov.org**
+Commercial and administrative questions: **info@aictem.org** · **aictem.org**

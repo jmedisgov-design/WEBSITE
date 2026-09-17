@@ -1,24 +1,24 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//EDIS//EDIS Academy Training Calendar 2027-2028//EN
+PRODID:-//AICTEM//EDIS Academy Training Calendar 2027-2028//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:EDIS Academy 2027/28
 BEGIN:VEVENT
-UID:01-NBO-2701@academy.edisgov.org
+UID:01-NBO-2701@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270130
 SUMMARY:Course 01 - Macroeconomics and Public Finance (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 01 - Macroeconomics and Public Finance\nCohort 01-NBO-27
- 01\nIn person - Nairobi\, Kenya - EDIS regional hub\n10 contact days (60 c
- ontact hours)\nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 20
- 26-11-23\; nominations close 2026-12-21\nFinal assessment by 2027-02-12
+ 01\nIn person - Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60
+  contact hours)\nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 
+ 2026-11-23\; nominations close 2026-12-21\nFinal assessment by 2027-02-12
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:03-VEA-2701@academy.edisgov.org
+UID:03-VEA-2701@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270206
@@ -31,20 +31,20 @@ DESCRIPTION:Course 03 - Public Investment\nCohort 03-VEA-2701\nLive virtual
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:13-ACC-2702@academy.edisgov.org
+UID:13-ACC-2702@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270208
 DTEND;VALUE=DATE:20270220
 SUMMARY:Course 13 - Monitoring\, Evaluation and Learning (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 13 - Monitoring\, Evaluation and Learning\nCohort 13-ACC
- -2702\nIn person - Accra\, Ghana - EDIS regional hub\n10 contact days (60 
- contact hours)\nSessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2
- 026-12-14\; nominations close 2027-01-11\nFinal assessment by 2027-03-05
+ -2702\nIn person - Accra\, Ghana - AICTEM regional hub\n10 contact days (6
+ 0 contact hours)\nSessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens
+  2026-12-14\; nominations close 2027-01-11\nFinal assessment by 2027-03-05
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:07-VWA-2702@academy.edisgov.org
+UID:07-VWA-2702@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270208
 DTEND;VALUE=DATE:20270216
@@ -57,7 +57,7 @@ DESCRIPTION:Course 07 - Education Modelling\nCohort 07-VWA-2702\nLive virtu
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:08-VEA-2702@academy.edisgov.org
+UID:08-VEA-2702@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270222
 DTEND;VALUE=DATE:20270302
@@ -70,21 +70,21 @@ DESCRIPTION:Course 08 - Health Modelling\nCohort 08-VEA-2702\nLive virtual
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:02-NBO-2703@academy.edisgov.org
+UID:02-NBO-2703@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270301
 DTEND;VALUE=DATE:20270316
 SUMMARY:Course 02 - Economic Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 02 - Economic Modelling\nCohort 02-NBO-2703\nIn person -
-  Nairobi\, Kenya - EDIS regional hub\n10 contact days (60 contact hours)\n
- Sessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2027-01-04\; nomi
- nations close 2027-02-01\nFinal assessment by 2027-03-29\nExtended for 10 
- Mar Eid al-Fitr (subject to sighting)
+  Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60 contact hours)
+ \nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2027-01-04\; no
+ minations close 2027-02-01\nFinal assessment by 2027-03-29\nExtended for 1
+ 0 Mar Eid al-Fitr (subject to sighting)
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:06-VWA-2703@academy.edisgov.org
+UID:06-VWA-2703@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270308
 DTEND;VALUE=DATE:20270319
@@ -100,20 +100,20 @@ DESCRIPTION:Course 06 - Agriculture\, Forestry and Fisheries Modelling\nCoh
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:09-ACC-2704@academy.edisgov.org
+UID:09-ACC-2704@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270405
 DTEND;VALUE=DATE:20270413
 SUMMARY:Course 09 - Energy Modelling (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 09 - Energy Modelling\nCohort 09-ACC-2704\nIn person - A
- ccra\, Ghana - EDIS regional hub\n6 contact days (36 contact hours)\nSessi
- ons 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-02-08\; nominatio
- ns close 2027-03-08\nFinal assessment by 2027-04-26
+ ccra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\nSes
+ sions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-02-08\; nominat
+ ions close 2027-03-08\nFinal assessment by 2027-04-26
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:05-VEA-2704@academy.edisgov.org
+UID:05-VEA-2704@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270405
 DTEND;VALUE=DATE:20270413
@@ -126,7 +126,7 @@ DESCRIPTION:Course 05 - Trade Modelling\nCohort 05-VEA-2704\nLive virtual -
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:04-VWA-2704@academy.edisgov.org
+UID:04-VWA-2704@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270405
 DTEND;VALUE=DATE:20270417
@@ -139,20 +139,20 @@ DESCRIPTION:Course 04 - Climate Modelling\nCohort 04-VWA-2704\nLive virtual
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:10-NBO-2704@academy.edisgov.org
+UID:10-NBO-2704@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270419
 DTEND;VALUE=DATE:20270428
 SUMMARY:Course 10 - Transport and Water Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 10 - Transport and Water Modelling\nCohort 10-NBO-2704\n
- In person - Nairobi\, Kenya - EDIS regional hub\n7 contact days (42 contac
- t hours)\nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnrolment opens 2027-02
- -22\; nominations close 2027-03-22\nFinal assessment by 2027-05-11
+ In person - Nairobi\, Kenya - AICTEM regional hub\n7 contact days (42 cont
+ act hours)\nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnrolment opens 2027-
+ 02-22\; nominations close 2027-03-22\nFinal assessment by 2027-05-11
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:01-VWA-2704@academy.edisgov.org
+UID:01-VWA-2704@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270419
 DTEND;VALUE=DATE:20270501
@@ -167,21 +167,21 @@ DESCRIPTION:Course 01 - Macroeconomics and Public Finance\nCohort 01-VWA-27
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:12-ACC-2705@academy.edisgov.org
+UID:12-ACC-2705@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270503
 DTEND;VALUE=DATE:20270511
 SUMMARY:Course 12 - Microsimulation (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 12 - Microsimulation\nCohort 12-ACC-2705\nIn person - Ac
- cra\, Ghana - EDIS regional hub\n5 contact days (30 contact hours)\nSessio
- ns 08:30-15:30 GMT\nFee US$1\,000\nEnrolment opens 2027-03-08\; nomination
- s close 2027-04-05\nFinal assessment by 2027-05-24\nExtended for 03 May Ma
- y Day (observed)
+ cra\, Ghana - AICTEM regional hub\n5 contact days (30 contact hours)\nSess
+ ions 08:30-15:30 GMT\nFee US$1\,000\nEnrolment opens 2027-03-08\; nominati
+ ons close 2027-04-05\nFinal assessment by 2027-05-24\nExtended for 03 May 
+ May Day (observed)
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:13-VEA-2705@academy.edisgov.org
+UID:13-VEA-2705@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270503
 DTEND;VALUE=DATE:20270515
@@ -196,21 +196,21 @@ DESCRIPTION:Course 13 - Monitoring\, Evaluation and Learning\nCohort 13-VEA
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:03-ACC-2705@academy.edisgov.org
+UID:03-ACC-2705@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270517
 DTEND;VALUE=DATE:20270601
 SUMMARY:Course 03 - Public Investment (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 03 - Public Investment\nCohort 03-ACC-2705\nIn person - 
- Accra\, Ghana - EDIS regional hub\n10 contact days (60 contact hours)\nSes
- sions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027-03-22\; nominat
- ions close 2027-04-19\nFinal assessment by 2027-06-14\nExtended for 17 May
-  Eid al-Adha (subject to sighting)
+ Accra\, Ghana - AICTEM regional hub\n10 contact days (60 contact hours)\nS
+ essions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027-03-22\; nomin
+ ations close 2027-04-19\nFinal assessment by 2027-06-14\nExtended for 17 M
+ ay Eid al-Adha (subject to sighting)
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:02-VWA-2705@academy.edisgov.org
+UID:02-VWA-2705@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270517
 DTEND;VALUE=DATE:20270601
@@ -224,7 +224,7 @@ DESCRIPTION:Course 02 - Economic Modelling\nCohort 02-VWA-2705\nLive virtua
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:09-VEA-2705@academy.edisgov.org
+UID:09-VEA-2705@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270531
 DTEND;VALUE=DATE:20270609
@@ -238,20 +238,20 @@ DESCRIPTION:Course 09 - Energy Modelling\nCohort 09-VEA-2705\nLive virtual
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:07-NBO-2706@academy.edisgov.org
+UID:07-NBO-2706@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270607
 DTEND;VALUE=DATE:20270615
 SUMMARY:Course 07 - Education Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 07 - Education Modelling\nCohort 07-NBO-2706\nIn person 
- - Nairobi\, Kenya - EDIS regional hub\n6 contact days (36 contact hours)\n
- Sessions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-04-12\; nomi
- nations close 2027-05-10\nFinal assessment by 2027-06-28
+ - Nairobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)
+ \nSessions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-04-12\; no
+ minations close 2027-05-10\nFinal assessment by 2027-06-28
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:10-VWA-2706@academy.edisgov.org
+UID:10-VWA-2706@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270614
 DTEND;VALUE=DATE:20270623
@@ -266,20 +266,20 @@ DESCRIPTION:Course 10 - Transport and Water Modelling\nCohort 10-VWA-2706\n
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:08-ACC-2706@academy.edisgov.org
+UID:08-ACC-2706@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270621
 DTEND;VALUE=DATE:20270629
 SUMMARY:Course 08 - Health Modelling (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 08 - Health Modelling\nCohort 08-ACC-2706\nIn person - A
- ccra\, Ghana - EDIS regional hub\n6 contact days (36 contact hours)\nSessi
- ons 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-04-26\; nominatio
- ns close 2027-05-24\nFinal assessment by 2027-07-12
+ ccra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\nSes
+ sions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-04-26\; nominat
+ ions close 2027-05-24\nFinal assessment by 2027-07-12
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:12-VEA-2706@academy.edisgov.org
+UID:12-VEA-2706@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270628
 DTEND;VALUE=DATE:20270703
@@ -292,35 +292,35 @@ DESCRIPTION:Course 12 - Microsimulation\nCohort 12-VEA-2706\nLive virtual -
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:06-NBO-2707@academy.edisgov.org
+UID:06-NBO-2707@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270705
 DTEND;VALUE=DATE:20270714
 SUMMARY:Course 06 - Agriculture\, Forestry and Fisheries Modelling (Nairobi
  )
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 06 - Agriculture\, Forestry and Fisheries Modelling\nCoh
- ort 06-NBO-2707\nIn person - Nairobi\, Kenya - EDIS regional hub\n7 contac
- t days (42 contact hours)\nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnrolm
- ent opens 2027-05-10\; nominations close 2027-06-07\nFinal assessment by 2
- 027-07-27
+ ort 06-NBO-2707\nIn person - Nairobi\, Kenya - AICTEM regional hub\n7 cont
+ act days (42 contact hours)\nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnro
+ lment opens 2027-05-10\; nominations close 2027-06-07\nFinal assessment by
+  2027-07-27
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:05-ACC-2707@academy.edisgov.org
+UID:05-ACC-2707@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270719
 DTEND;VALUE=DATE:20270727
 SUMMARY:Course 05 - Trade Modelling (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 05 - Trade Modelling\nCohort 05-ACC-2707\nIn person - Ac
- cra\, Ghana - EDIS regional hub\n6 contact days (36 contact hours)\nSessio
- ns 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-05-24\; nomination
- s close 2027-06-21\nFinal assessment by 2027-08-09
+ cra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\nSess
+ ions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-05-24\; nominati
+ ons close 2027-06-21\nFinal assessment by 2027-08-09
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:14-VEA-2707@academy.edisgov.org
+UID:14-VEA-2707@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270726
 DTEND;VALUE=DATE:20270731
@@ -333,20 +333,20 @@ DESCRIPTION:Course 14 - Executive Programmes\nCohort 14-VEA-2707\nLive virt
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:04-NBO-2708@academy.edisgov.org
+UID:04-NBO-2708@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270816
 DTEND;VALUE=DATE:20270828
 SUMMARY:Course 04 - Climate Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 04 - Climate Modelling\nCohort 04-NBO-2708\nIn person - 
- Nairobi\, Kenya - EDIS regional hub\n10 contact days (60 contact hours)\nS
- essions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2027-06-21\; nomin
- ations close 2027-07-19\nFinal assessment by 2027-09-10
+ Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60 contact hours)\
+ nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2027-06-21\; nom
+ inations close 2027-07-19\nFinal assessment by 2027-09-10
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:07-VEA-2708@academy.edisgov.org
+UID:07-VEA-2708@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270816
 DTEND;VALUE=DATE:20270824
@@ -359,7 +359,7 @@ DESCRIPTION:Course 07 - Education Modelling\nCohort 07-VEA-2708\nLive virtu
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:03-VWA-2708@academy.edisgov.org
+UID:03-VWA-2708@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270816
 DTEND;VALUE=DATE:20270828
@@ -372,7 +372,7 @@ DESCRIPTION:Course 03 - Public Investment\nCohort 03-VWA-2708\nLive virtual
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:08-VWA-2708@academy.edisgov.org
+UID:08-VWA-2708@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270830
 DTEND;VALUE=DATE:20270907
@@ -385,20 +385,20 @@ DESCRIPTION:Course 08 - Health Modelling\nCohort 08-VWA-2708\nLive virtual
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:01-ACC-2709@academy.edisgov.org
+UID:01-ACC-2709@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270906
 DTEND;VALUE=DATE:20270918
 SUMMARY:Course 01 - Macroeconomics and Public Finance (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 01 - Macroeconomics and Public Finance\nCohort 01-ACC-27
- 09\nIn person - Accra\, Ghana - EDIS regional hub\n10 contact days (60 con
- tact hours)\nSessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027
- -07-12\; nominations close 2027-08-09\nFinal assessment by 2027-10-01
+ 09\nIn person - Accra\, Ghana - AICTEM regional hub\n10 contact days (60 c
+ ontact hours)\nSessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 20
+ 27-07-12\; nominations close 2027-08-09\nFinal assessment by 2027-10-01
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:06-VEA-2709@academy.edisgov.org
+UID:06-VEA-2709@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270906
 DTEND;VALUE=DATE:20270915
@@ -413,7 +413,7 @@ DESCRIPTION:Course 06 - Agriculture\, Forestry and Fisheries Modelling\nCoh
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:05-VWA-2709@academy.edisgov.org
+UID:05-VWA-2709@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270920
 DTEND;VALUE=DATE:20270929
@@ -427,20 +427,20 @@ DESCRIPTION:Course 05 - Trade Modelling\nCohort 05-VWA-2709\nLive virtual -
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:11-NBO-2709@academy.edisgov.org
+UID:11-NBO-2709@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20270927
 DTEND;VALUE=DATE:20271006
 SUMMARY:Course 11 - Industry Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 11 - Industry Modelling\nCohort 11-NBO-2709\nIn person -
-  Nairobi\, Kenya - EDIS regional hub\n7 contact days (42 contact hours)\nS
- essions 08:30-15:30 EAT\nFee US$1\,400\nEnrolment opens 2027-08-02\; nomin
- ations close 2027-08-30\nFinal assessment by 2027-10-19
+  Nairobi\, Kenya - AICTEM regional hub\n7 contact days (42 contact hours)\
+ nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnrolment opens 2027-08-02\; nom
+ inations close 2027-08-30\nFinal assessment by 2027-10-19
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:04-VEA-2710@academy.edisgov.org
+UID:04-VEA-2710@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271004
 DTEND;VALUE=DATE:20271019
@@ -454,21 +454,21 @@ DESCRIPTION:Course 04 - Climate Modelling\nCohort 04-VEA-2710\nLive virtual
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:13-NBO-2710@academy.edisgov.org
+UID:13-NBO-2710@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271011
 DTEND;VALUE=DATE:20271027
 SUMMARY:Course 13 - Monitoring\, Evaluation and Learning (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 13 - Monitoring\, Evaluation and Learning\nCohort 13-NBO
- -2710\nIn person - Nairobi\, Kenya - EDIS regional hub\n10 contact days (6
- 0 contact hours)\nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens
-  2027-08-16\; nominations close 2027-09-13\nFinal assessment by 2027-11-09
- \nExtended for 11 Oct Mazingira Day (observed)\; 20 Oct Mashujaa Day
+ -2710\nIn person - Nairobi\, Kenya - AICTEM regional hub\n10 contact days 
+ (60 contact hours)\nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment ope
+ ns 2027-08-16\; nominations close 2027-09-13\nFinal assessment by 2027-11-
+ 09\nExtended for 11 Oct Mazingira Day (observed)\; 20 Oct Mashujaa Day
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:01-VEA-2710@academy.edisgov.org
+UID:01-VEA-2710@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271025
 DTEND;VALUE=DATE:20271106
@@ -483,7 +483,7 @@ DESCRIPTION:Course 01 - Macroeconomics and Public Finance\nCohort 01-VEA-27
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:11-VWA-2710@academy.edisgov.org
+UID:11-VWA-2710@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271025
 DTEND;VALUE=DATE:20271103
@@ -496,20 +496,20 @@ DESCRIPTION:Course 11 - Industry Modelling\nCohort 11-VWA-2710\nLive virtua
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:02-ACC-2711@academy.edisgov.org
+UID:02-ACC-2711@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271101
 DTEND;VALUE=DATE:20271113
 SUMMARY:Course 02 - Economic Modelling (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 02 - Economic Modelling\nCohort 02-ACC-2711\nIn person -
-  Accra\, Ghana - EDIS regional hub\n10 contact days (60 contact hours)\nSe
- ssions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027-09-06\; nomina
- tions close 2027-10-04\nFinal assessment by 2027-11-26
+  Accra\, Ghana - AICTEM regional hub\n10 contact days (60 contact hours)\n
+ Sessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027-09-06\; nomi
+ nations close 2027-10-04\nFinal assessment by 2027-11-26
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:13-VWA-2711@academy.edisgov.org
+UID:13-VWA-2711@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271108
 DTEND;VALUE=DATE:20271120
@@ -524,20 +524,20 @@ DESCRIPTION:Course 13 - Monitoring\, Evaluation and Learning\nCohort 13-VWA
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:09-NBO-2711@academy.edisgov.org
+UID:09-NBO-2711@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271122
 DTEND;VALUE=DATE:20271130
 SUMMARY:Course 09 - Energy Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 09 - Energy Modelling\nCohort 09-NBO-2711\nIn person - N
- airobi\, Kenya - EDIS regional hub\n6 contact days (36 contact hours)\nSes
- sions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-09-27\; nominat
- ions close 2027-10-25\nFinal assessment by 2027-12-13
+ airobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)\nS
+ essions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-09-27\; nomin
+ ations close 2027-10-25\nFinal assessment by 2027-12-13
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:14-VWA-2711@academy.edisgov.org
+UID:14-VWA-2711@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271122
 DTEND;VALUE=DATE:20271127
@@ -550,7 +550,7 @@ DESCRIPTION:Course 14 - Executive Programmes\nCohort 14-VWA-2711\nLive virt
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:02-VEA-2711@academy.edisgov.org
+UID:02-VEA-2711@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271129
 DTEND;VALUE=DATE:20271211
@@ -563,34 +563,34 @@ DESCRIPTION:Course 02 - Economic Modelling\nCohort 02-VEA-2711\nLive virtua
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:10-ACC-2712@academy.edisgov.org
+UID:10-ACC-2712@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20271206
 DTEND;VALUE=DATE:20271215
 SUMMARY:Course 10 - Transport and Water Modelling (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 10 - Transport and Water Modelling\nCohort 10-ACC-2712\n
- In person - Accra\, Ghana - EDIS regional hub\n7 contact days (42 contact 
- hours)\nSessions 08:30-15:30 GMT\nFee US$1\,400\nEnrolment opens 2027-10-1
- 1\; nominations close 2027-11-08\nFinal assessment by 2027-12-28
+ In person - Accra\, Ghana - AICTEM regional hub\n7 contact days (42 contac
+ t hours)\nSessions 08:30-15:30 GMT\nFee US$1\,400\nEnrolment opens 2027-10
+ -11\; nominations close 2027-11-08\nFinal assessment by 2027-12-28
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:14-ACC-2801@academy.edisgov.org
+UID:14-ACC-2801@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280103
 DTEND;VALUE=DATE:20280111
 SUMMARY:Course 14 - Executive Programmes (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 14 - Executive Programmes\nCohort 14-ACC-2801\nIn person
-  - Accra\, Ghana - EDIS regional hub\n5 contact days (30 contact hours)\nS
- essions 08:30-15:30 GMT\nFee US$1\,000\nEnrolment opens 2027-11-08\; nomin
- ations close 2027-12-06\nFinal assessment by 2028-01-24\nExtended for 07 J
- an Constitution Day
+  - Accra\, Ghana - AICTEM regional hub\n5 contact days (30 contact hours)\
+ nSessions 08:30-15:30 GMT\nFee US$1\,000\nEnrolment opens 2027-11-08\; nom
+ inations close 2027-12-06\nFinal assessment by 2028-01-24\nExtended for 07
+  Jan Constitution Day
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:10-VEA-2801@academy.edisgov.org
+UID:10-VEA-2801@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280103
 DTEND;VALUE=DATE:20280112
@@ -605,7 +605,7 @@ DESCRIPTION:Course 10 - Transport and Water Modelling\nCohort 10-VEA-2801\n
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:09-VWA-2801@academy.edisgov.org
+UID:09-VWA-2801@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280103
 DTEND;VALUE=DATE:20280112
@@ -619,20 +619,20 @@ DESCRIPTION:Course 09 - Energy Modelling\nCohort 09-VWA-2801\nLive virtual
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:12-NBO-2801@academy.edisgov.org
+UID:12-NBO-2801@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280117
 DTEND;VALUE=DATE:20280122
 SUMMARY:Course 12 - Microsimulation (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 12 - Microsimulation\nCohort 12-NBO-2801\nIn person - Na
- irobi\, Kenya - EDIS regional hub\n5 contact days (30 contact hours)\nSess
- ions 08:30-15:30 EAT\nFee US$1\,000\nEnrolment opens 2027-11-22\; nominati
- ons close 2027-12-20\nFinal assessment by 2028-02-04
+ irobi\, Kenya - AICTEM regional hub\n5 contact days (30 contact hours)\nSe
+ ssions 08:30-15:30 EAT\nFee US$1\,000\nEnrolment opens 2027-11-22\; nomina
+ tions close 2027-12-20\nFinal assessment by 2028-02-04
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:11-VEA-2801@academy.edisgov.org
+UID:11-VEA-2801@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280117
 DTEND;VALUE=DATE:20280126
@@ -645,20 +645,20 @@ DESCRIPTION:Course 11 - Industry Modelling\nCohort 11-VEA-2801\nLive virtua
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:03-NBO-2801@academy.edisgov.org
+UID:03-NBO-2801@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280131
 DTEND;VALUE=DATE:20280212
 SUMMARY:Course 03 - Public Investment (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 03 - Public Investment\nCohort 03-NBO-2801\nIn person - 
- Nairobi\, Kenya - EDIS regional hub\n10 contact days (60 contact hours)\nS
- essions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2027-12-06\; nomin
- ations close 2028-01-03\nFinal assessment by 2028-02-25
+ Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60 contact hours)\
+ nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2027-12-06\; nom
+ inations close 2028-01-03\nFinal assessment by 2028-02-25
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:12-VWA-2802@academy.edisgov.org
+UID:12-VWA-2802@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280214
 DTEND;VALUE=DATE:20280219
@@ -671,97 +671,97 @@ DESCRIPTION:Course 12 - Microsimulation\nCohort 12-VWA-2802\nLive virtual -
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:07-ACC-2802@academy.edisgov.org
+UID:07-ACC-2802@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280221
 DTEND;VALUE=DATE:20280229
 SUMMARY:Course 07 - Education Modelling (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 07 - Education Modelling\nCohort 07-ACC-2802\nIn person 
- - Accra\, Ghana - EDIS regional hub\n6 contact days (36 contact hours)\nSe
- ssions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-12-27\; nomina
- tions close 2028-01-24\nFinal assessment by 2028-03-13
+ - Accra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\n
+ Sessions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-12-27\; nomi
+ nations close 2028-01-24\nFinal assessment by 2028-03-13
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:11-ACC-2803@academy.edisgov.org
+UID:11-ACC-2803@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280306
 DTEND;VALUE=DATE:20280316
 SUMMARY:Course 11 - Industry Modelling (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 11 - Industry Modelling\nCohort 11-ACC-2803\nIn person -
-  Accra\, Ghana - EDIS regional hub\n7 contact days (42 contact hours)\nSes
- sions 08:30-15:30 GMT\nFee US$1\,400\nEnrolment opens 2028-01-10\; nominat
- ions close 2028-02-07\nFinal assessment by 2028-03-29\nExtended for 06 Mar
-  Independence Day
+  Accra\, Ghana - AICTEM regional hub\n7 contact days (42 contact hours)\nS
+ essions 08:30-15:30 GMT\nFee US$1\,400\nEnrolment opens 2028-01-10\; nomin
+ ations close 2028-02-07\nFinal assessment by 2028-03-29\nExtended for 06 M
+ ar Independence Day
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:08-NBO-2803@academy.edisgov.org
+UID:08-NBO-2803@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280320
 DTEND;VALUE=DATE:20280328
 SUMMARY:Course 08 - Health Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 08 - Health Modelling\nCohort 08-NBO-2803\nIn person - N
- airobi\, Kenya - EDIS regional hub\n6 contact days (36 contact hours)\nSes
- sions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2028-01-24\; nominat
- ions close 2028-02-21\nFinal assessment by 2028-04-10
+ airobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)\nS
+ essions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2028-01-24\; nomin
+ ations close 2028-02-21\nFinal assessment by 2028-04-10
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:06-ACC-2804@academy.edisgov.org
+UID:06-ACC-2804@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280403
 DTEND;VALUE=DATE:20280412
 SUMMARY:Course 06 - Agriculture\, Forestry and Fisheries Modelling (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 06 - Agriculture\, Forestry and Fisheries Modelling\nCoh
- ort 06-ACC-2804\nIn person - Accra\, Ghana - EDIS regional hub\n7 contact 
- days (42 contact hours)\nSessions 08:30-15:30 GMT\nFee US$1\,400\nEnrolmen
- t opens 2028-02-07\; nominations close 2028-03-06\nFinal assessment by 202
- 8-04-25
+ ort 06-ACC-2804\nIn person - Accra\, Ghana - AICTEM regional hub\n7 contac
+ t days (42 contact hours)\nSessions 08:30-15:30 GMT\nFee US$1\,400\nEnrolm
+ ent opens 2028-02-07\; nominations close 2028-03-06\nFinal assessment by 2
+ 028-04-25
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:05-NBO-2804@academy.edisgov.org
+UID:05-NBO-2804@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280424
 DTEND;VALUE=DATE:20280503
 SUMMARY:Course 05 - Trade Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 05 - Trade Modelling\nCohort 05-NBO-2804\nIn person - Na
- irobi\, Kenya - EDIS regional hub\n6 contact days (36 contact hours)\nSess
- ions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2028-02-28\; nominati
- ons close 2028-03-27\nFinal assessment by 2028-05-16\nExtended for 01 May 
- Labour Day
+ irobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)\nSe
+ ssions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2028-02-28\; nomina
+ tions close 2028-03-27\nFinal assessment by 2028-05-16\nExtended for 01 Ma
+ y Labour Day
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:04-ACC-2805@academy.edisgov.org
+UID:04-ACC-2805@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280508
 DTEND;VALUE=DATE:20280520
 SUMMARY:Course 04 - Climate Modelling (Accra)
-LOCATION:Accra\, Ghana - EDIS regional hub
+LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 04 - Climate Modelling\nCohort 04-ACC-2805\nIn person - 
- Accra\, Ghana - EDIS regional hub\n10 contact days (60 contact hours)\nSes
- sions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2028-03-13\; nominat
- ions close 2028-04-10\nFinal assessment by 2028-06-02
+ Accra\, Ghana - AICTEM regional hub\n10 contact days (60 contact hours)\nS
+ essions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2028-03-13\; nomin
+ ations close 2028-04-10\nFinal assessment by 2028-06-02
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:14-NBO-2805@academy.edisgov.org
+UID:14-NBO-2805@academy.aictem
 DTSTAMP:20260914T000000Z
 DTSTART;VALUE=DATE:20280529
 DTEND;VALUE=DATE:20280603
 SUMMARY:Course 14 - Executive Programmes (Nairobi)
-LOCATION:Nairobi\, Kenya - EDIS regional hub
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 14 - Executive Programmes\nCohort 14-NBO-2805\nIn person
-  - Nairobi\, Kenya - EDIS regional hub\n5 contact days (30 contact hours)\
- nSessions 08:30-15:30 EAT\nFee US$1\,000\nEnrolment opens 2028-04-03\; nom
- inations close 2028-05-01\nFinal assessment by 2028-06-16
+  - Nairobi\, Kenya - AICTEM regional hub\n5 contact days (30 contact hours
+ )\nSessions 08:30-15:30 EAT\nFee US$1\,000\nEnrolment opens 2028-04-03\; n
+ ominations close 2028-05-01\nFinal assessment by 2028-06-16
 TRANSP:OPAQUE
 END:VEVENT
 END:VCALENDAR

@@ -21,7 +21,7 @@
 
   /* The demonstration credential is intentionally public - see the note above. */
   var DEMO = {
-    email: "admin@edisgov.org",
+    email: "admin@aictem.org",
     pass: "edis-admin-2026",
     name: "Platform Administrator",
     initials: "PA",

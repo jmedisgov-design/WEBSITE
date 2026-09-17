@@ -121,7 +121,7 @@ srv.listen(0, async () => {
     console.log("--- calculator");
     const out = doc.getElementById("calc-out");
     ok(/Indicative estimate/i.test(out.textContent), "estimator carries the non-binding label");
-    ok(/subject to EDIS review/i.test(out.textContent), "label names EDIS review");
+    ok(/subject to AICTEM review/i.test(out.textContent), "label names AICTEM review");
     ok(/Indicative first year/.test(out.textContent), "first-year total shown");
     ok(/Indicative recurring/.test(out.textContent), "recurring total shown");
     const before = out.textContent;

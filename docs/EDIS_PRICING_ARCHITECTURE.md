@@ -30,7 +30,7 @@ This is why the plan table has two billing models — `seat` for the individual 
 | EDIS Ministry | Institutional | 35,000–75,000 / year | 25–50 | Request ministry demo |
 | EDIS Government Enterprise | Institutional | 120,000–300,000 / year | 50–200 | Request government demo |
 | EDIS National Platform | National | 300,000–750,000 / year | 200–1,000+ | Discuss national deployment |
-| EDIS Sovereign Premium | National | Custom, 750,000–1.5m+ | Custom | Contact EDIS |
+| EDIS Sovereign Premium | National | Custom, 750,000–1.5m+ | Custom | Contact AICTEM |
 
 All figures USD. **Two plans are visually prominent:** Professional Plus carries *Best for advanced
 analysts*, and Government Enterprise carries *Recommended for Ministries of Finance & Central
@@ -54,7 +54,7 @@ can legitimately cost as much as a small ministry deployment.
 
 **One record: `assets/js/pricing.js`.** It holds plans, entitlements, sector bands, add-ons,
 implementation fees, training bands, development access bands, institution packages, procurement
-vocabulary and the EDIS contact.
+vocabulary and the AICTEM contact.
 
 No page contains a price. `tests/source_of_truth` scans every HTML and JS file except the
 canonical record and **fails if any currency-marked figure appears anywhere else** — including in
@@ -107,7 +107,7 @@ Applied at contract, not at checkout, and recorded on the subscription as `disco
 the reason for a non-standard price is auditable. Administrators configure the bands, and may set
 a country-specific adjustment inside a band.
 
-**Donor-supported deployment** allows a donor, the government and EDIS to share financing;
+**Donor-supported deployment** allows a donor, the government and AICTEM to share financing;
 `donor_sponsorships` records the three shares and enforces that they do not exceed the total.
 
 ---
@@ -138,10 +138,10 @@ It selects the plan from the institution's recommendation and **raises it if the
 exceeds that plan's band**, so a 500-user request does not return a Team price. Development access
 is applied to the subscription only, never to implementation or training.
 
-Every output carries: **INDICATIVE ESTIMATE — FINAL COMMERCIAL PROPOSAL SUBJECT TO EDIS REVIEW.**
+Every output carries: **INDICATIVE ESTIMATE — FINAL COMMERCIAL PROPOSAL SUBJECT TO AICTEM REVIEW.**
 It never produces a binding offer, and a test asserts that label is present.
 
-**The configurator** (`pricing.html#configurator`) shows the package EDIS recommends for an
+**The configurator** (`pricing.html#configurator`) shows the package AICTEM recommends for an
 institution type and lets the buyer adjust it:
 
 | Institution | Recommended |
