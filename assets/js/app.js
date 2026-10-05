@@ -26,46 +26,70 @@
   window.EDIS_SITE = SITE;
 
   var NAV = [
-    { label: "Technology", href: "what-is-edis.html", children: [
-      ["what-is-edis.html", "What is EDIS?", "The platform, in plain language"],
-      ["how-it-works.html", "How EDIS works", "Question to routed workflow to report"],
-      ["agents.html", "AI agents", "Registered agents and the question library"],
-      ["models.html", "Models", "The AICTEM model services behind every number"],
+    { label: "EDIS", href: "what-is-edis.html", children: [
+      ["what-is-edis.html", "Platform", "The integrated decision-intelligence platform"],
+      ["how-it-works.html", "What EDIS does", "Policy question to routed workflow to decision report"],
+      ["models.html", "Models", "The 21 model services behind every number"],
+      ["sectors.html", "Sectors", "Sixteen sector and cross-cutting sheets"],
+      ["agents.html", "AI agents", "Agents orchestrate the models; they do not replace them"],
+      ["gis.html", "GIS and spatial planning", "Maps, layers, catchments and siting"],
+      ["reports.html", "Reports and analytics", "Decision briefs, technical reports and provenance"],
+      ["countries.html", "Countries", "What a national EDIS configuration contains"],
       ["data.html", "Data", "Sources, provenance and quality control"],
-      ["gis.html", "GIS", "Maps, layers, catchments and siting"],
       ["simulations.html", "Simulations", "Scenario builder and the run queue"],
-      ["reports.html", "Reports", "Generated policy briefs and technical reports"],
-      ["api.html", "API", "Programmatic access to indicators and runs"]
+      ["api.html", "API", "Programmatic access to indicators and runs"],
+      ["demo.html", "Live demonstration", "Watch EDIS answer a policy question"]
     ]},
     { label: "Solutions", href: "solutions.html", children: [
       ["solutions.html", "All solutions", "Every route in: government, sector and institution"],
-      ["government.html", "For governments", "Ministries, central banks and statistics offices"],
-      ["government-ministry-of-finance.html", "Ministry of Finance", "Envelope, ceilings, appraisal and what the budget buys"],
-      ["government-central-bank.html", "Central Bank", "Forecasting, policy simulation and the economy-wide closure"],
-      ["government-statistics.html", "Statistics Office", "Accounts, surveys, calibration and governed data APIs"],
-      ["sectors.html", "By sector", "Sixteen sector and cross-cutting sheets"],
+      ["solutions.html#finance", "Ministries of Finance", "Envelope, ceilings, appraisal and what the budget buys"],
+      ["solutions.html#planning", "Planning ministries", "National plans, investment programmes and results"],
+      ["solutions.html#central-bank", "Central banks", "Forecasting, policy simulation and the economy-wide closure"],
+      ["solutions.html#sector-ministries", "Sector ministries", "Sector plans costed against the fiscal envelope"],
+      ["solutions.html#development-banks", "Development banks", "Appraisal, portfolio and country diagnostics"],
+      ["solutions.html#development-partners", "Development partners", "Programme design, targeting and results"],
       ["solutions.html#institutions", "By institution type", "Ten institution types and what each one runs"]
     ]},
-    { label: "Academy", href: "academy.html", children: [
-      ["academy.html", "EDIS Academy", "Formats, course tracks, certification and fellowships"],
-      ["courses.html", "Course catalogue", "Fourteen courses, one for each school"],
-      ["academy-calendar.html", "Training calendar", "56 cohorts in Nairobi, Accra and online"],
-      ["enrol.html", "Enrol or nominate", "Take a place, or nominate a team from your institution"],
-      ["partners.html", "Training partners", "Deliver Academy courses under licence"]
+    { label: "For governments", href: "government.html", children: [
+      ["government.html", "Government overview", "What a government deployment contains"],
+      ["deploy.html#ministry", "Ministry deployment", "One ministry, its models, data and users"],
+      ["deploy.html#enterprise", "Government enterprise", "Several institutions on one governed estate"],
+      ["deploy.html#national", "National platform", "The national analytical infrastructure"],
+      ["deploy.html#configuration", "Country configuration", "National data, calibration and institutional setup"],
+      ["deploy.html#implementation", "Implementation", "From contract to live deployment"],
+      ["deploy.html#integration", "Integration", "APIs, IFMIS, statistics systems and data pipelines"],
+      ["government-ministry-of-finance.html", "Ministry of Finance", "Envelope, ceilings, appraisal and what the budget buys"],
+      ["government-central-bank.html", "Central Bank", "Forecasting, policy simulation and the economy-wide closure"],
+      ["government-statistics.html", "Statistics Office", "Accounts, surveys, calibration and governed data APIs"]
     ]},
     { label: "Pricing", href: "pricing.html", children: [
-      ["pricing.html", "Plans and pricing", "Explorer, Professional, institutional and national"],
-      ["pricing.html#compare", "Compare plans", "What every plan includes, capability by capability"],
+      ["pricing.html", "Plans and pricing", "Subscription, implementation, training and development"],
+      ["pricing.html#individual", "Explorer, Professional, Professional Plus", "Individual and small-team plans"],
+      ["pricing.html#institutional", "Institutional and Ministry", "Team, Sector, Ministry and Government Enterprise"],
+      ["pricing.html#national", "National Platform and Sovereign Premium", "National-scale deployments"],
+      ["pricing.html#implementation", "Implementation and services", "Configuration, integration and support"],
       ["pricing.html#calculator", "Estimate a deployment", "An indicative institutional estimate"],
       ["pricing.html#configurator", "Build your package", "A recommended package for your institution"],
-      ["request-quote.html", "Request a quote or demo", "Quotes, proformas, proposals and procurement"]
+      ["request-quote.html", "Request a quote", "Quotes, proformas, proposals and procurement"]
     ]},
-    { label: "Resources", href: "resources.html" },
-    { label: "About", href: "about.html", children: [
+    { label: "Academy", href: "academy.html", children: [
+      ["academy.html", "EDIS Academy", "Training that supports EDIS adoption"],
+      ["courses.html", "Courses", "Fourteen courses, one for each school"],
+      ["academy.html#certification", "Certification", "Assessment, certificates and the certification boards"],
+      ["academy-calendar.html", "Training calendar", "56 cohorts in Nairobi, Accra and online"],
+      ["academy.html#cohorts", "Government cohorts", "A ministry team trained together, on its own estate"],
+      ["academy.html#institutional", "Institutional training", "Onboarding and certification inside a deployment"],
+      ["enrol.html", "Enrol or nominate", "Take a place, or nominate a team"],
+      ["partners.html", "Training partners", "Deliver Academy courses under licence"]
+    ]},
+    { label: "Resources", href: "resources.html", children: [
+      ["resources.html", "All resources", "Documentation, reports, data and the Academy register"],
+      ["resources.html#reports", "Reports", "Decision briefs and technical report formats"],
+      ["resources.html#model-docs", "Model library and documentation", "Model reports and platform documentation"],
+      ["demo.html", "Demonstrations", "The public demonstration and sample runs"],
+      ["resources.html#research", "Research and publications", "The research behind the models"],
       ["about.html", "About EDIS", "Purpose, principles and governance"],
-      ["about.html#aictem", "About AICTEM", "The institute behind the platform"],
-      ["about.html#leadership", "Leadership", "Who directs the work"],
-      ["partners.html", "Partners", "Training, research and institutional partners"],
+      ["about.html#aictem", "About AICTEM", "The institute that develops and maintains EDIS"],
       ["contact.html", "Contact", "Reach the EDIS team"]
     ]}
   ];
@@ -121,7 +145,7 @@
         '<ul class="menu">' + items + "</ul>" +
         '<span class="navcta">' +
           '<a class="btn btn-outline btn-sm" href="login.html">Sign in</a>' +
-          '<a class="btn btn-green btn-sm keep" href="demo.html">Ask EDIS</a>' +
+          '<a class="btn btn-green btn-sm keep" href="request-demo.html">Request a demo</a>' +
         "</span>" +
       "</nav></div>";
   }
@@ -131,22 +155,25 @@
       '<div class="foot-grid">' +
         '<div class="foot-brand">' +
           '<img src="assets/img/logo-footer.png" alt="AICTEM" width="200" height="200">' +
-          "<p>EDIS is the Economic Development Intelligence System of the African Institute for " +
-          "Climate, Trade and Economic Modelling. It connects economic models, sector planning " +
-          "systems, GIS, public finance and AI agents so that governments and institutions can " +
-          "analyse policies, allocate resources and make evidence-based development decisions.</p>" +
+          "<p>EDIS is economic development intelligence infrastructure. It connects economic " +
+          "models, sector planning systems, public finance, GIS, optimization, forecasting, " +
+          "microsimulation and AI agents so that governments and institutions can analyse " +
+          "policies, allocate resources and make evidence-based development decisions. " +
+          "EDIS is developed and maintained by the African Institute for Climate, Trade and " +
+          "Economic Modelling (AICTEM).</p>" +
           socialRow("foot-soc") +
         "</div>" +
-        "<div><h4>Technology</h4>" +
-          '<a href="what-is-edis.html">What is EDIS?</a><a href="how-it-works.html">How EDIS works</a>' +
-          '<a href="agents.html">AI agents</a><a href="models.html">Models</a>' +
-          '<a href="gis.html">GIS</a><a href="api.html">API</a>' +
+        "<div><h4>EDIS</h4>" +
+          '<a href="what-is-edis.html">Platform</a><a href="models.html">Models</a>' +
+          '<a href="agents.html">AI agents</a><a href="sectors.html">Sectors</a>' +
+          '<a href="gis.html">GIS</a><a href="reports.html">Reports</a>' +
+          '<a href="countries.html">Countries</a><a href="api.html">API</a>' +
         "</div>" +
-        "<div><h4>Explore</h4>" +
+        "<div><h4>Deploy</h4>" +
           '<a href="solutions.html">Solutions</a><a href="government.html">For governments</a>' +
-          '<a href="sectors.html">By sector</a>' +
-          '<a href="academy.html">EDIS Academy</a><a href="pricing.html">Access and pricing</a>' +
-          '<a href="resources.html">Resources</a><a href="partners.html">Partners</a>' +
+          '<a href="deploy.html">Government deployment</a><a href="pricing.html">Pricing</a>' +
+          '<a href="academy.html">EDIS Academy</a><a href="resources.html">Resources</a>' +
+          '<a href="partners.html">Partners</a><a href="contact.html">Contact</a>' +
         "</div>" +
         "<div><h4>Contact</h4>" +
           '<a href="mailto:' + SITE.email + '">' + SITE.email + "</a>" +
@@ -162,6 +189,45 @@
       "</div></div>";
   }
 
+  /* ------------------------------------------------------------- measurement
+     Conversion events for the commercial funnel. Nothing is collected here and
+     no third-party tag is loaded: each event is dispatched as a DOM event and,
+     where the site owner has installed an analytics tag, forwarded to it. */
+  var EVENTS = [
+    [/request-demo\.html/, "request_demo"],
+    [/request-quote\.html/, "institutional_inquiry"],
+    [/^deploy\.html/, "government_deployment_view"],
+    [/^pricing\.html/, "pricing_view"],
+    [/^models\.html/, "model_view"],
+    [/^academy\.html|^academy-calendar\.html|^courses\.html/, "academy_visit"],
+    [/^enrol\.html/, "academy_registration"],
+    [/^login\.html|^admin-login\.html/, "signup_start"],
+    [/^demo\.html/, "demonstration_open"]
+  ];
+
+  function track(name, detail) {
+    try {
+      document.dispatchEvent(new CustomEvent("edis:event", { detail: { event: name, data: detail } }));
+      if (window.dataLayer && window.dataLayer.push) window.dataLayer.push({ event: name, edis: detail });
+      if (typeof window.gtag === "function") window.gtag("event", name, detail || {});
+    } catch (e) { /* measurement must never break the page */ }
+  }
+
+  function measure() {
+    document.addEventListener("click", function (e) {
+      var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+      if (!a) return;
+      var href = a.getAttribute("href") || "", name = a.getAttribute("data-ev");
+      if (!name) {
+        for (var i = 0; i < EVENTS.length; i++) {
+          if (EVENTS[i][0].test(href)) { name = EVENTS[i][1]; break; }
+        }
+      }
+      if (name) track(name, { href: href, label: (a.textContent || "").trim().slice(0, 60),
+                              page: currentPage() });
+    });
+  }
+
   function mount() {
     var head = document.querySelector("header.site");
     var foot = document.querySelector("footer.site");
@@ -170,6 +236,8 @@
 
     var yr = document.getElementById("yr");
     if (yr) yr.textContent = new Date().getFullYear();
+
+    measure();
 
     var tog = document.querySelector(".navtoggle");
     var menu = document.querySelector(".menu");
@@ -349,6 +417,7 @@
       '<div class="chain-body">' + rows + "</div></div>";
   };
 
+  H.track = track;
   window.EDIS = H;
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount);

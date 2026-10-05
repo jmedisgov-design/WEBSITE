@@ -727,3 +727,108 @@ table.tbl.cmp tbody tr:hover .cmp-feat{background:var(--soft)}
 /* documentation downloads: equal-height cards with actions on the bottom edge */
 .doccard{display:flex;flex-direction:column}
 .doccard .card-actions{margin-top:auto;padding-top:6px}
+
+/* ===========================================================================
+   Platform information architecture: the adoption ladder, the commercial
+   funnel, the analytical pipeline, the model ecosystem and the report spine.
+   =========================================================================== */
+
+/* adoption ladder: numbered rungs with a connecting rail */
+.ladder{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:rung}
+.ladder li{display:grid;grid-template-columns:62px 1fr;gap:18px;padding:18px 0;
+  border-top:1px solid var(--line);align-items:start}
+.ladder li:first-child{border-top:0}
+.ladder .rung{font-family:var(--mono);font-size:.82rem;font-weight:700;color:#fff;
+  background:var(--navy);border-radius:6px;padding:8px 0;text-align:center;letter-spacing:.06em}
+.ladder li:nth-child(n+4) .rung{background:var(--green-d)}
+.ladder b{display:block;font-family:var(--serif);font-size:1.12rem;color:var(--navy);margin-bottom:.2em}
+.ladder span:not(.rung){display:block;color:var(--muted)}
+.ladder .card-more{margin-top:6px;display:inline-block}
+
+/* commercial funnel: stages that narrow as commitment deepens */
+.funnel{display:grid;gap:10px;max-width:860px;margin:0 auto}
+.funnel .fstage{display:grid;grid-template-columns:150px 1fr auto;gap:16px;align-items:center;
+  background:var(--navy);color:#fff;border-radius:8px;padding:14px 20px;
+  justify-self:center;width:100%}
+.funnel .fstage:nth-child(2){width:96%}
+.funnel .fstage:nth-child(3){width:92%}
+.funnel .fstage:nth-child(4){width:88%}
+.funnel .fstage:nth-child(5){width:84%}
+.funnel .fstage:nth-child(6){width:80%}
+.funnel .fstage:nth-child(7){width:76%;background:var(--green-d)}
+.funnel .fstage b{font-family:var(--sans);text-transform:uppercase;letter-spacing:.1em;
+  font-size:.78rem;color:#bfe3c5}
+.funnel .fstage span{color:#dbe8f2;font-size:.95rem}
+.funnel .fstage .fplan{font-family:var(--mono);font-size:.82rem;color:#fff;white-space:nowrap}
+.funnel-note{text-align:center;margin-top:18px;color:var(--muted)}
+
+/* analytical pipeline: a vertical chain from question to decision report */
+.pipe{display:grid;gap:0;max-width:880px;margin:0 auto}
+.pipe .pstep{display:grid;grid-template-columns:48px 1fr;gap:18px;align-items:start;
+  padding:14px 0;position:relative}
+.pipe .pstep:not(:last-child)::before{content:"";position:absolute;left:23px;top:46px;bottom:-14px;
+  width:2px;background:var(--line)}
+.pipe .pn{width:48px;height:48px;border-radius:50%;background:var(--soft2);color:var(--navy);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--mono);
+  font-size:.8rem;border:1px solid var(--line);position:relative;z-index:1}
+.pipe .pstep.ai .pn{background:var(--navy);color:#fff;border-color:var(--navy)}
+.pipe .pstep.out .pn{background:var(--green-d);color:#fff;border-color:var(--green-d)}
+.pipe b{display:block;font-family:var(--serif);color:var(--navy);font-size:1.1rem}
+.pipe .pstep>div>span{display:block;color:var(--muted);font-size:.95rem}
+.sec-dark .pipe b{color:#fff}
+.sec-dark .pipe .pstep>div>span{color:#9fb8cc}
+.sec-dark .pipe .pn{background:#ffffff14;border-color:var(--line-d);color:#fff}
+.sec-dark .pipe .pstep:not(:last-child)::before{background:var(--line-d)}
+
+/* model ecosystem: grouped model chips */
+.eco{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:16px}
+.eco .ecogroup{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:#fff}
+.eco .ecogroup h3{font-size:1.08rem;margin-bottom:.5em}
+.eco .ecogroup.g-macro{border-top:4px solid var(--growth)}
+.eco .ecogroup.g-invest{border-top:4px solid var(--green-d)}
+.eco .ecogroup.g-sector{border-top:4px solid var(--infra)}
+.eco .ecogroup.g-dist{border-top:4px solid var(--ochre)}
+.eco .ecogroup.g-climate{border-top:4px solid var(--climate)}
+.eco .ecolist{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.eco .ecolist li{font-family:var(--mono);font-size:.78rem;background:var(--soft);
+  border:1px solid var(--line);border-radius:4px;padding:4px 8px;color:var(--navy)}
+
+/* decision report spine */
+.spine{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);
+  display:grid;gap:2px}
+.spine li{position:relative;padding:7px 0 7px 22px;color:var(--ink);font-size:.95rem}
+.spine li::before{content:"";position:absolute;left:-6px;top:16px;width:10px;height:10px;
+  border-radius:50%;background:var(--green);border:2px solid #fff}
+.spine li b{font-family:var(--sans);font-weight:600}
+.spine li span{color:var(--muted)}
+
+@media(max-width:700px){
+  .ladder li{grid-template-columns:46px 1fr;gap:12px}
+  .funnel .fstage{grid-template-columns:1fr;gap:4px;width:100%!important;padding:12px 16px}
+  .funnel .fstage .fplan{white-space:normal}
+  .pipe .pstep{grid-template-columns:38px 1fr;gap:12px}
+  .pipe .pn{width:38px;height:38px;font-size:.72rem}
+  .pipe .pstep:not(:last-child)::before{left:18px;top:40px}
+}
+
+/* hero: product name, the infrastructure line under it, and the quiet link */
+.hero .subhead{font-family:var(--serif);color:#9fe6b4;font-size:1.55rem;line-height:1.25;
+  margin:.05em 0 .5em;font-weight:700;letter-spacing:.01em}
+.hero h1.wordmark{font-size:3.6rem;letter-spacing:.02em;margin-bottom:.1em}
+.hero .tagline{font-size:1.32rem;color:#fff;font-weight:600;margin-bottom:.6em}
+.hero .herolink{display:inline-block;margin-top:14px;color:#bfe3c5;font-size:.95rem}
+.hero .herolink:hover{color:#fff}
+.hero p{color:#dce8f1}
+@media(max-width:700px){
+  .hero h1.wordmark{font-size:2.8rem}
+  .hero .subhead{font-size:1.2rem}
+  .hero .tagline{font-size:1.12rem}
+}
+
+/* the infrastructure band: eight inputs, one output */
+.stack{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stack .scell{background:#ffffff12;border:1px solid #ffffff26;border-top:3px solid var(--green-l);
+  border-radius:8px;padding:14px 16px;font-weight:600;color:#fff;font-size:.95rem}
+.stack-out{text-align:center;margin-top:22px}
+.stack-out b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block}
+@media(max-width:860px){.stack{grid-template-columns:repeat(2,1fr)}}
