@@ -41,26 +41,18 @@
       ["demo.html", "Live demonstration", "Watch EDIS answer a policy question"]
     ]},
     { label: "Solutions", href: "solutions.html", children: [
-      ["solutions.html", "All solutions", "Every route in: government, sector and institution"],
-      ["solutions.html#finance", "Ministries of Finance", "Envelope, ceilings, appraisal and what the budget buys"],
-      ["solutions.html#planning", "Planning ministries", "National plans, investment programmes and results"],
-      ["solutions.html#central-bank", "Central banks", "Forecasting, policy simulation and the economy-wide closure"],
-      ["solutions.html#sector-ministries", "Sector ministries", "Sector plans costed against the fiscal envelope"],
-      ["solutions.html#development-banks", "Development banks", "Appraisal, portfolio and country diagnostics"],
-      ["solutions.html#development-partners", "Development partners", "Programme design, targeting and results"],
-      ["solutions.html#institutions", "By institution type", "Ten institution types and what each one runs"]
-    ]},
-    { label: "Government deployment", href: "government.html", children: [
-      ["government.html", "Government overview", "What a government deployment contains"],
-      ["deploy.html#ministry", "Ministry deployment", "One ministry, its models, data and users"],
-      ["deploy.html#enterprise", "Government enterprise", "Several institutions on one governed estate"],
-      ["deploy.html#national", "National platform", "The national analytical infrastructure"],
+      ["solutions.html", "All solutions", "Every route in: institution, sector and deployment"],
+      ["solutions.html#government", "By government institution", "What each institution actually runs"],
+      ["government-ministry-of-finance.html", "Ministry of Finance", "Envelope, ceilings, appraisal and what the budget buys"],
+      ["government-central-bank.html", "Central Bank", "Forecasting, policy simulation and the economy-wide closure"],
+      ["government-statistics.html", "Statistics Office", "Accounts, surveys, calibration and governed data APIs"],
+      ["solutions.html#sectors", "By sector", "Sixteen sector and cross-cutting sheets"],
+      ["solutions.html#institutions", "By institution type", "Ten institution types, from ministries to development partners"],
+      ["deploy.html", "Government deployment", "Ministry, enterprise and national platform tiers"],
       ["deploy.html#configuration", "Country configuration", "National data, calibration and institutional setup"],
       ["deploy.html#implementation", "Implementation", "From contract to live deployment"],
       ["deploy.html#integration", "Integration", "APIs, IFMIS, statistics systems and data pipelines"],
-      ["government-ministry-of-finance.html", "Ministry of Finance", "Envelope, ceilings, appraisal and what the budget buys"],
-      ["government-central-bank.html", "Central Bank", "Forecasting, policy simulation and the economy-wide closure"],
-      ["government-statistics.html", "Statistics Office", "Accounts, surveys, calibration and governed data APIs"]
+      ["government.html", "Procurement and licensing", "How a government buys and what the licence carries"]
     ]},
     { label: "Pricing", href: "pricing.html", children: [
       ["pricing.html", "Plans and pricing", "Subscription, implementation, training and development"],
@@ -170,8 +162,8 @@
           '<a href="countries.html">Countries</a><a href="api.html">API</a>' +
         "</div>" +
         "<div><h4>Deploy</h4>" +
-          '<a href="solutions.html">Solutions</a><a href="government.html">Government deployment</a>' +
-          '<a href="deploy.html">Deployment tiers</a><a href="pricing.html">Pricing</a>' +
+          '<a href="solutions.html">Solutions</a><a href="deploy.html">Government deployment</a>' +
+          '<a href="government.html">Procurement</a><a href="pricing.html">Pricing</a>' +
           '<a href="academy.html">EDIS Academy</a><a href="resources.html">Resources</a>' +
           '<a href="partners.html">Partners</a><a href="contact.html">Contact</a>' +
         "</div>" +
