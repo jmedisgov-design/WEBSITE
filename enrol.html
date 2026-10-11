@@ -17,10 +17,10 @@
     &rsaquo; <a href="courses.html">Courses</a> &rsaquo; Enrol</div>
   <div class="eyebrow">Enrolment</div>
   <h1 id="page-title">Take a place on a cohort</h1>
-  <p id="page-lede">Choose the course and the cohort &mdash; each course runs four times, in person in Nairobi
-  and Accra and live virtual on East Africa and West Africa time. Individual enrolment
-  opens eight weeks before a cohort starts; institutions nominating a team are scheduled directly,
-  so the course can be built around the institution&rsquo;s own questions.</p>
+  <p id="page-lede">Choose the course and the cohort &mdash; each course is taught twice in person,
+  once in Nairobi and once in Accra. Individual enrolment opens eight weeks before a cohort starts;
+  institutions nominating a team are scheduled directly, so the course can be built around the
+  institution&rsquo;s own questions.</p>
 </div></section>
 
 <section><div class="wrap"><div class="g-sidebar grid">
@@ -34,7 +34,7 @@
         <label class="field full"><span>Cohort <span class="reqmark">*</span></span>
           <select name="cohort" id="f-cohort" required></select>
           <span class="small muted" id="cohort-note"></span></label>
-        <p class="field full small muted" id="mode-note" style="margin:-6px 0 0">Each cohort is either in person in Nairobi or Accra, or live virtual on East Africa or West Africa time. Choose the cohort that suits you; the fee follows it.</p>
+        <p class="field full small muted" id="mode-note" style="margin:-6px 0 0">Every cohort is taught in person, in Nairobi or in Accra. Choose the one that suits your calendar; the fee is US$200 a contact day.</p>
         <label class="field"><span>Enrolling as <span class="reqmark">*</span></span>
           <select name="enrolment_type" id="f-type" required>
             <option value="Individual">An individual</option>
@@ -138,7 +138,7 @@
     var c = course(), list = c ? CAL.filter(function (r) { return r.key === c.key; })
       .sort(function (a, b) { return a.start < b.start ? -1 : 1; }) : [];
     selCohort.innerHTML = "";
-    ["In person", "Live virtual"].forEach(function (mode) {
+    ["In person"].forEach(function (mode) {
       var grp = document.createElement("optgroup");
       grp.label = mode;
       list.filter(function (r) { return r.mode === mode; }).forEach(function (r) {

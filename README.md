@@ -66,8 +66,8 @@ price cards; and copy that states what the system does and does not do.
 | `government.html` | EDIS for governments — what each institution runs, how a deployment runs, procurement. Detail pages: `government-ministry-of-finance.html`, `government-central-bank.html`, `government-statistics.html`. All four now sit under Solutions in the menu and the breadcrumbs; their URLs are unchanged. |
 | `sectors.html` | Sixteen sector and cross-cutting sheets — coverage, questions, models, data and status — as a filterable table and as cards, plus sector-package pricing. Sits under Solutions; the URL is unchanged. |
 | `academy.html` | EDIS Academy, positioned as the training and certification arm that supports platform adoption: learn → practise → certify → deploy, delivery formats, the fourteen-course table (filterable by length and status), certification (`#certification`), training inside a deployment (`#institutional`), government cohorts (`#cohorts`), laboratories, training partners, enrolment. |
-| `courses.html` | Course catalogue, master–detail. **Fourteen courses, one per numbered directory of `D:/EDIP/Training/EDIS_Academy`.** Each shows its length and the reason for it, its four cohorts as cards (Nairobi, Accra, virtual East Africa time, virtual West Africa time) with fees and deadlines, its modules — each expanding to the module's own published summary, learning outcomes, prerequisites and outline — modules still to be written, a day-by-day plan, the certificate and materials counts. Deep-links as `courses.html#C04`; older module links such as `courses.html#MOD_309` open the course containing that module. |
-| `academy-calendar.html` | The training year, 15 Jan 2027 (first cohorts Monday 18 Jan) to 2 Jun 2028 — a 73-week grid in four lanes (Nairobi, Accra, virtual East Africa time, virtual West Africa time), coloured by course family, with provisional cohorts hatched. All 56 cohorts filterable by course, place and month, the scheduling rules, closures, certification boards, holiday extensions and the build queue. |
+| `courses.html` | Course catalogue, master–detail. **Fourteen courses, one per numbered directory of `D:/EDIP/Training/EDIS_Academy`.** Each shows its length and the reason for it, its two cohorts as cards (Nairobi and Accra) with fees and deadlines, its modules — each expanding to the module's own published summary, learning outcomes, prerequisites and outline — modules still to be written, a day-by-day plan, the certificate and materials counts. Deep-links as `courses.html#C04`; older module links such as `courses.html#MOD_309` open the course containing that module. |
+| `academy-calendar.html` | The training year, 15 Jan 2027 (first cohorts Monday 18 Jan) to 23 Jun 2028 — a 76-week grid in two hub lanes (Nairobi, Accra), coloured by course family, with provisional cohorts hatched. All 28 cohorts filterable by course, place and month, the scheduling rules, closures, certification boards, holiday extensions and the build queue. |
 | `enrol.html` | Enrolment. Course and cohort selects, pre-filled from `enrol.html?course=C04&cohort=04-NBO-2704`; the cohort determines the mode and the fee. Older module links (`?course=MOD_309`) select the course that contains the module. |
 | `pricing.html` | Eight access levels, an 18-row capability matrix, the configurable-licensing model and its database objects. **No prices are hard-coded.** |
 | `resources.html` | Academy resources (catalogue, calendar, `.ics` feed, `.csv` register), platform documentation, case studies and FAQs. The earlier AICTEM publications section and the course technical-manual downloads have both been removed at the client's request. |
@@ -115,16 +115,17 @@ The catalogue and calendar are generated from the directories, not typed. The ru
   Executive Programmes run eight audience tracks side by side, so take the 5-day minimum.
   Result: 01, 02, 03, 04 and 13 run 10 days; 06, 10 and 11 run 7; 05, 07, 08 and 09 run 6; 12 and 14 run 5.
 - **Contact time:** 6 hours a day, shared between modules in proportion to their specified hours.
-- **Four cohorts per course:** in person in Nairobi, in person in Accra, live virtual on East Africa
-  time (UTC+3), live virtual on West Africa time (UTC+0). Each lane holds one cohort at a time; a
-  course's cohorts never overlap and start at least four weeks apart, targeted about 13 weeks apart.
-  In-person cohorts in Nairobi and Accra never overlap, with at least three clear travel days
-  between one and the next; the calendar runs to 2 June 2028 to fit them.
-- **Holidays:** a cohort skips its hub's weekday public holidays (Kenya for Nairobi and East Africa
-  time, Ghana for Accra and West Africa time) and runs on. Eid dates are estimates subject to sighting.
+- **Two cohorts per course, both in person:** once at the Nairobi hub and once at the Accra hub,
+  the two runs at least eight weeks apart. Online delivery was withdrawn at the client's request in
+  October 2026. Only one cohort runs at a time anywhere in the programme, with at least three clear
+  travel days between one cohort and the next; the calendar runs to 23 June 2028 to fit the 28
+  cohorts. The year opens with 02 Economic Modelling (Nairobi) and 04 Climate Modelling (Accra);
+  the remaining courses follow, spaced across the calendar.
+- **Holidays:** a cohort skips its hub's weekday public holidays (Kenya for Nairobi, Ghana for
+  Accra) and runs on. Eid dates are estimates subject to sighting.
 - **Courses with no materials** (11 Industry Modelling, 14 Executive Programmes) are scheduled from
   July 2027 and flagged *In development* — their dates are provisional.
-- **Fees:** US$200 a contact day in person, US$80 live virtual.
+- **Fees:** US$200 a contact day, in person at either hub.
 
 PFM 206, PFM 209 and MOD 312 are no longer in any directory, so they are not in any course. Their
 outline PDFs remain in `assets/downloads/outlines/` but nothing links to them.

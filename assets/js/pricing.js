@@ -327,7 +327,6 @@
      The per-participant bands. The dated EDIS Academy cohort fees live in
      data.js as CAL_RATES and are the authority for a specific cohort.      */
   var TRAINING = [
-    { id: "online",     name: "Online courses",              from: 300,   to: 750,   unit: "participant" },
     { id: "advanced",   name: "Advanced model courses",      from: 1000,  to: 2500,  unit: "participant" },
     { id: "cohort",     name: "Government cohort training",  from: 15000, to: 40000, unit: "cohort" },
     { id: "custom",     name: "Custom institutional training", custom: true }

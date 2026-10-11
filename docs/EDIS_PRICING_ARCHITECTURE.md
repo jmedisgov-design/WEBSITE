@@ -81,8 +81,9 @@ account and role setup, model setup, calibration, API integration, training, dep
 testing. Bands run from included on the individual and team plans to 150,000–500,000+ on a
 national platform. Always presented as *from*.
 
-**Training** is per participant or per cohort: online courses 300–750, advanced model courses
-1,000–2,500, government cohorts 15,000–40,000, custom quoted. The dated EDIS Academy cohorts have
+**Training** is per participant or per cohort: advanced model courses 1,000–2,500, government
+cohorts 15,000–40,000, custom quoted. Online courses were withdrawn in October 2026; Academy
+delivery is in person at the Nairobi and Accra hubs, or on site for an institution. The dated EDIS Academy cohorts have
 their own published fees in `data.js` (`CAL_RATES`) — that is the authority for a specific cohort,
 and the bands here are the commercial envelope around it.
 

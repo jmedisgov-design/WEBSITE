@@ -76,7 +76,7 @@
       ["academy.html", "EDIS Academy", "Training that supports EDIS adoption"],
       ["courses.html", "Courses", "Fourteen courses, one for each school"],
       ["academy.html#certification", "Certification", "Assessment, certificates and the certification boards"],
-      ["academy-calendar.html", "Training calendar", "56 cohorts in Nairobi, Accra and online"],
+      ["academy-calendar.html", "Training calendar", "28 cohorts in Nairobi and Accra"],
       ["academy.html#cohorts", "Government cohorts", "A ministry team trained together, on its own estate"],
       ["academy.html#institutional", "Institutional training", "Onboarding and certification inside a deployment"],
       ["enrol.html", "Enrol or nominate", "Take a place, or nominate a team"],

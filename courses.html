@@ -17,10 +17,9 @@
   <div class="eyebrow">Course catalogue</div>
   <h1>Fourteen courses, one for each school</h1>
   <p>Each course brings together the modules of one Academy school and runs for five to ten contact
-  days. Every course is offered four times: in person in <strong>Nairobi</strong> and in
-  <strong>Accra</strong>, and live online on <strong>East Africa</strong> and on
-  <strong>West Africa</strong> time. Select a course to see its modules, its dates and how to take
-  a place.</p>
+  days. Every course is taught twice in the training year, in person: once in
+  <strong>Nairobi</strong> and once in <strong>Accra</strong>. Select a course to see its modules,
+  its dates and how to take a place.</p>
   <div class="btnrow">
     <a class="btn btn-green" href="#explorer">Browse the catalogue</a>
     <a class="btn btn-ghost" href="academy-calendar.html">Training calendar</a>
@@ -51,10 +50,9 @@
       </div>
       <div class="ratecard">
         <span><b>Tuition</b></span>
-        <span>Live virtual <b>US$80</b> per contact day</span>
         <span>In person <b>US$200</b> per contact day</span>
-        <span>Each course runs twice in person and twice live virtual &mdash; the fee follows the
-        cohort you choose.</span>
+        <span>Every course is taught twice, once in Nairobi and once in Accra &mdash; the fee is the
+        rate times the course&rsquo;s contact days.</span>
       </div>
       <p class="counter" id="c-count"></p>
       <div id="c-list"></div>
@@ -81,10 +79,9 @@
     <div class="card flat"><div class="kicker">Rule 03</div><h3>Six contact hours a day</h3>
       <p class="small">Contact time is shared between the modules in proportion to their specified
       hours. The full materials for every module are issued for the work around the contact days.</p></div>
-    <div class="card flat"><div class="kicker">Rule 04</div><h3>Four cohorts</h3>
-      <p class="small">Every course runs in person in Nairobi and in Accra, and live virtual on East
-      Africa and West Africa time, spread across the year so each region has an early and a late
-      option.</p></div>
+    <div class="card flat"><div class="kicker">Rule 04</div><h3>Two cohorts</h3>
+      <p class="small">Every course is taught in person twice, once in Nairobi and once in Accra,
+      with the two runs well apart so each region has an early and a late option.</p></div>
   </div>
 </div></section>
 
@@ -122,7 +119,6 @@
   var FULLMON = ["January", "February", "March", "April", "May", "June", "July", "August",
                  "September", "October", "November", "December"];
   function monthYear(s) { return s ? FULLMON[+s.slice(4, 6) - 1] + " " + s.slice(0, 4) : "later in the year"; }
-  function feeV(c) { return c.days * RATES["Live virtual"]; }
   function feeP(c) { return c.days * RATES["In person"]; }
   function cohorts(c) {
     return CAL.filter(function (r) { return r.key === c.key; })
@@ -173,7 +169,7 @@
         (c.status !== "Available" ? ' &middot; <span style="color:#9c6a13;font-weight:700">' +
           H.esc(c.status) + "</span>" : "") + "</div>" +
       '<div class="small" style="margin-top:4px;color:#2e7d39;font-weight:700">' +
-        money(feeV(c)) + " virtual / " + money(feeP(c)) + " in person</div></a>";
+        money(feeP(c)) + " in person</div></a>";
   }
 
   function table(head, body) {
@@ -245,7 +241,6 @@
       "</div>" +
       '<div style="text-align:right">' +
         '<span class="badge ' + (c.status === "Available" ? "ok" : "partial") + '">' + H.esc(c.status) + "</span>" +
-        '<div class="coursefee">' + money(feeV(c)) + '</div><div class="small muted">live virtual</div>' +
         '<div class="coursefee">' + money(feeP(c)) + '</div><div class="small muted">in person</div>' +
       "</div></div>");
 
@@ -310,11 +305,10 @@
         '">Course ' + H.esc(prior.code) + " &mdash; " + H.esc(prior.title) + "</a>" : "Nothing") + "</dd>" +
       "<dt>Prerequisites</dt><dd>" + H.esc(c.prereq) + "</dd>" +
       "<dt>Who it is for</dt><dd>" + H.esc(c.audience) + "</dd>" +
-      "<dt>Delivery</dt><dd>In person in Nairobi and Accra; live virtual on East Africa and West Africa time</dd>" +
+      "<dt>Delivery</dt><dd>In person, twice a year: once in Nairobi and once in Accra</dd>" +
       "<dt>Pass mark</dt><dd>" + c.passMark + " %</dd>" +
-      "<dt>Fee</dt><dd>" + money(feeV(c)) + " live virtual, or " + money(feeP(c)) + " in person &mdash; " +
-        c.days + " contact days at " + money(RATES["Live virtual"]) + " or " + money(RATES["In person"]) +
-        " a day</dd>" +
+      "<dt>Fee</dt><dd>" + money(feeP(c)) + " &mdash; " + c.days + " contact days at " +
+        money(RATES["In person"]) + " a day</dd>" +
       "</dl></div>");
 
     out.push('<div class="card-actions" style="margin-top:20px">' +
