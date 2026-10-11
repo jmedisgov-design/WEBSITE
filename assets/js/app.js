@@ -50,7 +50,7 @@
       ["solutions.html#development-partners", "Development partners", "Programme design, targeting and results"],
       ["solutions.html#institutions", "By institution type", "Ten institution types and what each one runs"]
     ]},
-    { label: "For governments", href: "government.html", children: [
+    { label: "Government deployment", href: "government.html", children: [
       ["government.html", "Government overview", "What a government deployment contains"],
       ["deploy.html#ministry", "Ministry deployment", "One ministry, its models, data and users"],
       ["deploy.html#enterprise", "Government enterprise", "Several institutions on one governed estate"],
@@ -170,8 +170,8 @@
           '<a href="countries.html">Countries</a><a href="api.html">API</a>' +
         "</div>" +
         "<div><h4>Deploy</h4>" +
-          '<a href="solutions.html">Solutions</a><a href="government.html">For governments</a>' +
-          '<a href="deploy.html">Government deployment</a><a href="pricing.html">Pricing</a>' +
+          '<a href="solutions.html">Solutions</a><a href="government.html">Government deployment</a>' +
+          '<a href="deploy.html">Deployment tiers</a><a href="pricing.html">Pricing</a>' +
           '<a href="academy.html">EDIS Academy</a><a href="resources.html">Resources</a>' +
           '<a href="partners.html">Partners</a><a href="contact.html">Contact</a>' +
         "</div>" +

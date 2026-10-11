@@ -68,7 +68,7 @@ After:
 | --- | --- |
 | **EDIS** | Platform, What EDIS does, Models, Sectors, AI agents, GIS and spatial planning, Reports and analytics, Countries, Data, Simulations, API, Live demonstration |
 | **Solutions** | All solutions and the six institution routes (ministries of finance, planning ministries, central banks, sector ministries, development banks, development partners), plus all ten institution types |
-| **For governments** | Government overview, ministry deployment, government enterprise, national platform, country configuration, implementation, integration, and the three institution workflow pages |
+| **Government deployment** | Government overview, ministry deployment, government enterprise, national platform, country configuration, implementation, integration, and the three institution workflow pages |
 | **Pricing** | Plans, individual tiers, institutional and ministry, national and sovereign, implementation and services, estimator, configurator, request a quote |
 | **Academy** | EDIS Academy, courses, certification, training calendar, government cohorts, institutional training, enrol, training partners |
 | **Resources** | All resources, reports, model library and documentation, demonstrations, research and publications, about EDIS, about AICTEM, contact |
