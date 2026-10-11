@@ -5,375 +5,376 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:EDIS Academy 2027/28
 BEGIN:VEVENT
-UID:02-NBO-2701@academy.aictem
+UID:02-NBO-2702@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270118
-DTEND;VALUE=DATE:20270130
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270213
 SUMMARY:Course 02 - Economic Modelling (Nairobi)
 LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 02 - Economic Modelling\nCohort 02-NBO-2701\nIn person -
+DESCRIPTION:Course 02 - Economic Modelling\nCohort 02-NBO-2702\nIn person -
   Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60 contact hours)
- \nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2026-11-23\; no
- minations close 2026-12-21\nFinal assessment by 2027-02-12
+ \nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2026-12-07\; no
+ minations close 2027-01-04\nFinal assessment by 2027-02-26
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:04-ACC-2702@academy.aictem
+UID:04-NBO-2702@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270208
-DTEND;VALUE=DATE:20270220
-SUMMARY:Course 04 - Climate Modelling (Accra)
-LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 04 - Climate Modelling\nCohort 04-ACC-2702\nIn person - 
- Accra\, Ghana - AICTEM regional hub\n10 contact days (60 contact hours)\nS
- essions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2026-12-14\; nomin
- ations close 2027-01-11\nFinal assessment by 2027-03-05
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:01-NBO-2703@academy.aictem
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270301
-DTEND;VALUE=DATE:20270316
-SUMMARY:Course 01 - Macroeconomics and Public Finance (Nairobi)
+DTSTART;VALUE=DATE:20270222
+DTEND;VALUE=DATE:20270306
+SUMMARY:Course 04 - Climate Modelling (Nairobi)
 LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 01 - Macroeconomics and Public Finance\nCohort 01-NBO-27
- 03\nIn person - Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60
-  contact hours)\nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 
- 2027-01-04\; nominations close 2027-02-01\nFinal assessment by 2027-03-29\
- nExtended for 10 Mar Eid al-Fitr (subject to sighting)
+DESCRIPTION:Course 04 - Climate Modelling\nCohort 04-NBO-2702\nIn person - 
+ Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60 contact hours)\
+ nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2026-12-28\; nom
+ inations close 2027-01-25\nFinal assessment by 2027-03-19
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:01-ACC-2704@academy.aictem
+DTSTAMP:20261011T000000Z
+DTSTART;VALUE=DATE:20270405
+DTEND;VALUE=DATE:20270417
+SUMMARY:Course 01 - Macroeconomics and Public Finance (Accra)
+LOCATION:Accra\, Ghana - AICTEM regional hub
+DESCRIPTION:Course 01 - Macroeconomics and Public Finance\nCohort 01-ACC-27
+ 04\nIn person - Accra\, Ghana - AICTEM regional hub\n10 contact days (60 c
+ ontact hours)\nSessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 20
+ 27-02-08\; nominations close 2027-03-08\nFinal assessment by 2027-04-30
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:03-ACC-2704@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270405
-DTEND;VALUE=DATE:20270417
+DTSTART;VALUE=DATE:20270426
+DTEND;VALUE=DATE:20270511
 SUMMARY:Course 03 - Public Investment (Accra)
 LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 03 - Public Investment\nCohort 03-ACC-2704\nIn person - 
  Accra\, Ghana - AICTEM regional hub\n10 contact days (60 contact hours)\nS
- essions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027-02-08\; nomin
- ations close 2027-03-08\nFinal assessment by 2027-04-30
+ essions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027-03-01\; nomin
+ ations close 2027-03-29\nFinal assessment by 2027-05-24\nExtended for 03 M
+ ay May Day (observed)
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:07-NBO-2704@academy.aictem
+UID:07-NBO-2705@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270426
-DTEND;VALUE=DATE:20270504
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270525
 SUMMARY:Course 07 - Education Modelling (Nairobi)
 LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 07 - Education Modelling\nCohort 07-NBO-2704\nIn person 
+DESCRIPTION:Course 07 - Education Modelling\nCohort 07-NBO-2705\nIn person 
  - Nairobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)
- \nSessions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-03-01\; no
- minations close 2027-03-29\nFinal assessment by 2027-05-17
+ \nSessions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-03-22\; no
+ minations close 2027-04-19\nFinal assessment by 2027-06-07
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:08-ACC-2705@academy.aictem
+UID:08-NBO-2705@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270510
-DTEND;VALUE=DATE:20270519
-SUMMARY:Course 08 - Health Modelling (Accra)
-LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 08 - Health Modelling\nCohort 08-ACC-2705\nIn person - A
- ccra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\nSes
- sions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-03-15\; nominat
- ions close 2027-04-12\nFinal assessment by 2027-06-01\nExtended for 17 May
-  Eid al-Adha (subject to sighting)
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:09-NBO-2705@academy.aictem
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270524
-DTEND;VALUE=DATE:20270601
-SUMMARY:Course 09 - Energy Modelling (Nairobi)
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270609
+SUMMARY:Course 08 - Health Modelling (Nairobi)
 LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 09 - Energy Modelling\nCohort 09-NBO-2705\nIn person - N
+DESCRIPTION:Course 08 - Health Modelling\nCohort 08-NBO-2705\nIn person - N
  airobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)\nS
- essions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-03-29\; nomin
- ations close 2027-04-26\nFinal assessment by 2027-06-14
+ essions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-04-05\; nomin
+ ations close 2027-05-03\nFinal assessment by 2027-06-22\nExtended for 01 J
+ un Madaraka Day
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:09-ACC-2706@academy.aictem
+DTSTAMP:20261011T000000Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270622
+SUMMARY:Course 09 - Energy Modelling (Accra)
+LOCATION:Accra\, Ghana - AICTEM regional hub
+DESCRIPTION:Course 09 - Energy Modelling\nCohort 09-ACC-2706\nIn person - A
+ ccra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\nSes
+ sions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-04-19\; nominat
+ ions close 2027-05-17\nFinal assessment by 2027-07-05
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:13-ACC-2706@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270607
-DTEND;VALUE=DATE:20270619
+DTSTART;VALUE=DATE:20270628
+DTEND;VALUE=DATE:20270713
 SUMMARY:Course 13 - Monitoring\, Evaluation and Learning (Accra)
 LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 13 - Monitoring\, Evaluation and Learning\nCohort 13-ACC
  -2706\nIn person - Accra\, Ghana - AICTEM regional hub\n10 contact days (6
  0 contact hours)\nSessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens
-  2027-04-12\; nominations close 2027-05-10\nFinal assessment by 2027-07-02
+  2027-05-03\; nominations close 2027-05-31\nFinal assessment by 2027-07-26
+ \nExtended for 01 Jul Republic Day
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:06-NBO-2706@academy.aictem
+UID:06-NBO-2707@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270628
-DTEND;VALUE=DATE:20270707
+DTSTART;VALUE=DATE:20270719
+DTEND;VALUE=DATE:20270728
 SUMMARY:Course 06 - Agriculture\, Forestry and Fisheries Modelling (Nairobi
  )
 LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 06 - Agriculture\, Forestry and Fisheries Modelling\nCoh
- ort 06-NBO-2706\nIn person - Nairobi\, Kenya - AICTEM regional hub\n7 cont
+ ort 06-NBO-2707\nIn person - Nairobi\, Kenya - AICTEM regional hub\n7 cont
  act days (42 contact hours)\nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnro
- lment opens 2027-05-03\; nominations close 2027-05-31\nFinal assessment by
-  2027-07-20
+ lment opens 2027-05-24\; nominations close 2027-06-21\nFinal assessment by
+  2027-08-10
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:10-ACC-2707@academy.aictem
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270712
-DTEND;VALUE=DATE:20270721
-SUMMARY:Course 10 - Transport and Water Modelling (Accra)
-LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 10 - Transport and Water Modelling\nCohort 10-ACC-2707\n
- In person - Accra\, Ghana - AICTEM regional hub\n7 contact days (42 contac
- t hours)\nSessions 08:30-15:30 GMT\nFee US$1\,400\nEnrolment opens 2027-05
- -17\; nominations close 2027-06-14\nFinal assessment by 2027-08-03
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:12-ACC-2707@academy.aictem
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20270726
-DTEND;VALUE=DATE:20270731
-SUMMARY:Course 12 - Microsimulation (Accra)
-LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 12 - Microsimulation\nCohort 12-ACC-2707\nIn person - Ac
- cra\, Ghana - AICTEM regional hub\n5 contact days (30 contact hours)\nSess
- ions 08:30-15:30 GMT\nFee US$1\,000\nEnrolment opens 2027-05-31\; nominati
- ons close 2027-06-28\nFinal assessment by 2027-08-13
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:05-NBO-2708@academy.aictem
+UID:10-NBO-2708@academy.aictem
 DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20270816
-DTEND;VALUE=DATE:20270824
-SUMMARY:Course 05 - Trade Modelling (Nairobi)
+DTEND;VALUE=DATE:20270825
+SUMMARY:Course 10 - Transport and Water Modelling (Nairobi)
 LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 05 - Trade Modelling\nCohort 05-NBO-2708\nIn person - Na
- irobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)\nSe
- ssions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-06-21\; nomina
- tions close 2027-07-19\nFinal assessment by 2027-09-06
+DESCRIPTION:Course 10 - Transport and Water Modelling\nCohort 10-NBO-2708\n
+ In person - Nairobi\, Kenya - AICTEM regional hub\n7 contact days (42 cont
+ act hours)\nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnrolment opens 2027-
+ 06-21\; nominations close 2027-07-19\nFinal assessment by 2027-09-07
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:11-NBO-2708@academy.aictem
+UID:05-ACC-2708@academy.aictem
 DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20270830
-DTEND;VALUE=DATE:20270908
-SUMMARY:Course 11 - Industry Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 11 - Industry Modelling\nCohort 11-NBO-2708\nIn person -
-  Nairobi\, Kenya - AICTEM regional hub\n7 contact days (42 contact hours)\
- nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnrolment opens 2027-07-05\; nom
- inations close 2027-08-02\nFinal assessment by 2027-09-21
+DTEND;VALUE=DATE:20270907
+SUMMARY:Course 05 - Trade Modelling (Accra)
+LOCATION:Accra\, Ghana - AICTEM regional hub
+DESCRIPTION:Course 05 - Trade Modelling\nCohort 05-ACC-2708\nIn person - Ac
+ cra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\nSess
+ ions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-07-05\; nominati
+ ons close 2027-08-02\nFinal assessment by 2027-09-20
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:14-ACC-2709@academy.aictem
+UID:12-ACC-2709@academy.aictem
 DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20270913
 DTEND;VALUE=DATE:20270918
-SUMMARY:Course 14 - Executive Programmes (Accra)
+SUMMARY:Course 12 - Microsimulation (Accra)
 LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 14 - Executive Programmes\nCohort 14-ACC-2709\nIn person
-  - Accra\, Ghana - AICTEM regional hub\n5 contact days (30 contact hours)\
- nSessions 08:30-15:30 GMT\nFee US$1\,000\nEnrolment opens 2027-07-19\; nom
- inations close 2027-08-16\nFinal assessment by 2027-10-01
+DESCRIPTION:Course 12 - Microsimulation\nCohort 12-ACC-2709\nIn person - Ac
+ cra\, Ghana - AICTEM regional hub\n5 contact days (30 contact hours)\nSess
+ ions 08:30-15:30 GMT\nFee US$1\,000\nEnrolment opens 2027-07-19\; nominati
+ ons close 2027-08-16\nFinal assessment by 2027-10-01
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:11-NBO-2709@academy.aictem
+DTSTAMP:20261011T000000Z
+DTSTART;VALUE=DATE:20270927
+DTEND;VALUE=DATE:20271006
+SUMMARY:Course 11 - Industry Modelling (Nairobi)
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
+DESCRIPTION:Course 11 - Industry Modelling\nCohort 11-NBO-2709\nIn person -
+  Nairobi\, Kenya - AICTEM regional hub\n7 contact days (42 contact hours)\
+ nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnrolment opens 2027-08-02\; nom
+ inations close 2027-08-30\nFinal assessment by 2027-10-19
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:14-NBO-2710@academy.aictem
+DTSTAMP:20261011T000000Z
+DTSTART;VALUE=DATE:20271011
+DTEND;VALUE=DATE:20271019
+SUMMARY:Course 14 - Executive Programmes (Nairobi)
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
+DESCRIPTION:Course 14 - Executive Programmes\nCohort 14-NBO-2710\nIn person
+  - Nairobi\, Kenya - AICTEM regional hub\n5 contact days (30 contact hours
+ )\nSessions 08:30-15:30 EAT\nFee US$1\,000\nEnrolment opens 2027-08-16\; n
+ ominations close 2027-09-13\nFinal assessment by 2027-11-01\nExtended for 
+ 11 Oct Mazingira Day (observed)
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:02-ACC-2710@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20271011
-DTEND;VALUE=DATE:20271023
+DTSTART;VALUE=DATE:20271025
+DTEND;VALUE=DATE:20271106
 SUMMARY:Course 02 - Economic Modelling (Accra)
 LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 02 - Economic Modelling\nCohort 02-ACC-2710\nIn person -
   Accra\, Ghana - AICTEM regional hub\n10 contact days (60 contact hours)\n
- Sessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027-08-16\; nomi
- nations close 2027-09-13\nFinal assessment by 2027-11-05
+ Sessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027-08-30\; nomi
+ nations close 2027-09-27\nFinal assessment by 2027-11-19
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:04-NBO-2711@academy.aictem
+UID:04-ACC-2711@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20271101
-DTEND;VALUE=DATE:20271113
-SUMMARY:Course 04 - Climate Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 04 - Climate Modelling\nCohort 04-NBO-2711\nIn person - 
- Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60 contact hours)\
- nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2027-09-06\; nom
- inations close 2027-10-04\nFinal assessment by 2027-11-26
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:01-ACC-2711@academy.aictem
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20271122
-DTEND;VALUE=DATE:20271207
-SUMMARY:Course 01 - Macroeconomics and Public Finance (Accra)
+DTSTART;VALUE=DATE:20271115
+DTEND;VALUE=DATE:20271127
+SUMMARY:Course 04 - Climate Modelling (Accra)
 LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 01 - Macroeconomics and Public Finance\nCohort 01-ACC-27
- 11\nIn person - Accra\, Ghana - AICTEM regional hub\n10 contact days (60 c
- ontact hours)\nSessions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 20
- 27-09-27\; nominations close 2027-10-25\nFinal assessment by 2027-12-20\nE
- xtended for 03 Dec Farmers' Day
+DESCRIPTION:Course 04 - Climate Modelling\nCohort 04-ACC-2711\nIn person - 
+ Accra\, Ghana - AICTEM regional hub\n10 contact days (60 contact hours)\nS
+ essions 08:30-15:30 GMT\nFee US$2\,000\nEnrolment opens 2027-09-20\; nomin
+ ations close 2027-10-18\nFinal assessment by 2027-12-10
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:01-NBO-2801@academy.aictem
+DTSTAMP:20261011T000000Z
+DTSTART;VALUE=DATE:20280103
+DTEND;VALUE=DATE:20280115
+SUMMARY:Course 01 - Macroeconomics and Public Finance (Nairobi)
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
+DESCRIPTION:Course 01 - Macroeconomics and Public Finance\nCohort 01-NBO-28
+ 01\nIn person - Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60
+  contact hours)\nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 
+ 2027-11-08\; nominations close 2027-12-06\nFinal assessment by 2028-01-28
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:03-NBO-2801@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20280103
-DTEND;VALUE=DATE:20280115
+DTSTART;VALUE=DATE:20280124
+DTEND;VALUE=DATE:20280205
 SUMMARY:Course 03 - Public Investment (Nairobi)
 LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 03 - Public Investment\nCohort 03-NBO-2801\nIn person - 
  Nairobi\, Kenya - AICTEM regional hub\n10 contact days (60 contact hours)\
- nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2027-11-08\; nom
- inations close 2027-12-06\nFinal assessment by 2028-01-28
+ nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment opens 2027-11-29\; nom
+ inations close 2027-12-27\nFinal assessment by 2028-02-18
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:07-ACC-2801@academy.aictem
+UID:07-ACC-2802@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20280124
-DTEND;VALUE=DATE:20280201
+DTSTART;VALUE=DATE:20280214
+DTEND;VALUE=DATE:20280222
 SUMMARY:Course 07 - Education Modelling (Accra)
 LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 07 - Education Modelling\nCohort 07-ACC-2801\nIn person 
+DESCRIPTION:Course 07 - Education Modelling\nCohort 07-ACC-2802\nIn person 
  - Accra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\n
- Sessions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-11-29\; nomi
- nations close 2027-12-27\nFinal assessment by 2028-02-14
+ Sessions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-12-20\; nomi
+ nations close 2028-01-17\nFinal assessment by 2028-03-06
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:08-NBO-2802@academy.aictem
+UID:08-ACC-2802@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20280207
-DTEND;VALUE=DATE:20280215
-SUMMARY:Course 08 - Health Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 08 - Health Modelling\nCohort 08-NBO-2802\nIn person - N
- airobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)\nS
- essions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2027-12-13\; nomin
- ations close 2028-01-10\nFinal assessment by 2028-02-28
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:09-ACC-2802@academy.aictem
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20280221
-DTEND;VALUE=DATE:20280229
-SUMMARY:Course 09 - Energy Modelling (Accra)
+DTSTART;VALUE=DATE:20280228
+DTEND;VALUE=DATE:20280308
+SUMMARY:Course 08 - Health Modelling (Accra)
 LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 09 - Energy Modelling\nCohort 09-ACC-2802\nIn person - A
+DESCRIPTION:Course 08 - Health Modelling\nCohort 08-ACC-2802\nIn person - A
  ccra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\nSes
- sions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2027-12-27\; nominat
- ions close 2028-01-24\nFinal assessment by 2028-03-13
+ sions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2028-01-03\; nominat
+ ions close 2028-01-31\nFinal assessment by 2028-03-21\nExtended for 06 Mar
+  Independence Day
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:09-NBO-2803@academy.aictem
+DTSTAMP:20261011T000000Z
+DTSTART;VALUE=DATE:20280313
+DTEND;VALUE=DATE:20280321
+SUMMARY:Course 09 - Energy Modelling (Nairobi)
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
+DESCRIPTION:Course 09 - Energy Modelling\nCohort 09-NBO-2803\nIn person - N
+ airobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)\nS
+ essions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2028-01-17\; nomin
+ ations close 2028-02-14\nFinal assessment by 2028-04-03
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:13-NBO-2803@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20280306
-DTEND;VALUE=DATE:20280318
+DTSTART;VALUE=DATE:20280327
+DTEND;VALUE=DATE:20280408
 SUMMARY:Course 13 - Monitoring\, Evaluation and Learning (Nairobi)
 LOCATION:Nairobi\, Kenya - AICTEM regional hub
 DESCRIPTION:Course 13 - Monitoring\, Evaluation and Learning\nCohort 13-NBO
  -2803\nIn person - Nairobi\, Kenya - AICTEM regional hub\n10 contact days 
  (60 contact hours)\nSessions 08:30-15:30 EAT\nFee US$2\,000\nEnrolment ope
- ns 2028-01-10\; nominations close 2028-02-07\nFinal assessment by 2028-03-
- 31
+ ns 2028-01-31\; nominations close 2028-02-28\nFinal assessment by 2028-04-
+ 21
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:06-ACC-2803@academy.aictem
-DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20280327
-DTEND;VALUE=DATE:20280405
-SUMMARY:Course 06 - Agriculture\, Forestry and Fisheries Modelling (Accra)
-LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 06 - Agriculture\, Forestry and Fisheries Modelling\nCoh
- ort 06-ACC-2803\nIn person - Accra\, Ghana - AICTEM regional hub\n7 contac
- t days (42 contact hours)\nSessions 08:30-15:30 GMT\nFee US$1\,400\nEnrolm
- ent opens 2028-01-31\; nominations close 2028-02-28\nFinal assessment by 2
- 028-04-18
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:10-NBO-2804@academy.aictem
+UID:06-ACC-2804@academy.aictem
 DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20280424
 DTEND;VALUE=DATE:20280504
-SUMMARY:Course 10 - Transport and Water Modelling (Nairobi)
-LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 10 - Transport and Water Modelling\nCohort 10-NBO-2804\n
- In person - Nairobi\, Kenya - AICTEM regional hub\n7 contact days (42 cont
- act hours)\nSessions 08:30-15:30 EAT\nFee US$1\,400\nEnrolment opens 2028-
- 02-28\; nominations close 2028-03-27\nFinal assessment by 2028-05-17\nExte
- nded for 01 May Labour Day
+SUMMARY:Course 06 - Agriculture\, Forestry and Fisheries Modelling (Accra)
+LOCATION:Accra\, Ghana - AICTEM regional hub
+DESCRIPTION:Course 06 - Agriculture\, Forestry and Fisheries Modelling\nCoh
+ ort 06-ACC-2804\nIn person - Accra\, Ghana - AICTEM regional hub\n7 contac
+ t days (42 contact hours)\nSessions 08:30-15:30 GMT\nFee US$1\,400\nEnrolm
+ ent opens 2028-02-28\; nominations close 2028-03-27\nFinal assessment by 2
+ 028-05-17\nExtended for 01 May May Day
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:05-ACC-2805@academy.aictem
+UID:10-ACC-2805@academy.aictem
 DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20280508
-DTEND;VALUE=DATE:20280516
-SUMMARY:Course 05 - Trade Modelling (Accra)
+DTEND;VALUE=DATE:20280517
+SUMMARY:Course 10 - Transport and Water Modelling (Accra)
 LOCATION:Accra\, Ghana - AICTEM regional hub
-DESCRIPTION:Course 05 - Trade Modelling\nCohort 05-ACC-2805\nIn person - Ac
- cra\, Ghana - AICTEM regional hub\n6 contact days (36 contact hours)\nSess
- ions 08:30-15:30 GMT\nFee US$1\,200\nEnrolment opens 2028-03-13\; nominati
- ons close 2028-04-10\nFinal assessment by 2028-05-29
+DESCRIPTION:Course 10 - Transport and Water Modelling\nCohort 10-ACC-2805\n
+ In person - Accra\, Ghana - AICTEM regional hub\n7 contact days (42 contac
+ t hours)\nSessions 08:30-15:30 GMT\nFee US$1\,400\nEnrolment opens 2028-03
+ -13\; nominations close 2028-04-10\nFinal assessment by 2028-05-30
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:12-NBO-2805@academy.aictem
+UID:05-NBO-2805@academy.aictem
 DTSTAMP:20261011T000000Z
 DTSTART;VALUE=DATE:20280522
-DTEND;VALUE=DATE:20280527
+DTEND;VALUE=DATE:20280530
+SUMMARY:Course 05 - Trade Modelling (Nairobi)
+LOCATION:Nairobi\, Kenya - AICTEM regional hub
+DESCRIPTION:Course 05 - Trade Modelling\nCohort 05-NBO-2805\nIn person - Na
+ irobi\, Kenya - AICTEM regional hub\n6 contact days (36 contact hours)\nSe
+ ssions 08:30-15:30 EAT\nFee US$1\,200\nEnrolment opens 2028-03-27\; nomina
+ tions close 2028-04-24\nFinal assessment by 2028-06-12
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:12-NBO-2806@academy.aictem
+DTSTAMP:20261011T000000Z
+DTSTART;VALUE=DATE:20280605
+DTEND;VALUE=DATE:20280610
 SUMMARY:Course 12 - Microsimulation (Nairobi)
 LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 12 - Microsimulation\nCohort 12-NBO-2805\nIn person - Na
+DESCRIPTION:Course 12 - Microsimulation\nCohort 12-NBO-2806\nIn person - Na
  irobi\, Kenya - AICTEM regional hub\n5 contact days (30 contact hours)\nSe
- ssions 08:30-15:30 EAT\nFee US$1\,000\nEnrolment opens 2028-03-27\; nomina
- tions close 2028-04-24\nFinal assessment by 2028-06-09
+ ssions 08:30-15:30 EAT\nFee US$1\,000\nEnrolment opens 2028-04-10\; nomina
+ tions close 2028-05-08\nFinal assessment by 2028-06-23
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:11-ACC-2806@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20280605
-DTEND;VALUE=DATE:20280614
+DTSTART;VALUE=DATE:20280619
+DTEND;VALUE=DATE:20280628
 SUMMARY:Course 11 - Industry Modelling (Accra)
 LOCATION:Accra\, Ghana - AICTEM regional hub
 DESCRIPTION:Course 11 - Industry Modelling\nCohort 11-ACC-2806\nIn person -
   Accra\, Ghana - AICTEM regional hub\n7 contact days (42 contact hours)\nS
- essions 08:30-15:30 GMT\nFee US$1\,400\nEnrolment opens 2028-04-10\; nomin
- ations close 2028-05-08\nFinal assessment by 2028-06-27
+ essions 08:30-15:30 GMT\nFee US$1\,400\nEnrolment opens 2028-04-24\; nomin
+ ations close 2028-05-22\nFinal assessment by 2028-07-11
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:14-NBO-2806@academy.aictem
+UID:14-ACC-2807@academy.aictem
 DTSTAMP:20261011T000000Z
-DTSTART;VALUE=DATE:20280619
-DTEND;VALUE=DATE:20280624
-SUMMARY:Course 14 - Executive Programmes (Nairobi)
-LOCATION:Nairobi\, Kenya - AICTEM regional hub
-DESCRIPTION:Course 14 - Executive Programmes\nCohort 14-NBO-2806\nIn person
-  - Nairobi\, Kenya - AICTEM regional hub\n5 contact days (30 contact hours
- )\nSessions 08:30-15:30 EAT\nFee US$1\,000\nEnrolment opens 2028-04-24\; n
- ominations close 2028-05-22\nFinal assessment by 2028-07-07
+DTSTART;VALUE=DATE:20280703
+DTEND;VALUE=DATE:20280708
+SUMMARY:Course 14 - Executive Programmes (Accra)
+LOCATION:Accra\, Ghana - AICTEM regional hub
+DESCRIPTION:Course 14 - Executive Programmes\nCohort 14-ACC-2807\nIn person
+  - Accra\, Ghana - AICTEM regional hub\n5 contact days (30 contact hours)\
+ nSessions 08:30-15:30 GMT\nFee US$1\,000\nEnrolment opens 2028-05-08\; nom
+ inations close 2028-06-05\nFinal assessment by 2028-07-21
 TRANSP:OPAQUE
 END:VEVENT
 END:VCALENDAR
