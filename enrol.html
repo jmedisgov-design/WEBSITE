@@ -56,6 +56,8 @@
           <textarea name="message" placeholder="e.g. We are rebuilding the MTEF ceilings for FY2027/28 and need the team to run the model themselves rather than commission it."></textarea></label>
       </div>
       <div class="btnrow mt24">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+             style="position:absolute;left:-9999px">
         <button class="btn btn-green btn-lg" type="submit">Send enrolment request</button>
         <span class="small muted">We reply from <a href="mailto:info@edisgov.org">info@edisgov.org</a>.</span>
       </div>
@@ -212,18 +214,20 @@
     var data = new FormData(e.target), sent = document.getElementById("sent"), c = course(), r = cohort();
     var subject = "EDIS Academy enrolment - Course " + (c ? c.code : "") + " - " + (r ? r.cohort : "") +
       " - " + (data.get("institution") || "");
-    var body = [];
-    if (c) body.push("course_title: Course " + c.code + " " + c.title);
-    if (r) body.push("cohort: " + r.cohort + " (" + r.mode + ", " + r.venue + ", " + dmy(r.start) + " to " + dmy(r.end) + ")");
-    if (r) body.push("fee: " + money(r.fee));
-    data.forEach(function (v, k) { if (v && k !== "cohort") body.push(k + ": " + v); });
-    sent.innerHTML = "Thank you. This static preview does not post to a server. " +
-      "Your enrolment request has been prepared as an email &mdash; " +
-      '<a href="mailto:info@edisgov.org?subject=' + encodeURIComponent(subject) + "&body=" +
-      encodeURIComponent(body.join("\n")) + '">open it in your mail client</a>, or write to ' +
-      '<a href="mailto:info@edisgov.org">info@edisgov.org</a>.';
-    sent.hidden = false;
-    sent.scrollIntoView({ behavior: "smooth", block: "center" });
+    var extra = [];
+    if (c) extra.push("course_title: Course " + c.code + " " + c.title);
+    if (r) extra.push("cohort: " + r.cohort + " (" + r.mode + ", " + r.venue + ", " +
+                      dmy(r.start) + " to " + dmy(r.end) + ")");
+    if (r) extra.push("fee: " + money(r.fee));
+    window.EDIS.sendForm({
+      form: e.target,
+      note: sent,
+      data: data,
+      skip: ["cohort"],
+      subject: subject,
+      extra: extra,
+      tail: "We reply from info@edisgov.org with the joining details and the invoice."
+    });
   });
 })();
 </script>

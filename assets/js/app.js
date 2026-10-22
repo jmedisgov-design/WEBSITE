@@ -13,6 +13,10 @@
     product: "EDIS",
     productLong: "Economic Development Intelligence System",
     email: "info@edisgov.org",
+    /* Where the public forms post. Paste the Formspree form URL here - it looks
+       like "https://formspree.io/f/abcdwxyz". While this is empty the forms fall
+       back to preparing the message as a mailto: link. */
+    formEndpoint: "",
     website: "www.aictem.org",
     location: "Nairobi, Kenya",
     phone: "+256 776 130913",
@@ -269,6 +273,68 @@
     if (s.indexOf("fail") > -1 || s.indexOf("error") > -1 || s.indexOf("missing") > -1 ||
         s.indexOf("non-conv") > -1) return "err";
     return "";
+  };
+
+  /* ------------------------------------------------------------ form delivery
+     Public forms post to SITE.formEndpoint (a Formspree form URL), so that
+     enquiries reach the team without the visitor having to open a mail client.
+     Until that endpoint is filled in - and if the request ever fails - the
+     message is prepared as a mailto: link instead, so nothing is ever lost. */
+  H.sendForm = function (o) {
+    var form = o.form, note = o.note, data = o.data || new FormData(form);
+    var skip = o.skip || [], lines = (o.extra || []).slice();
+    data.forEach(function (v, k) {
+      if (v && k.charAt(0) !== "_" && skip.indexOf(k) < 0) lines.push(k + ": " + v);
+    });
+    var subject = o.subject || "EDIS enquiry";
+    var mail = "mailto:" + SITE.email + "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(lines.join("\n"));
+
+    function show(html) {
+      note.innerHTML = html;
+      note.hidden = false;
+      if (note.scrollIntoView) note.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    function byMail(lead) {
+      show(lead + ' <a href="' + mail + '">Open it in your mail client</a>, or write to ' +
+        '<a href="mailto:' + SITE.email + '">' + SITE.email + "</a>.");
+    }
+
+    if (!SITE.formEndpoint || !window.fetch) {
+      byMail("Thank you. Your message has been prepared as an email.");
+      return;
+    }
+
+    var btn = form.querySelector('button[type="submit"]'), label = btn ? btn.innerHTML : "";
+    if (btn) { btn.disabled = true; btn.innerHTML = "Sending&hellip;"; }
+    show("Sending your message&hellip;");
+
+    var payload = {};
+    data.forEach(function (v, k) { if (v) payload[k] = v; });
+    (o.extra || []).forEach(function (l) {
+      var i = l.indexOf(": ");
+      if (i > 0) payload[l.slice(0, i)] = l.slice(i + 2);
+    });
+    payload._subject = subject;
+    payload.summary = lines.join("\n");
+    payload.page = location.pathname.split("/").pop() + location.search;
+
+    fetch(SITE.formEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      if (btn) { btn.disabled = false; btn.innerHTML = label; }
+      if (!r.ok) throw new Error("rejected");
+      form.reset();
+      track("form_sent", { form: form.id, subject: subject });
+      show("<b>Thank you &mdash; your message has been sent.</b> " +
+        (o.tail || "The EDIS team replies from " + SITE.email +
+         ", usually within two working days."));
+    }).catch(function () {
+      if (btn) { btn.disabled = false; btn.innerHTML = label; }
+      byMail("The website could not send the message just now, so it has been prepared as an email.");
+    });
   };
 
   /* pill-tab controller: buttons carry data-panel, panels carry the id */

@@ -73,6 +73,8 @@
         </select></label>
       <label class="field mb24"><span>Message <span class="reqmark">*</span></span>
         <textarea name="message" required></textarea></label>
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+             style="position:absolute;left:-9999px">
       <button class="btn btn-green btn-lg" type="submit" style="width:100%">Send</button>
     </form>
     <div class="formnote mt24" id="sent" hidden></div>
@@ -86,14 +88,13 @@
 <script>
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
-  var data = new FormData(e.target), body = [], note = document.getElementById("sent");
-  data.forEach(function (v, k) { if (v) body.push(k + ": " + v); });
-  note.innerHTML = "Thank you. This static preview does not post to a server. " +
-    '<a href="mailto:info@edisgov.org?subject=' +
-    encodeURIComponent("EDIS enquiry - " + (data.get("subject") || "")) + "&body=" +
-    encodeURIComponent(body.join("\n")) + '">Open this message in your mail client</a>, ' +
-    'or write to <a href="mailto:info@edisgov.org">info@edisgov.org</a>.';
-  note.hidden = false;
+  var data = new FormData(e.target);
+  window.EDIS.sendForm({
+    form: e.target,
+    note: document.getElementById("sent"),
+    data: data,
+    subject: "EDIS enquiry - " + (data.get("subject") || "General")
+  });
 });
 </script>
 </body>
