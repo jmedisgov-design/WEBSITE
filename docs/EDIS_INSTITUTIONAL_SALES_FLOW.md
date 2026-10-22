@@ -50,7 +50,7 @@ request type · source URL
 
 Donor mode adds: development partner · government beneficiary · duration · estimated budget.
 
-**Today** these are assembled into a structured `mailto:info@aictem.org` payload — the same pattern
+**Today** these are assembled into a structured `mailto:info@edisgov.org` payload — the same pattern
 every other form on the static site uses, so a request is never silently lost.
 
 **With a backend** the same payload posts to `crm_leads` and, where a plan and user count are
@@ -157,5 +157,5 @@ All render from `pricing.js`, so a proposal built from them cannot quote a stale
 
 ## 9. Contact
 
-All commercial enquiry routes to **info@aictem.org** and **aictem.org**. No other address exists
+All commercial enquiry routes to **info@edisgov.org** and **aictem.org**. No other address exists
 and none has been invented.

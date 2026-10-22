@@ -126,4 +126,4 @@ subscription. If it exceeds the band's maximum, it needs finance approval and a
 
 ## 5. Contact
 
-Commercial and administrative questions: **info@aictem.org** · **aictem.org**
+Commercial and administrative questions: **info@edisgov.org** · **aictem.org**

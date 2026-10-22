@@ -90,7 +90,7 @@
       <div class="btnrow mt24">
         <button class="btn btn-green btn-lg" type="submit">Send request</button>
         <span class="small muted">We reply from
-          <a href="mailto:info@aictem.org">info@aictem.org</a>.</span>
+          <a href="mailto:info@edisgov.org">info@edisgov.org</a>.</span>
       </div>
     </form>
     <div class="formnote mt24" id="sent" hidden></div>
@@ -239,10 +239,10 @@
     body.push("source: request-quote.html" + location.search);
     note.innerHTML = "Thank you. This static preview does not post to a server. " +
       "Your request has been prepared as an email &mdash; " +
-      '<a href="mailto:info@aictem.org?subject=' + encodeURIComponent(subject) +
+      '<a href="mailto:info@edisgov.org?subject=' + encodeURIComponent(subject) +
       "&body=" + encodeURIComponent(body.join("\n")) +
       '">open it in your mail client</a>, or write to ' +
-      '<a href="mailto:info@aictem.org">info@aictem.org</a>. ' +
+      '<a href="mailto:info@edisgov.org">info@edisgov.org</a>. ' +
       "AICTEM responds to institutional requests with a written proposal.";
     note.hidden = false;
     note.scrollIntoView({ behavior: "smooth", block: "center" });

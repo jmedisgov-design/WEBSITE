@@ -412,7 +412,7 @@
                         "European Union", "FCDO", "GIZ", "Foundation",
                         "Regional institution", "Other development partner"];
 
-  var CONTACT = { email: "info@aictem.org", website: "aictem.org", org: "AICTEM" };
+  var CONTACT = { email: "info@edisgov.org", website: "aictem.org", org: "AICTEM" };
 
   /* ------------------------------------------------------------------ helpers */
   function plan(id) {

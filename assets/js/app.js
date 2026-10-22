@@ -12,7 +12,7 @@
     org: "African Institute for Climate, Trade and Economic Modelling",
     product: "EDIS",
     productLong: "Economic Development Intelligence System",
-    email: "info@aictem.org",
+    email: "info@edisgov.org",
     website: "www.aictem.org",
     location: "Nairobi, Kenya",
     phone: "+256 776 130913",

@@ -61,7 +61,7 @@
       </div>
       <div class="btnrow mt24">
         <button class="btn btn-green btn-lg" type="submit">Send request</button>
-        <span class="small muted">We reply from <a href="mailto:info@aictem.org">info@aictem.org</a>.</span>
+        <span class="small muted">We reply from <a href="mailto:info@edisgov.org">info@edisgov.org</a>.</span>
       </div>
     </form>
     <div class="formnote mt24" id="sent" hidden></div>
@@ -81,7 +81,7 @@
 
     <div class="callout mt32">
       <h4>Already know what you need?</h4>
-      <p class="mb0">Write directly to <a href="mailto:info@aictem.org">info@aictem.org</a>, or see the
+      <p class="mb0">Write directly to <a href="mailto:info@edisgov.org">info@edisgov.org</a>, or see the
       <a href="pricing.html">access levels</a> first.</p>
     </div>
 
@@ -110,9 +110,9 @@ document.getElementById("demo-form").addEventListener("submit", function (e) {
   var body = [];
   data.forEach(function (v, k) { if (v) body.push(k + ": " + v); });
   note.innerHTML = "Thank you. This static preview does not post to a server. " +
-    'Your request has been prepared as an email &mdash; <a href="mailto:info@aictem.org?subject=' +
+    'Your request has been prepared as an email &mdash; <a href="mailto:info@edisgov.org?subject=' +
     encodeURIComponent(subject) + "&body=" + encodeURIComponent(body.join("\n")) +
-    '">open it in your mail client</a>, or write to <a href="mailto:info@aictem.org">info@aictem.org</a>.';
+    '">open it in your mail client</a>, or write to <a href="mailto:info@edisgov.org">info@edisgov.org</a>.';
   note.hidden = false;
   note.scrollIntoView({ behavior: "smooth", block: "center" });
 });

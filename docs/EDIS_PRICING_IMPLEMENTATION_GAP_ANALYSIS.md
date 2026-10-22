@@ -27,7 +27,7 @@ services, not in the browser."* The sign-in form does not authenticate; it shows
 to `workspace.html`, which is a static preview of an authenticated workspace.
 
 Every form on the site (`request-demo.html`, `contact.html`, `enrol.html`) follows one pattern:
-prevent submit, assemble the fields, and compose a `mailto:info@aictem.org` link. Nothing posts.
+prevent submit, assemble the fields, and compose a `mailto:info@edisgov.org` link. Nothing posts.
 
 ### What this means for the brief
 
@@ -155,7 +155,7 @@ the single place navigation is defined. `assets/css/style.css` is the whole desi
 | 20 | Procurement mode | ✅ quote / proforma / proposal / demo / procurement contact |
 | 21 | Donor mode | ✅ donor-supported deployment route |
 | 22 | CTA routing | ✅ every plan routes as specified |
-| 23 | Contact information | ✅ `info@aictem.org` and `aictem.org` only — no invented addresses |
+| 23 | Contact information | ✅ `info@edisgov.org` and `aictem.org` only — no invented addresses |
 | 24 | Pricing calculator | ✅ indicative estimate, labelled non-binding |
 | 25 | Ministry configurator | ✅ with recommended packages per institution type |
 | 26 | Feature explanations | ✅ tooltips on every model term |

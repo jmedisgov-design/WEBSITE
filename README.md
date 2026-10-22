@@ -97,7 +97,7 @@ price cards; and copy that states what the system does and does not do.
 | `assets/img/icons/` | Social icons. |
 
 Navigation and the footer are injected by `app.js` from the `NAV` and `SITE` objects, so there is
-one place to change them. Contact details (`info@aictem.org`, `aictem.org`, Nairobi, the phone
+one place to change them. Contact details (`info@edisgov.org`, `aictem.org`, Nairobi, the phone
 number) also live in `SITE` and are not hard-coded into pages.
 
 ---
