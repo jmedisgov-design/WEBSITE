@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EDIS Academy — LinkedIn banner, Economic and Climate Modelling 2027</title>
+<!--
+  Source for the LinkedIn banner image. Rendered at 1200 x 1500 (4:5 portrait,
+  the tallest shape LinkedIn shows in the feed) and exported at 2x for a crisp
+  2400 x 3000 PNG. Course data matches assets/js/courses.js and data.js.
+-->
+<style>
+  @page { size: 1200px 1500px; margin: 0 }
+  * { box-sizing: border-box; margin: 0; padding: 0 }
+  body { width: 1200px; height: 1500px; overflow: hidden; display: flex; flex-direction: column;
+         font-family: "Segoe UI", -apple-system, Roboto, Helvetica, Arial, sans-serif;
+         color: #1d2733; background: #fff }
+  .serif { font-family: Georgia, "Times New Roman", serif }
+
+  /* ---------------------------------------------------------------- header */
+  .head { position: relative; height: 334px; flex: none; color: #fff; overflow: hidden;
+          background: linear-gradient(118deg, #0b2f4d 0%, #123f63 42%, #14563f 100%);
+          padding: 34px 54px 0 }
+  .head::after { content: ""; position: absolute; inset: 0; opacity: .3;
+                 background-image: linear-gradient(#ffffff18 1px, transparent 1px),
+                                   linear-gradient(90deg, #ffffff18 1px, transparent 1px);
+                 background-size: 54px 54px }
+  .head > * { position: relative; z-index: 1 }
+  .brandrow { display: flex; align-items: center; gap: 18px }
+  .brandrow img { width: 88px; height: 88px; object-fit: contain }
+  .bname { font-family: Georgia, serif; font-size: 46px; font-weight: 700; letter-spacing: .04em }
+  .bsub { font-size: 15px; letter-spacing: .22em; text-transform: uppercase; color: #9fe6b4;
+          font-weight: 700; margin-top: 2px }
+  .kicker { position: absolute; top: 44px; right: 54px; text-align: right }
+  .kicker .pill { display: inline-block; background: #3f9b46; color: #fff; font-weight: 700;
+                  font-size: 17px; letter-spacing: .08em; text-transform: uppercase;
+                  padding: 9px 20px; border-radius: 999px }
+  .kicker .yr { display: block; margin-top: 10px; font-size: 15px; color: #cfe0ee;
+                letter-spacing: .1em; text-transform: uppercase }
+  h1 { font-family: Georgia, serif; font-size: 50px; line-height: 1.12; margin-top: 26px;
+       max-width: 23ch }
+  h1 em { font-style: normal; color: #9fe6b4 }
+  .lede { margin-top: 12px; font-size: 19px; color: #dce8f1; max-width: 72ch }
+
+  /* ----------------------------------------------------------------- cards */
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; padding: 30px 54px 0; flex: 1 }
+  .card { border: 1px solid #e3e9ef; border-radius: 14px; overflow: hidden;
+          box-shadow: 0 10px 30px rgba(18,63,99,.10); display: flex; flex-direction: column }
+  .card .top { padding: 18px 24px 16px; color: #fff }
+  .c-econ .top { background: linear-gradient(135deg, #14507d 0%, #1c6ea4 100%) }
+  .c-clim .top { background: linear-gradient(135deg, #1f7a4d 0%, #2e8b57 100%) }
+  .code { font-size: 14px; letter-spacing: .18em; text-transform: uppercase; opacity: .92;
+          font-weight: 700 }
+  .ctitle { font-family: Georgia, serif; font-size: 34px; line-height: 1.1; margin-top: 4px }
+  .meta { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap }
+  .meta span { background: #ffffff2e; border: 1px solid #ffffff45; border-radius: 6px;
+               padding: 5px 11px; font-size: 14.5px; font-weight: 600 }
+  .body { padding: 20px 26px 22px; background: #fff; flex: 1; display: flex; flex-direction: column }
+  .lbl { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700;
+         color: #5d6b79; margin-bottom: 9px }
+  ul { list-style: none }
+  .mods li { font-size: 17.5px; line-height: 1.36; padding: 5.5px 0 5.5px 20px; position: relative }
+  .mods li::before { content: ""; position: absolute; left: 3px; top: 11px; width: 8px; height: 8px;
+                     border-radius: 50%; }
+  .c-econ .mods li::before { background: #1c6ea4 }
+  .c-clim .mods li::before { background: #2e8b57 }
+  .mods li b { font-weight: 700 }
+  .more { font-size: 14.5px; color: #5d6b79; padding: 6px 0 0 20px; font-style: italic }
+
+  /* ----------------------------------------------------------------- dates */
+  .dates { margin-top: auto; border-top: 1px solid #e3e9ef; padding-top: 16px }
+  .when { display: flex; align-items: center; gap: 12px; padding: 9px 0 }
+  .city { font-weight: 700; font-size: 16px; color: #fff; border-radius: 6px; padding: 5px 12px;
+          min-width: 92px; text-align: center; letter-spacing: .04em }
+  .nbo { background: #123f63 } .acc { background: #c1611f }
+  .when .d { font-size: 17px; font-weight: 600 }
+  .when .d small { display: block; font-weight: 400; color: #5d6b79; font-size: 14px }
+
+  /* ------------------------------------------------------------------- CTA */
+  .cta { margin: 26px 54px 0; flex: none; background: #0e3150; color: #fff; border-radius: 14px;
+         padding: 30px 36px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px;
+         align-items: center }
+  .cta h2 { font-family: Georgia, serif; font-size: 33px; line-height: 1.15 }
+  .cta p { color: #cfe0ee; font-size: 17px; margin-top: 8px }
+  .cta .btn { display: inline-block; background: #3f9b46; color: #fff; font-weight: 700;
+              font-size: 20px; padding: 14px 26px; border-radius: 8px; letter-spacing: .01em }
+  .contact { text-align: right }
+  .contact div { margin-bottom: 12px }
+  .contact .k { display: block; margin-bottom: 3px; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase;
+                color: #9fb8cc; font-weight: 700 }
+  .contact .v { font-size: 20px; font-weight: 600; color: #fff }
+  .foot { padding: 18px 54px 22px; flex: none; display: flex; justify-content: space-between;
+          align-items: center; font-size: 14.5px; color: #5d6b79 }
+  .foot b { color: #123f63 }
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="brandrow">
+    <img src="../assets/img/logo.png" alt="EDIS">
+    <div>
+      <div class="bname">EDIS Academy</div>
+      <div class="bsub">Economic Development Intelligence System</div>
+    </div>
+  </div>
+  <div class="kicker">
+    <span class="pill">Registration open</span>
+    <span class="yr">Training year 2027</span>
+  </div>
+  <h1>Model the economy.<br><em>Model the climate.</em></h1>
+  <p class="lede">Two flagship courses for economists, planners and policy analysts &mdash; taught
+  in the room, on the same models governments run in production.</p>
+</header>
+
+<section class="cards">
+
+  <article class="card c-econ">
+    <div class="top">
+      <div class="code">Course 02 &middot; School of Economic Modelling</div>
+      <div class="ctitle">Economic Modelling</div>
+      <div class="meta"><span>10 contact days</span><span>60 hours</span><span>US$2,000</span></div>
+    </div>
+    <div class="body">
+      <div class="lbl">Seven modules</div>
+      <ul class="mods">
+        <li><b>MOD 301</b> Social Accounting Matrix Construction</li>
+        <li><b>MOD 302</b> Input&ndash;Output and Structural Analysis</li>
+        <li><b>MOD 303</b> Introduction to CGE Modelling</li>
+        <li><b>MOD 304</b> Advanced CGE Modelling</li>
+        <li><b>MOD 305</b> Recursive Dynamic CGE</li>
+        <li><b>MOD 306</b> CDCGE with EDIS</li>
+        <li><b>MOD 310</b> Growth Diagnostics</li>
+      </ul>
+      <p class="more">Laboratories run on the live EDIS platform, with the national datasets the
+      models use in production.</p>
+      <div class="dates">
+        <div class="lbl">When and where</div>
+        <div class="when"><span class="city nbo">Nairobi</span>
+          <span class="d">1 &ndash; 12 February 2027<small>AICTEM regional hub, Kenya</small></span></div>
+        <div class="when"><span class="city acc">Accra</span>
+          <span class="d">25 October &ndash; 5 November 2027<small>AICTEM regional hub, Ghana</small></span></div>
+      </div>
+    </div>
+  </article>
+
+  <article class="card c-clim">
+    <div class="top">
+      <div class="code">Course 04 &middot; School of Climate Modelling</div>
+      <div class="ctitle">Climate Modelling</div>
+      <div class="meta"><span>10 contact days</span><span>60 hours</span><span>US$2,000</span></div>
+    </div>
+    <div class="body">
+      <div class="lbl">Ten modules</div>
+      <ul class="mods">
+        <li><b>CLM 601</b> Climate Science for Economic Modelling</li>
+        <li><b>CLM 604</b> Sector Climate Impact Modelling</li>
+        <li><b>CLM 606</b> Climate&ndash;Economy and CDCGE Modelling</li>
+        <li><b>CLM 607</b> Adaptation Modelling and Appraisal</li>
+        <li><b>CLM 608</b> Mitigation, Emissions and Carbon Policy</li>
+        <li><b>CLM 609</b> NDC Modelling, Costing and Financing</li>
+        <li><b>CLM 610</b> Climate Fiscal Risk and Macro-Fiscal Modelling</li>
+        <li><b>CLM 611</b> Climate&ndash;Energy Transition Modelling</li>
+        <li><b>CLM 612</b> GIS and Spatial Climate Risk</li>
+        <li><b>CLM 613</b> Uncertainty, Monte Carlo and Robust Decisions</li>
+      </ul>
+      <p class="more">Five further climate modules are in preparation for the 2028 training year.</p>
+      <div class="dates">
+        <div class="lbl">When and where</div>
+        <div class="when"><span class="city nbo">Nairobi</span>
+          <span class="d">22 February &ndash; 5 March 2027<small>AICTEM regional hub, Kenya</small></span></div>
+        <div class="when"><span class="city acc">Accra</span>
+          <span class="d">15 &ndash; 26 November 2027<small>AICTEM regional hub, Ghana</small></span></div>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Register, or nominate a team</h2>
+    <p>Enrolment opens 7 December 2026. Institutions may nominate a team at any time, and the
+    course is then built around the questions that team has to answer.</p>
+  </div>
+  <div class="contact">
+    <div><span class="btn">www.edisgov.org/enrol.html</span></div>
+    <div><span class="k">Enquiries</span><span class="v">info@edisgov.org</span></div>
+  </div>
+</section>
+
+<div class="foot">
+  <span>Assessed and certified against the EDIS Academy register &middot; Fee US$200 a contact day</span>
+  <span><b>www.edisgov.org</b> &middot; An AICTEM platform</span>
+</div>
+
+</body>
+</html>
