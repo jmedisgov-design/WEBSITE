@@ -42,7 +42,7 @@
   .lede { margin-top: 12px; font-size: 19px; color: #dce8f1; max-width: 72ch }
 
   /* ----------------------------------------------------------------- cards */
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; padding: 30px 54px 0; flex: 1 }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 26px 54px 0; flex: 1 }
   .card { border: 1px solid #e3e9ef; border-radius: 14px; overflow: hidden;
           box-shadow: 0 10px 30px rgba(18,63,99,.10); display: flex; flex-direction: column }
   .card .top { padding: 18px 24px 16px; color: #fff }
@@ -75,9 +75,24 @@
   .when .d { font-size: 17px; font-weight: 600 }
   .when .d small { display: block; font-weight: 400; color: #5d6b79; font-size: 14px }
 
+  /* ----------------------------------------------------------- sponsorship */
+  .sponsor { margin: 20px 54px 0; flex: none; display: grid;
+             grid-template-columns: auto 1fr auto; gap: 24px; align-items: center;
+             background: linear-gradient(120deg, #fdf3e7 0%, #fbe9d6 100%);
+             border: 1px solid #f0d3b2; border-left: 10px solid #c1611f;
+             border-radius: 14px; padding: 18px 28px }
+  .sp-mark { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 13px;
+             letter-spacing: .22em; text-transform: uppercase; font-weight: 700; color: #c1611f }
+  .sponsor h2 { font-family: Georgia, serif; font-size: 26px; color: #8a3d0c; line-height: 1.15 }
+  .sponsor p { font-size: 16px; color: #5a4433; margin-top: 7px; line-height: 1.45 }
+  .sp-ask { text-align: right; white-space: nowrap }
+  .sp-k { display: block; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase;
+          font-weight: 700; color: #a2714a; margin-bottom: 4px }
+  .sp-v { font-size: 22px; font-weight: 700; color: #8a3d0c }
+
   /* ------------------------------------------------------------------- CTA */
-  .cta { margin: 26px 54px 0; flex: none; background: #0e3150; color: #fff; border-radius: 14px;
-         padding: 30px 36px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px;
+  .cta { margin: 20px 54px 0; flex: none; background: #0e3150; color: #fff; border-radius: 14px;
+         padding: 24px 36px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px;
          align-items: center }
   .cta h2 { font-family: Georgia, serif; font-size: 33px; line-height: 1.15 }
   .cta p { color: #cfe0ee; font-size: 17px; margin-top: 8px }
@@ -88,7 +103,7 @@
   .contact .k { display: block; margin-bottom: 3px; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase;
                 color: #9fb8cc; font-weight: 700 }
   .contact .v { font-size: 20px; font-weight: 600; color: #fff }
-  .foot { padding: 18px 54px 22px; flex: none; display: flex; justify-content: space-between;
+  .foot { padding: 14px 54px 18px; flex: none; display: flex; justify-content: space-between;
           align-items: center; font-size: 14.5px; color: #5d6b79 }
   .foot b { color: #123f63 }
 </style>
@@ -105,11 +120,11 @@
   </div>
   <div class="kicker">
     <span class="pill">Registration open</span>
-    <span class="yr">Training year 2027</span>
+    <span class="yr">Nairobi &middot; 2027</span>
   </div>
   <h1>Model the economy.<br><em>Model the climate.</em></h1>
-  <p class="lede">Two flagship courses for economists, planners and policy analysts &mdash; taught
-  in the room, on the same models governments run in production.</p>
+  <p class="lede">Two flagship courses for economists, planners and policy analysts, taught in
+  Nairobi on the same models governments run in production.</p>
 </header>
 
 <section class="cards">
@@ -134,11 +149,9 @@
       <p class="more">Laboratories run on the live EDIS platform, with the national datasets the
       models use in production.</p>
       <div class="dates">
-        <div class="lbl">When and where</div>
+        <div class="lbl">Nairobi cohort 2027</div>
         <div class="when"><span class="city nbo">Nairobi</span>
-          <span class="d">1 &ndash; 12 February 2027<small>AICTEM regional hub, Kenya</small></span></div>
-        <div class="when"><span class="city acc">Accra</span>
-          <span class="d">25 October &ndash; 5 November 2027<small>AICTEM regional hub, Ghana</small></span></div>
+          <span class="d">1 &ndash; 12 February 2027<small>AICTEM regional hub, Nairobi, Kenya</small></span></div>
       </div>
     </div>
   </article>
@@ -165,15 +178,28 @@
       </ul>
       <p class="more">Five further climate modules are in preparation for the 2028 training year.</p>
       <div class="dates">
-        <div class="lbl">When and where</div>
+        <div class="lbl">Nairobi cohort 2027</div>
         <div class="when"><span class="city nbo">Nairobi</span>
-          <span class="d">22 February &ndash; 5 March 2027<small>AICTEM regional hub, Kenya</small></span></div>
-        <div class="when"><span class="city acc">Accra</span>
-          <span class="d">15 &ndash; 26 November 2027<small>AICTEM regional hub, Ghana</small></span></div>
+          <span class="d">22 February &ndash; 5 March 2027<small>AICTEM regional hub, Nairobi, Kenya</small></span></div>
       </div>
     </div>
   </article>
 
+</section>
+
+<section class="sponsor">
+  <div class="sp-mark">Partners</div>
+  <div>
+    <h2>Sponsor an analyst from a developing country</h2>
+    <p>Development partners, foundations and programmes can fund places for economists, planners
+    and climate analysts from low- and middle-income countries. One sponsorship covers tuition,
+    all course materials, the laboratories and certification &mdash; and leaves a ministry with a
+    modeller it did not have before. Group and multi-country sponsorships are welcome.</p>
+  </div>
+  <div class="sp-ask">
+    <span class="sp-k">To sponsor places</span>
+    <span class="sp-v">info@edisgov.org</span>
+  </div>
 </section>
 
 <section class="cta">
