@@ -13,10 +13,11 @@
     product: "EDIS",
     productLong: "Economic Development Intelligence System",
     email: "info@edisgov.org",
-    /* Where the public forms post. Paste the Formspree form URL here - it looks
-       like "https://formspree.io/f/abcdwxyz". While this is empty the forms fall
-       back to preparing the message as a mailto: link. */
-    formEndpoint: "",
+    /* Where the public forms post. FormSubmit relays each submission straight to
+       the address below - no account, no dashboard. Swap in a Formspree form URL
+       ("https://formspree.io/f/abcdwxyz") instead if a dashboard is wanted; an
+       empty string falls back to preparing the message as a mailto: link. */
+    formEndpoint: "https://formsubmit.co/ajax/info@edisgov.org",
     website: "www.aictem.org",
     location: "Nairobi, Kenya",
     phone: "+256 776 130913",
@@ -316,6 +317,10 @@
       if (i > 0) payload[l.slice(0, i)] = l.slice(i + 2);
     });
     payload._subject = subject;
+    if (SITE.formEndpoint.indexOf("formsubmit.co") > -1) {
+      payload._captcha = "false";      /* the honeypot below guards the form */
+      payload._template = "table";     /* readable layout in the delivered mail */
+    }
     payload.summary = lines.join("\n");
     payload.page = location.pathname.split("/").pop() + location.search;
 
@@ -324,8 +329,17 @@
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(payload)
     }).then(function (r) {
+      /* a 200 is not enough: the relay answers 200 with success:"false" when the
+         form still needs activating, so the body has to be read before claiming
+         the message was delivered. */
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        return { ok: r.ok, body: j };
+      });
+    }).then(function (res) {
       if (btn) { btn.disabled = false; btn.innerHTML = label; }
-      if (!r.ok) throw new Error("rejected");
+      var refused = !res.ok || res.body.success === "false" ||
+                    res.body.success === false || res.body.ok === false;
+      if (refused) throw new Error(res.body.message || "rejected");
       form.reset();
       track("form_sent", { form: form.id, subject: subject });
       show("<b>Thank you &mdash; your message has been sent.</b> " +
