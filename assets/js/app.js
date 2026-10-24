@@ -81,6 +81,7 @@
     ]},
     { label: "Resources", href: "resources.html", children: [
       ["resources.html", "All resources", "Documentation, reports, data and the Academy register"],
+      ["news.html", "News and announcements", "Open courses, new reports and releases"],
       ["resources.html#reports", "Reports", "Decision briefs and technical report formats"],
       ["resources.html#model-docs", "Model library and documentation", "Model reports and platform documentation"],
       ["demo.html", "Demonstrations", "The public demonstration and sample runs"],
@@ -170,7 +171,8 @@
           '<a href="solutions.html">Solutions</a><a href="deploy.html">Government deployment</a>' +
           '<a href="government.html">Procurement</a><a href="pricing.html">Pricing</a>' +
           '<a href="academy.html">EDIS Academy</a><a href="resources.html">Resources</a>' +
-          '<a href="partners.html">Partners</a><a href="contact.html">Contact</a>' +
+          '<a href="news.html">News</a><a href="partners.html">Partners</a>' +
+          '<a href="contact.html">Contact</a>' +
         "</div>" +
         "<div><h4>Contact</h4>" +
           '<a href="mailto:' + SITE.email + '">' + SITE.email + "</a>" +
