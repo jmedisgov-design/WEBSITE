@@ -9,7 +9,7 @@
 
   /* ---------------------------------------------------------------- config */
   var SITE = {
-    org: "African Institute for Climate, Trade and Economic Modelling",
+    org: "Economic Development Intelligence System",
     product: "EDIS",
     productLong: "Economic Development Intelligence System",
     email: "info@edisgov.org",
@@ -18,15 +18,10 @@
        ("https://formspree.io/f/abcdwxyz") instead if a dashboard is wanted; an
        empty string falls back to preparing the message as a mailto: link. */
     formEndpoint: "https://formsubmit.co/ajax/info@edisgov.org",
-    website: "www.aictem.org",
+    website: "www.edisgov.org",
     location: "Nairobi, Kenya",
     phone: "+256 776 130913",
-    social: {
-      linkedin: "https://www.linkedin.com/company/aictem",
-      x: "https://x.com/aictem_org",
-      youtube: "https://www.youtube.com/@aictem",
-      facebook: "https://www.facebook.com/aictem.org"
-    }
+    social: {}
   };
   window.EDIS_SITE = SITE;
 
@@ -87,7 +82,7 @@
       ["demo.html", "Demonstrations", "The public demonstration and sample runs"],
       ["resources.html#research", "Research and publications", "The research behind the models"],
       ["about.html", "About EDIS", "Purpose, principles and governance"],
-      ["about.html#aictem", "About AICTEM", "The institute that develops and maintains EDIS"],
+      ["about.html#hierarchy", "How EDIS fits together", "The platform, implementation and the Academy"],
       ["contact.html", "Contact", "Reach the EDIS team"]
     ]}
   ];
@@ -100,12 +95,13 @@
   };
 
   function socialRow(cls) {
-    var s = SITE.social, out = '<span class="' + cls + '">';
-    out += '<a href="' + s.linkedin + '" target="_blank" rel="noopener" aria-label="LinkedIn">' + ICONS.linkedin + "</a>";
-    out += '<a href="' + s.x + '" target="_blank" rel="noopener" aria-label="X">' + ICONS.x + "</a>";
-    out += '<a href="' + s.youtube + '" target="_blank" rel="noopener" aria-label="YouTube">' + ICONS.youtube + "</a>";
-    out += '<a href="' + s.facebook + '" target="_blank" rel="noopener" aria-label="Facebook">' + ICONS.facebook + "</a>";
-    return out + "</span>";
+    var s = SITE.social, out = "";
+    [["linkedin", "LinkedIn"], ["x", "X"], ["youtube", "YouTube"], ["facebook", "Facebook"]]
+      .forEach(function (k) {
+        if (s[k[0]]) out += '<a href="' + s[k[0]] + '" target="_blank" rel="noopener" aria-label="' +
+          k[1] + '">' + ICONS[k[0]] + "</a>";
+      });
+    return out ? '<span class="' + cls + '">' + out + "</span>" : "";
   }
 
   /* ------------------------------------------------------------- masthead */
@@ -136,7 +132,7 @@
       "</div></div>" +
       '<div class="wrap"><nav class="nav" aria-label="Primary">' +
         '<a class="brand" href="index.html">' +
-          '<img src="assets/img/logo.png" alt="AICTEM logo" width="140" height="140">' +
+          '<img src="assets/img/logo.png" alt="EDIS logo" width="140" height="140">' +
           '<span class="bt"><b>EDIS</b><span>Economic Development Intelligence System</span></span>' +
         "</a>" +
         '<button class="navtoggle" aria-label="Menu" aria-expanded="false">&#9776;</button>' +
@@ -152,13 +148,11 @@
     return '<div class="wrap">' +
       '<div class="foot-grid">' +
         '<div class="foot-brand">' +
-          '<img src="assets/img/logo-footer.png" alt="AICTEM" width="200" height="200">' +
+          '<img src="assets/img/logo-footer.png" alt="EDIS" width="200" height="200">' +
           "<p>EDIS is economic development intelligence infrastructure. It connects economic " +
           "models, sector planning systems, public finance, GIS, optimization, forecasting, " +
           "microsimulation and AI agents so that governments and institutions can analyse " +
-          "policies, allocate resources and make evidence-based development decisions. " +
-          "EDIS is developed and maintained by the African Institute for Climate, Trade and " +
-          "Economic Modelling (AICTEM).</p>" +
+          "policies, allocate resources and make evidence-based development decisions.</p>" +
           socialRow("foot-soc") +
         "</div>" +
         "<div><h4>EDIS</h4>" +
@@ -178,12 +172,12 @@
           '<a href="mailto:' + SITE.email + '">' + SITE.email + "</a>" +
           '<a href="contact.html">' + SITE.location + "</a>" +
           '<a href="tel:' + SITE.phone.replace(/\s/g, "") + '">' + SITE.phone + "</a>" +
-          '<a href="https://aictem.org" target="_blank" rel="noopener">aictem.org</a>' +
+          '<a href="https://www.edisgov.org" target="_blank" rel="noopener">edisgov.org</a>' +
           '<a href="request-demo.html">Request a demonstration</a>' +
         "</div>" +
       "</div>" +
       '<div class="foot-bottom">' +
-        "<span>&copy; <span id=\"yr\"></span> AICTEM. All rights reserved. EDIS is a platform of AICTEM.</span>" +
+        "<span>&copy; <span id=\"yr\"></span> EDIS &mdash; Economic Development Intelligence System. All rights reserved.</span>" +
         "<span>" + SITE.website + "</span>" +
       "</div></div>";
   }

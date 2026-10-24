@@ -3,7 +3,7 @@
 October 2026 restructuring. The site is repositioned so that **EDIS is the primary commercial
 product** — a subscription-based economic development intelligence platform for governments and
 institutions — with **EDIS Academy** as the training, certification and adoption arm, and
-**implementation and consulting** as the deployment revenue line. AICTEM remains the institute that
+**implementation and consulting** as the deployment revenue line. EDIS remains the institute that
 develops and maintains the models, data and analytical infrastructure.
 
 No page, route, download, registry or dataset was removed. Two pages were added and the navigation,
@@ -15,7 +15,7 @@ the home page and the positioning were rebuilt around the platform.
 
 | Layer | Where it is stated |
 | --- | --- |
-| **AICTEM** — owner and developer of models, data, analytical infrastructure and IP | `about.html#aictem`, `about.html#hierarchy`, footer on every page |
+| **EDIS** — owner and developer of models, data, analytical infrastructure and IP | `about.html#edis`, `about.html#hierarchy`, footer on every page |
 | **EDIS** — primary commercial product, subscription platform | home page, `what-is-edis.html`, `models.html`, `pricing.html` |
 | **EDIS Academy** — training, certification, institutional adoption | `academy.html`, `courses.html`, `academy-calendar.html` |
 | **Implementation and consulting** — configuration, calibration, integration, deployment | `deploy.html`, `pricing.html#implementation` |
@@ -52,7 +52,7 @@ No redirects are required: no route changed and no route was deleted.
 | `#cohorts` | `academy.html` | Government cohort training |
 | `#reports` | `resources.html` | Resources nav entry for report formats |
 | `#research` | `resources.html` | Research, publications and case studies |
-| `#hierarchy` | `about.html` | AICTEM → EDIS → implementation → Academy |
+| `#hierarchy` | `about.html` | EDIS → EDIS → implementation → Academy |
 | `#ministry`, `#enterprise`, `#national`, `#configuration`, `#implementation`, `#integration` | `deploy.html` | Deployment nav entries |
 
 ---
@@ -70,7 +70,7 @@ After:
 | **Solutions** | The single hub: by government institution (with the Ministry of Finance, Central Bank and Statistics Office workflow sheets), by sector, by institution type, and by deployment — the ministry, enterprise and national tiers, country configuration, implementation, integration and procurement |
 | **Pricing** | Plans, individual tiers, institutional and ministry, national and sovereign, implementation and services, estimator, configurator, request a quote |
 | **Academy** | EDIS Academy, courses, certification, training calendar, government cohorts, institutional training, enrol, training partners |
-| **Resources** | All resources, reports, model library and documentation, demonstrations, research and publications, about EDIS, about AICTEM, contact |
+| **Resources** | All resources, reports, model library and documentation, demonstrations, research and publications, about EDIS, about EDIS, contact |
 
 Masthead call to action: **Request a demo** (primary) with **Sign in** beside it. Academy no longer
 competes for the primary action anywhere on the site.

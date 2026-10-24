@@ -1,7 +1,6 @@
 # EDIS website
 
-**Economic Development Intelligence System (EDIS)** — a platform of the **African Institute for
-Climate, Trade and Economic Modelling (AICTEM)**.
+**Economic Development Intelligence System (EDIS)** — a platform of the **Economic Development Intelligence System (EDIS)**.
 
 This is the public-facing website and the front-end shell of the authenticated platform, built to
 the master brief in `EDIS_Website_Master_Claude_Code_Command.docx`. It is a static site: open
@@ -13,10 +12,10 @@ the master brief in `EDIS_Website_Master_Claude_Code_Command.docx`. It is a stat
 
 The brief asked for two things at once: the feature set and information architecture of
 palantir.com (a product platform sold to institutions, organised around platforms, solutions by
-audience, and a visible technical mechanism), and the *format* of aictem.org.
+audience, and a visible technical mechanism), and the *format* of edisgov.org.
 
-**Format taken from aictem.org** — the site is built on the institute's own house layout so that
-EDIS reads as an AICTEM product rather than a separate company:
+**Format taken from edisgov.org** — the site is built on the institute's own house layout so that
+EDIS reads as an EDIS product rather than a separate company:
 
 - Navy `#123f63` / green `#3f9b46` palette, serif (Georgia) headings on a system sans body,
   17px base, the same `--soft` band alternation.
@@ -40,7 +39,7 @@ price cards; and copy that states what the system does and does not do.
 | `.chain` — the model chain | Section 39 of the brief: users must see FINEX complete, CDCGE running, Poverty waiting. The differentiator, made visible. |
 | `.prov` — the provenance strip | Section 23: no numerical answer without data source, year, model, version, scenario, run ID, timestamp, parameters, transformations and validation status. |
 | `.badge` — status badges | Section 24: READY / PARTIAL / DATA MISSING / MODEL ERROR / RUNNING / NON-CONVERGED / VALIDATED. |
-| `.lanes` — the two-lane diagram | Section 47: the AI layer and the AICTEM analytical layer are separated, and the separation is shown on the home page, in the architecture page and in the About page. |
+| `.lanes` — the two-lane diagram | Section 47: the AI layer and the EDIS analytical layer are separated, and the separation is shown on the home page, in the architecture page and in the About page. |
 | `.flow`, `.arrowlist` | The eight-stage pipeline and the FINEX → MEL workflow. |
 | `.ws` — the workspace shell | Section 9: sidebar, Ask EDIS, scenarios, projects, data, maps, reports, administration. |
 
@@ -70,9 +69,9 @@ price cards; and copy that states what the system does and does not do.
 | `academy-calendar.html` | The training year, Monday 1 Feb 2027 to 14 Jul 2028 — a 76-week grid in two hub lanes (Nairobi, Accra), coloured by course family, with provisional cohorts hatched. All 28 cohorts filterable by course, place and month, the scheduling rules, closures, certification boards, holiday extensions and the build queue. |
 | `enrol.html` | Enrolment. Course and cohort selects, pre-filled from `enrol.html?course=C04&cohort=04-NBO-2704`; the cohort determines the mode and the fee. Older module links (`?course=MOD_309`) select the course that contains the module. |
 | `pricing.html` | Eight access levels, an 18-row capability matrix, the configurable-licensing model and its database objects. **No prices are hard-coded.** |
-| `resources.html` | Academy resources (catalogue, calendar, `.ics` feed, `.csv` register), platform documentation, case studies and FAQs. The earlier AICTEM publications section and the course technical-manual downloads have both been removed at the client's request. |
+| `resources.html` | Academy resources (catalogue, calendar, `.ics` feed, `.csv` register), platform documentation, case studies and FAQs. The earlier EDIS publications section and the course technical-manual downloads have both been removed at the client's request. |
 | `partners.html` | Training partners, research partners, development institutions and universities. |
-| `about.html` | About EDIS, how the parts fit together (`#hierarchy`: AICTEM → EDIS → implementation → Academy), about AICTEM, leadership and governance, continuity with the institute's existing site. |
+| `about.html` | About EDIS, how the parts fit together (`#hierarchy`: EDIS → EDIS → implementation → Academy), about EDIS, leadership and governance, continuity with the institute's existing site. |
 | `contact.html` | Contact details, routing table and a message form. |
 | `demo.html` | Public demonstration. Three registered questions, animated routing and model chain, and the full response interface: Summary, Results, Charts, Maps, Budget, Macro effects, Poverty, MEL, Methods, Data, Downloads — every figure stamped as demonstration data. |
 | `request-demo.html` | Demonstration request form with every field the brief specifies. |
@@ -93,11 +92,11 @@ price cards; and copy that states what the system does and does not do.
 | `assets/js/outlines.js` | Each module's own `00_Course_Outline.md`, converted to HTML in full and shown inside its course on `courses.html`. Includes the eight MEL modules. The matching PDFs, where published, are in `assets/downloads/outlines/`. |
 | `assets/js/courses.js` | The course registry behind `courses.html` and `enrol.html`: fourteen courses, each carrying its modules with their published summary, outcomes, audience, prerequisites, model and materials counts, plus length, contact-hour allocation per module, day-by-day plan, planned modules and certificate. Generated — do not edit by hand. |
 | `assets/js/demo.js` | The three demonstration scenarios and the run engine (typing, chain walk, readout). |
-| `assets/img/` | AICTEM logo from `AICTEM_logo_pack` — `logo.png` (masthead), `favicon.png`, and `logo-footer.png`, the transparent mark composited onto the footer navy so it sits flush. |
+| `assets/img/` | EDIS logo from `EDIS_logo_pack` — `logo.png` (masthead), `favicon.png`, and `logo-footer.png`, the transparent mark composited onto the footer navy so it sits flush. |
 | `assets/img/icons/` | Social icons. |
 
 Navigation and the footer are injected by `app.js` from the `NAV` and `SITE` objects, so there is
-one place to change them. Contact details (`info@edisgov.org`, `aictem.org`, Nairobi, the phone
+one place to change them. Contact details (`info@edisgov.org`, `edisgov.org`, Nairobi, the phone
 number) also live in `SITE` and are not hard-coded into pages.
 
 ---
@@ -152,8 +151,8 @@ These come from the brief and are worth keeping when the site is extended:
    in the status system, because hiding them would misrepresent the product.
 6. **Country is not hard-coded.** Utopia is the demonstration instance; country, region, year and
    scenario are presented as first-class dimensions throughout.
-7. **AICTEM's existing site is preserved.** Publications, research papers, diagnostics and the blog
-   link out to `aictem.org` rather than being duplicated here.
+7. **EDIS's existing site is preserved.** Publications, research papers, diagnostics and the blog
+   link out to `edisgov.org` rather than being duplicated here.
 
 ---
 

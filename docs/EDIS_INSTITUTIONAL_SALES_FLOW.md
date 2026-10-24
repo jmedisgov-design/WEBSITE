@@ -8,7 +8,7 @@ From a pricing-page visit to a contracted national deployment.
 
 ```
    Pricing page  ─┬─►  Estimator      ─┐
-                  ├─►  Configurator   ─┼─►  request-quote.html  ─►  AICTEM  ─►  Proposal  ─►  Contract
+                  ├─►  Configurator   ─┼─►  request-quote.html  ─►  EDIS  ─►  Proposal  ─►  Contract
    Government pg ─┤                    │        (structured)
    Sector page   ─┘                    │
                                         └─►  Demonstration / sandbox
@@ -70,11 +70,11 @@ DRAFT ─► SUBMITTED ─► UNDER_REVIEW ─► PROPOSAL_SENT ─► NEGOTIATI
 |---|---|---|
 | `DRAFT` | System | Created from an estimator or configurator hand-off |
 | `SUBMITTED` | Buyer | The institution has sent the request |
-| `UNDER_REVIEW` | AICTEM | Commercial review of scope, country band and discount |
-| `PROPOSAL_SENT` | AICTEM | A written proposal has gone to the institution |
+| `UNDER_REVIEW` | EDIS | Commercial review of scope, country band and discount |
+| `PROPOSAL_SENT` | EDIS | A written proposal has gone to the institution |
 | `NEGOTIATION` | Both | Scope, phasing or financing under discussion |
-| `APPROVED` | AICTEM | Internally approved, awaiting signature |
-| `CONTRACTED` | AICTEM | Signed; a `subscriptions` row is created |
+| `APPROVED` | EDIS | Internally approved, awaiting signature |
+| `CONTRACTED` | EDIS | Signed; a `subscriptions` row is created |
 | `DECLINED` | Either | Closed, with a reason recorded |
 
 A quote holds `quote_items` typed as `plan`, `sector`, `addon`, `implementation`, `training` or
@@ -88,7 +88,7 @@ Excel export is left to the backend; `quotes` + `quote_items` carry everything a
 ## 5. Donor-supported deployments (item 21)
 
 A development partner can fund EDIS for a government. `donor_sponsorships` records the donor, the
-beneficiary institution and country, and the three financing shares — donor, government, AICTEM —
+beneficiary institution and country, and the three financing shares — donor, government, EDIS —
 with a constraint that they cannot exceed the total.
 
 Partners the route is written for: World Bank, AfDB, UNDP, EU, FCDO, GIZ, foundations and regional
@@ -157,5 +157,5 @@ All render from `pricing.js`, so a proposal built from them cannot quote a stale
 
 ## 9. Contact
 
-All commercial enquiry routes to **info@edisgov.org** and **aictem.org**. No other address exists
+All commercial enquiry routes to **info@edisgov.org** and **edisgov.org**. No other address exists
 and none has been invented.

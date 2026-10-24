@@ -209,7 +209,7 @@ CREATE TABLE quotes (
     funding_source      TEXT,
     procurement_method  TEXT,
     deployment_date     DATE,
-    owner               TEXT,                          -- AICTEM account owner
+    owner               TEXT,                          -- EDIS account owner
     created_at          TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at          TIMESTAMPTZ NOT NULL DEFAULT now()
 );
@@ -236,14 +236,14 @@ CREATE TABLE donor_sponsorships (
     beneficiary_country CHAR(3),
     donor_share         NUMERIC(4,3) NOT NULL DEFAULT 1.000,
     government_share    NUMERIC(4,3) NOT NULL DEFAULT 0.000,
-    aictem_share        NUMERIC(4,3) NOT NULL DEFAULT 0.000,
+    edis_share        NUMERIC(4,3) NOT NULL DEFAULT 0.000,
     amount              BIGINT,
     duration_years      INTEGER,
     training_included   BOOLEAN NOT NULL DEFAULT TRUE,
     status              TEXT NOT NULL DEFAULT 'proposed',
     starts_on           DATE,
     ends_on             DATE,
-    CHECK (donor_share + government_share + aictem_share <= 1.001)
+    CHECK (donor_share + government_share + edis_share <= 1.001)
 );
 
 -- ---------------------------------------------------------------- CRM leads

@@ -20,7 +20,7 @@
   <h1 id="page-title">Request a quote, proposal or demonstration</h1>
   <p id="page-lede">Government and institutional buyers rarely purchase with a card. Tell us what
   you need and in what form &mdash; a quote, a proforma invoice, a formal proposal, a demonstration
-  or a sandbox on sample data &mdash; and AICTEM will respond with a document your procurement
+  or a sandbox on sample data &mdash; and EDIS will respond with a document your procurement
   process can use.</p>
 </div></section>
 
@@ -182,7 +182,7 @@
     sandbox: "Request a sandbox demonstration",
     procurement: "Contact the procurement team",
     donor: "Fund EDIS for a government", subscribe: "Start an EDIS subscription",
-    national: "Discuss a national deployment", sovereign: "Contact AICTEM"
+    national: "Discuss a national deployment", sovereign: "Contact the EDIS team"
   };
 
   function donorMode() { return intent.value === "donor"; }
@@ -198,7 +198,7 @@
     if (donorMode()) {
       document.getElementById("page-lede").textContent =
         "Development partners can finance EDIS for a government, alone or shared with the " +
-        "government and AICTEM. Tell us the beneficiary, the modules and the duration, and we " +
+        "government and EDIS. Tell us the beneficiary, the modules and the duration, and we " +
         "will scope it with you and the government together.";
     }
 
@@ -246,7 +246,7 @@
       data: data,
       subject: subject,
       extra: extra,
-      tail: "AICTEM responds to institutional requests with a written proposal."
+      tail: "EDIS responds to institutional requests with a written proposal."
     });
   });
 })();
