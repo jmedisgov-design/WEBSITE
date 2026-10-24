@@ -1,5 +1,5 @@
 ﻿cohort,course,title,status,modules,days,contact_hours,mode,venue,place,session_hours,start,end,enrol_open,nominate_by,assess_by,holidays,rate_per_day,fee,currency,folder
-02-NBO-2702,Course 02,Economic Modelling,Available,7,10,60,In person,Nairobi,"Nairobi, Kenya - EDIS regional hub",08:30-15:30 EAT,2027-02-01,2027-02-12,2026-12-07,2027-01-04,2027-02-26,,200,2000,USD,02_Economic_Modelling
+02-NBO-2702,Course 02,Economic Modelling,Available,9,10,60,In person,Nairobi,"Nairobi, Kenya - EDIS regional hub",08:30-15:30 EAT,2027-02-01,2027-02-12,2026-12-07,2027-01-04,2027-02-26,,200,2000,USD,02_Economic_Modelling
 04-NBO-2702,Course 04,Climate Modelling,Available,10,10,60,In person,Nairobi,"Nairobi, Kenya - EDIS regional hub",08:30-15:30 EAT,2027-02-22,2027-03-05,2026-12-28,2027-01-25,2027-03-19,,200,2000,USD,04_Climate_Modelling
 01-ACC-2704,Course 01,Macroeconomics and Public Finance,Available,7,10,60,In person,Accra,"Accra, Ghana - EDIS regional hub",08:30-15:30 GMT,2027-04-05,2027-04-16,2027-02-08,2027-03-08,2027-04-30,,200,2000,USD,01_Macroeconomics_Public_Finance
 03-ACC-2704,Course 03,Public Investment,Available,12,10,60,In person,Accra,"Accra, Ghana - EDIS regional hub",08:30-15:30 GMT,2027-04-26,2027-05-10,2027-03-01,2027-03-29,2027-05-24,03 May May Day (observed),200,2000,USD,03_Public_Investment
@@ -13,7 +13,7 @@
 12-ACC-2709,Course 12,Microsimulation,Available,1,5,30,In person,Accra,"Accra, Ghana - EDIS regional hub",08:30-15:30 GMT,2027-09-13,2027-09-17,2027-07-19,2027-08-16,2027-10-01,,200,1000,USD,12_Micro_Simulation
 11-NBO-2709,Course 11,Industry Modelling,In development,3,7,42,In person,Nairobi,"Nairobi, Kenya - EDIS regional hub",08:30-15:30 EAT,2027-09-27,2027-10-05,2027-08-02,2027-08-30,2027-10-19,,200,1400,USD,11_Industry_Modelling
 14-NBO-2710,Course 14,Executive Programmes,In development,8,5,30,In person,Nairobi,"Nairobi, Kenya - EDIS regional hub",08:30-15:30 EAT,2027-10-11,2027-10-18,2027-08-16,2027-09-13,2027-11-01,11 Oct Mazingira Day (observed),200,1000,USD,14_Executive_Programmes
-02-ACC-2710,Course 02,Economic Modelling,Available,7,10,60,In person,Accra,"Accra, Ghana - EDIS regional hub",08:30-15:30 GMT,2027-10-25,2027-11-05,2027-08-30,2027-09-27,2027-11-19,,200,2000,USD,02_Economic_Modelling
+02-ACC-2710,Course 02,Economic Modelling,Available,9,10,60,In person,Accra,"Accra, Ghana - EDIS regional hub",08:30-15:30 GMT,2027-10-25,2027-11-05,2027-08-30,2027-09-27,2027-11-19,,200,2000,USD,02_Economic_Modelling
 04-ACC-2711,Course 04,Climate Modelling,Available,10,10,60,In person,Accra,"Accra, Ghana - EDIS regional hub",08:30-15:30 GMT,2027-11-15,2027-11-26,2027-09-20,2027-10-18,2027-12-10,,200,2000,USD,04_Climate_Modelling
 01-NBO-2801,Course 01,Macroeconomics and Public Finance,Available,7,10,60,In person,Nairobi,"Nairobi, Kenya - EDIS regional hub",08:30-15:30 EAT,2028-01-03,2028-01-14,2027-11-08,2027-12-06,2028-01-28,,200,2000,USD,01_Macroeconomics_Public_Finance
 03-NBO-2801,Course 03,Public Investment,Available,12,10,60,In person,Nairobi,"Nairobi, Kenya - EDIS regional hub",08:30-15:30 EAT,2028-01-24,2028-02-04,2027-11-29,2027-12-27,2028-02-18,,200,2000,USD,03_Public_Investment

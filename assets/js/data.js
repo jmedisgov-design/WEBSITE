@@ -539,7 +539,7 @@
      [code, title, modules, length, status] - full records are in courses.js. */
   var COURSES = [
     ["01", "Macroeconomics and Public Finance", "7 modules", "10 days", "Available"],
-    ["02", "Economic Modelling", "7 modules", "10 days", "Available"],
+    ["02", "Economic Modelling", "9 modules", "10 days", "Available"],
     ["03", "Public Investment", "12 modules", "10 days", "Available"],
     ["04", "Climate Modelling", "10 modules", "10 days", "Available"],
     ["05", "Trade Modelling", "2 modules", "6 days", "Available"],
