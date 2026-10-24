@@ -17,7 +17,7 @@
   .serif { font-family: Georgia, "Times New Roman", serif }
 
   /* ---------------------------------------------------------------- header */
-  .head { position: relative; height: 334px; flex: none; color: #fff; overflow: hidden;
+  .head { position: relative; height: 322px; flex: none; color: #fff; overflow: hidden;
           background: linear-gradient(118deg, #0b2f4d 0%, #123f63 42%, #14563f 100%);
           padding: 34px 54px 0 }
   .head::after { content: ""; position: absolute; inset: 0; opacity: .3;
@@ -41,8 +41,17 @@
   h1 em { font-style: normal; color: #9fe6b4 }
   .lede { margin-top: 12px; font-size: 19px; color: #dce8f1; max-width: 72ch }
 
+  /* ------------------------------------------------------------ who it is for */
+  .who { flex: none; display: flex; align-items: center; justify-content: center; gap: 9px;
+         flex-wrap: wrap; padding: 11px 54px 2px }
+  .who-k { font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700;
+           color: #5d6b79 }
+  .who .chip { font-size: 15px; font-weight: 600; color: #123f63; background: #eef3f7;
+               border: 1px solid #d7e2ec; border-radius: 999px; padding: 6px 13px; white-space: nowrap }
+  .who .chip.hi { background: #e9f4ec; border-color: #bfe0c7; color: #1f6b33 }
+
   /* ----------------------------------------------------------------- cards */
-  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 26px 54px 0; flex: 1 }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 16px 54px 0; flex: 1 }
   .card { border: 1px solid #e3e9ef; border-radius: 14px; overflow: hidden;
           box-shadow: 0 10px 30px rgba(18,63,99,.10); display: flex; flex-direction: column }
   .card .top { padding: 18px 24px 16px; color: #fff }
@@ -58,7 +67,7 @@
   .lbl { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700;
          color: #5d6b79; margin-bottom: 9px }
   ul { list-style: none }
-  .mods li { font-size: 17.5px; line-height: 1.36; padding: 5.5px 0 5.5px 20px; position: relative }
+  .mods li { font-size: 17px; line-height: 1.32; padding: 4.5px 0 4.5px 20px; position: relative }
   .mods li::before { content: ""; position: absolute; left: 3px; top: 11px; width: 8px; height: 8px;
                      border-radius: 50%; }
   .c-econ .mods li::before { background: #1c6ea4 }
@@ -76,23 +85,23 @@
   .when .d small { display: block; font-weight: 400; color: #5d6b79; font-size: 14px }
 
   /* ----------------------------------------------------------- sponsorship */
-  .sponsor { margin: 20px 54px 0; flex: none; display: grid;
+  .sponsor { margin: 16px 54px 0; flex: none; display: grid;
              grid-template-columns: auto 1fr auto; gap: 24px; align-items: center;
              background: linear-gradient(120deg, #fdf3e7 0%, #fbe9d6 100%);
              border: 1px solid #f0d3b2; border-left: 10px solid #c1611f;
-             border-radius: 14px; padding: 18px 28px }
+             border-radius: 14px; padding: 15px 28px }
   .sp-mark { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 13px;
              letter-spacing: .22em; text-transform: uppercase; font-weight: 700; color: #c1611f }
   .sponsor h2 { font-family: Georgia, serif; font-size: 26px; color: #8a3d0c; line-height: 1.15 }
-  .sponsor p { font-size: 16px; color: #5a4433; margin-top: 7px; line-height: 1.45 }
+  .sponsor p { font-size: 15.5px; color: #5a4433; margin-top: 7px; line-height: 1.45 }
   .sp-ask { text-align: right; white-space: nowrap }
   .sp-k { display: block; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase;
           font-weight: 700; color: #a2714a; margin-bottom: 4px }
   .sp-v { font-size: 22px; font-weight: 700; color: #8a3d0c }
 
   /* ------------------------------------------------------------------- CTA */
-  .cta { margin: 20px 54px 0; flex: none; background: #0e3150; color: #fff; border-radius: 14px;
-         padding: 24px 36px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px;
+  .cta { margin: 16px 54px 0; flex: none; background: #0e3150; color: #fff; border-radius: 14px;
+         padding: 20px 36px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px;
          align-items: center }
   .cta h2 { font-family: Georgia, serif; font-size: 33px; line-height: 1.15 }
   .cta p { color: #cfe0ee; font-size: 17px; margin-top: 8px }
@@ -103,7 +112,7 @@
   .contact .k { display: block; margin-bottom: 3px; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase;
                 color: #9fb8cc; font-weight: 700 }
   .contact .v { font-size: 20px; font-weight: 600; color: #fff }
-  .foot { padding: 14px 54px 18px; flex: none; display: flex; justify-content: space-between;
+  .foot { padding: 11px 54px 14px; flex: none; display: flex; justify-content: space-between;
           align-items: center; font-size: 14.5px; color: #5d6b79 }
   .foot b { color: #123f63 }
 </style>
@@ -123,9 +132,18 @@
     <span class="yr">Nairobi &middot; 2027</span>
   </div>
   <h1>Model the economy.<br><em>Model the climate.</em></h1>
-  <p class="lede">Two flagship courses for economists, planners and policy analysts, taught in
+  <p class="lede">Two flagship courses for economists, planners and climate analysts, taught in
   Nairobi on the same models governments run in production.</p>
 </header>
+
+<section class="who">
+  <span class="who-k">For</span>
+  <span class="chip">Ministries of Finance</span>
+  <span class="chip">Ministries of Planning</span>
+  <span class="chip hi">Climate units</span>
+  <span class="chip">Ministries of Natural Resources</span>
+  <span class="chip hi">University researchers and advanced students</span>
+</section>
 
 <section class="cards">
 
